@@ -2,7 +2,7 @@
 name: source-bookingkoala-help-center
 type: source
 tags: [bookingkoala, lbk-cleaners, crm, operations]
-sources: [BookingKoala_Help_Center_Full_Reference.md.txt]
+sources: [BookingKoala_Help_Center_Full_Reference.md]
 updated: 2026-05-29
 ---
 
@@ -10,7 +10,7 @@ updated: 2026-05-29
 
 **Summary**: 370-article complete reference guide for BookingKoala, prepared specifically for LBK Cleaners (Lubbock, TX). Covers every setting, integration, and workflow in the platform.
 
-**Sources**: BookingKoala_Help_Center_Full_Reference.md.txt
+**Sources**: BookingKoala_Help_Center_Full_Reference.md
 
 **Last updated**: 2026-05-29
 
