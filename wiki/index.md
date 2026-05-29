@@ -70,4 +70,4 @@
 - [Matt Beard](matt-beard.md) — AI-augmented wholesale framework reference
 
 ## Sources
-<!-- Populated as raw files are ingested -->
+- [BookingKoala Help Center](source-bookingkoala-help-center.md) — 370-article complete reference for BookingKoala, prepared for LBK Cleaners
