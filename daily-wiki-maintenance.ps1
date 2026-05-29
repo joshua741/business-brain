@@ -1,7 +1,7 @@
 # Business Brain — Daily Wiki Maintenance
 # Runs at 6:57 AM via Windows Task Scheduler
 
-$repoPath = "C:\Users\joshu\.claude\Business_Brain"
+$repoPath = "C:\Users\joshu\Documents\Business_Brain"
 $logFile  = "$repoPath\daily-maintenance.log"
 $claude   = "C:\Users\joshu\AppData\Roaming\npm\claude.cmd"
 $git      = "C:\Program Files\Git\cmd\git.exe"

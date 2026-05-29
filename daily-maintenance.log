@@ -100,3 +100,52 @@
 [2026-05-29 09:32:29] 4 issues found, 0 auto-fixed (write-blocked). Same root cause as 08:18 run. Fixes need manual apply.
 [2026-05-29 09:32:29] Changes detected â€
 [2026-05-29 09:32:29] === Daily maintenance complete ===
+[2026-05-29 09:40:33] === Daily maintenance started ===
+[2026-05-29 09:40:33] git pull
+[2026-05-29 09:40:35] From https://github.com/joshua741/business-brain
+[2026-05-29 09:40:35]  * branch            master     -> FETCH_HEAD
+[2026-05-29 09:40:35] Already up to date.
+[2026-05-29 09:40:35] Running Claude lint agent
+[2026-05-29 09:44:22] All write paths are blocked ΓÇö same root cause as previous runs. The sensitive-directory check fires before allowlist rules are applied, and there's no one to approve prompts in automated mode.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] ---
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] ## Daily Lint Report ΓÇö 2026-05-29
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **No new raw files.** `raw/` unchanged since last ingest (2026-05-29). `.last-ingest` is current.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Zero broken wikilinks.** All 56 pages resolve correctly.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Zero orphan pages.** Full inbound-link analysis confirms every page is referenced. All previous fixes (portfolio section in `wih.md`, role models in `joshua.md`, `mkenzy`/`kenneth` in `mostafa.md`, `property-management.md` creation, `ai-automation-strategy` links in `vince-ai.md` and `content-ai.md`) are confirmed in place.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Zero frontmatter spec violations.**
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] ---
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Issues found ΓÇö 5 fixes needed (all write-blocked):**
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] 1. `wih.md` ΓåÆ `updated: 2026-05-28` should be `2026-05-29` (portfolio section was added that day)
+[2026-05-29 09:44:22] 2. `joshua.md` ΓåÆ `updated: 2026-05-28` should be `2026-05-29` (role models added)
+[2026-05-29 09:44:22] 3. `vince-ai.md` ΓåÆ `updated: 2026-05-28` should be `2026-05-29` (ai-automation-strategy link added)
+[2026-05-29 09:44:22] 4. `content-ai.md` ΓåÆ `updated: 2026-05-28` should be `2026-05-29` (ai-automation-strategy link added)
+[2026-05-29 09:44:22] 5. `ai-automation-strategy.md` ΓåÆ "property management" in body text and Related pages should link to `[[property-management]]` ΓÇö it's the third vertical but appears as plain text
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] ---
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Root cause of write failure (unchanged from previous runs):**
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] Everything under `~/.claude/` triggers a sensitive-directory permission prompt regardless of project-level allowlist rules. The automated agent has no one to approve prompts, so all writes fail. The project `.claude/settings.local.json` has the correct wiki allow rules ΓÇö they just don't fire in automated context.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **Permanent fix (requires one interactive session):**
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] Open Claude Code interactively and run `/update-config` to move these two rules from project settings to **user-level** `~/.claude/settings.json`:
+[2026-05-29 09:44:22] ```
+[2026-05-29 09:44:22] Write(C:\Users\joshu\.claude\Business_Brain\wiki\*)
+[2026-05-29 09:44:22] Edit(C:\Users\joshu\.claude\Business_Brain\wiki\*)
+[2026-05-29 09:44:22] ```
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] Once at user level, the allowlist check happens before the sensitive-directory prompt, and the automated agent can write unattended.
+[2026-05-29 09:44:22] 
+[2026-05-29 09:44:22] **To apply today's 5 fixes right now**, just say "apply the lint fixes" in an interactive session.
+[2026-05-29 09:44:23] Changes detected â€
+[2026-05-29 09:44:23] === Daily maintenance complete ===
