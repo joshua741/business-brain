@@ -8,7 +8,8 @@
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
-      "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)"
+      "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
+      "PowerShell(Start-ScheduledTask *)"
     ]
   }
 }

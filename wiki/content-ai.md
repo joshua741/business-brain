@@ -23,3 +23,4 @@ Automates daily social media posts for [[r2oc]]. Driven by [[google-sheets]] as 
 - [[r2oc]]
 - [[google-sheets]]
 - [[ghl]]
+- [[ai-automation-strategy]]

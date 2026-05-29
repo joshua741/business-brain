@@ -54,6 +54,7 @@
 - [PML/TL](pml-tl.md) — Private Money Lenders and Transactional Lenders, capital raising
 - [Wholesale](wholesale.md) — top-of-funnel deal sourcing, AI-automated outreach pipeline
 - [AI Automation Strategy](ai-automation-strategy.md) — GHL as hub, Matt Beard framework, three verticals
+- [Property Management](property-management.md) — self-managed portfolio ops, Mostafa as lead, AI automation roadmap
 
 ## People
 - [Mostafa Elkhamisy](mostafa.md) — operations lead, all outbound comms route through him

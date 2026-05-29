@@ -56,3 +56,47 @@
 [2026-05-29 08:22:35] **If you're here now and want me to apply the 3 fixes immediately, just say "apply the lint fixes" and I'll do it with your approval.**
 [2026-05-29 08:22:35] Changes detected â€
 [2026-05-29 08:22:35] === Daily maintenance complete ===
+[2026-05-29 09:28:10] === Daily maintenance started ===
+[2026-05-29 09:28:10] git pull
+[2026-05-29 09:28:13] From https://github.com/joshua741/business-brain
+[2026-05-29 09:28:13]  * branch            master     -> FETCH_HEAD
+[2026-05-29 09:28:13] Already up to date.
+[2026-05-29 09:28:13] Running Claude lint agent
+[2026-05-29 09:32:29] The log writes are captured by the calling PowerShell script, not by Claude tools. My output here IS the lint report ΓÇö the script appends it. Here's the complete findings:
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] ---
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] ## Daily Lint Report ΓÇö 2026-05-29 (09:28 run)
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **No new raw files.** `raw/` unchanged since last ingest.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **Zero broken wikilinks.** All 57 index entries resolve.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **Zero frontmatter violations** in sampled pages.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **Issues found (4):**
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] 1. **`pace-morby` orphaned from `joshua.md`** ΓÇö the previous lint linked 5 role models (alex-hormozi, dan-martell, david-goggins, ed-mylett, grant-cardone) but missed pace-morby as the 6th. `pace-morby.md` links back to `[[joshua]]` but the reverse link is absent.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] 2. **Missing concept page: `property-management`** ΓÇö `ai-automation-strategy.md` names three verticals: wholesale, property management, and capital raising. `[[wholesale]]` and `[[pml-tl]]` have pages; property management does not. Needs a stub.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] 3. **`vince-ai.md` missing `[[ai-automation-strategy]]` link** ΓÇö it's the live implementation of capital-raising automation but doesn't cross-link the strategy page.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] 4. **`content-ai.md` missing `[[ai-automation-strategy]]` link** ΓÇö same gap; it's the live implementation for brand automation.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **Wiki writes still blocked.** Wildcard allow rules in `settings.local.json` (`wiki\*`) are not overriding the global `.claude/` sensitive-directory check. All four fixes require a user-present session to apply.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **To permanently unblock:** The allow rules need to be at user-level settings (`~/.claude/settings.json`), not project-level, OR each target file needs an explicit path (not a wildcard) in the allow list.
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] **Fixes to apply in next user session:**
+[2026-05-29 09:32:29] - `joshua.md` ΓåÆ add `- [[pace-morby]]` to Related pages
+[2026-05-29 09:32:29] - Create `wiki/property-management.md` (concept stub, tags: [property-management, real-estate, ai-automation])
+[2026-05-29 09:32:29] - `vince-ai.md` ΓåÆ add `- [[ai-automation-strategy]]` to Related pages
+[2026-05-29 09:32:29] - `content-ai.md` ΓåÆ add `- [[ai-automation-strategy]]` to Related pages
+[2026-05-29 09:32:29] - `wiki/index.md` ΓåÆ add `property-management.md` entry under Concepts
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] ---
+[2026-05-29 09:32:29] 
+[2026-05-29 09:32:29] 4 issues found, 0 auto-fixed (write-blocked). Same root cause as 08:18 run. Fixes need manual apply.
+[2026-05-29 09:32:29] Changes detected â€
+[2026-05-29 09:32:29] === Daily maintenance complete ===
