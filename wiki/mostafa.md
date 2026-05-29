@@ -29,3 +29,5 @@ For [[lbk-cleaners]], he oversees the [[bookingkoala]] platform — managing boo
 - [[vince-ai]]
 - [[bookingkoala]]
 - [[joshua]]
+- [[mkenzy]]
+- [[kenneth]]

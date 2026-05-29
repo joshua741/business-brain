@@ -23,3 +23,8 @@ Owner and architect of [[wih]], [[lbk-cleaners]], and all related entities. Wake
 - [[mostafa]]
 - [[ai-automation-strategy]]
 - [[profit-first]]
+- [[alex-hormozi]]
+- [[dan-martell]]
+- [[david-goggins]]
+- [[ed-mylett]]
+- [[grant-cardone]]

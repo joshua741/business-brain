@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir \"C:\\\\Users\\\\joshu\\\\.claude\\\\Business_Brain\")"
+      "Bash(dir \"C:\\\\Users\\\\joshu\\\\.claude\\\\Business_Brain\")",
+      "Bash(where.exe claude *)",
+      "Bash(where.exe git *)",
+      "Bash(powershell.exe *)",
+      "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
+      "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
+      "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
+      "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)"
     ]
   }
 }

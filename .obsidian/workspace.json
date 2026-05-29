@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0c3e9eb9a9695f48",
+        "id": "8024ead148415d79",
         "type": "tabs",
         "children": [
           {
-            "id": "e570ad49494d6d53",
+            "id": "bafd57f178c8fd9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/david-goggins.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "david-goggins"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -181,22 +177,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "e570ad49494d6d53",
+  "active": "bafd57f178c8fd9a",
   "lastOpenFiles": [
+    "wiki/log.md.tmp.74060.7f03891c238d",
+    "wiki/mostafa.md.tmp.74060.1a6afbbcd914",
+    "wiki/joshua.md.tmp.74060.2ffdca0a4cd9",
+    "wiki/wih.md.tmp.74060.35aea679f1b9",
+    "Untitled.canvas",
+    "wiki/david-goggins.md",
+    "daily-maintenance.log",
+    "setup-task.bat",
+    "setup-task.bat.tmp.74060.8082c090bd9d",
+    "daily-wiki-maintenance.ps1",
+    "daily-wiki-maintenance.ps1.tmp.74060.db6b5617e9c3",
     "CLAUDE.md",
     "sync.ps1",
     "sync.ps1.tmp.45504.1b65f42f849c",
-    "wiki/log.md.tmp.45504.83701d7fc2e0",
-    "wiki/google-sheets.md.tmp.45504.b0f3184c06d5",
-    "wiki/mostafa.md.tmp.45504.77c10747b7e4",
-    "wiki/stripe.md.tmp.45504.62008bef21d4",
-    "wiki/ghl.md.tmp.45504.99a01a543e02",
-    "wiki/zapier.md.tmp.45504.b86f0d35dd4f",
     "raw/BookingKoala_Help_Center_Full_Reference.md",
     "wiki/index.md",
     "wiki/twilio.md",
-    "wiki",
-    "raw",
     "Welcome.md"
   ]
 }
