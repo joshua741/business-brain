@@ -4,22 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "e2ae972993094e0f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6a0a152de6e887de",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
         "id": "0c3e9eb9a9695f48",
         "type": "tabs",
         "children": [
@@ -193,8 +177,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "789d0696a7a6693c",
+  "active": "e570ad49494d6d53",
   "lastOpenFiles": [
+    "wiki/index.md",
+    "wiki/twilio.md",
     "wiki",
     "raw",
     "Welcome.md"
