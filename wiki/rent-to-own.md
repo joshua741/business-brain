@@ -28,6 +28,13 @@ The dominant exit strategy in the [[wih]] portfolio. A lease that grants the ten
 
 Application flow: prequalify → apply ($49.90 fee) at rent2owncribs.com (source: faq-rent-to-own.md).
 
+## Underwriting / cash-flow SOP
+How deals are priced and cash-flowed (from Josh's training of [[antonio]], see [[source-underwriting-antonio]]):
+- **Sell price** = 105–110% of ARV (rounded to a clean promo number).
+- **Interest rate by ARV band, not credit**: $120–150k → 9.5%; $151–210k → 9.0%; $211k+ → 8.5%. Start low, raise slowly as the portfolio grows.
+- Buyer's payment = **PITI** (+ PMI if <20% down), mirroring the underlying mortgage; round up to the highest tenth. Deposit ≈ 3.5% down.
+- **PM fee 2.5%** of selling rent; **target net margin = 20%** of selling rent (selling rent − PM fee − actual mortgage PITI) (source: clip-2026-06-03-pre-foreclosure-underwriting-with-antonio-and-josh-2026-05-0.md).
+
 ## Related pages
 - [[wih]]
 - [[r2oc]]

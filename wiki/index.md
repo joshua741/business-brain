@@ -100,6 +100,7 @@
 - [Mostafa Elkhamisy](mostafa.md) — operations lead; Claude Code builder; all outbound comms route through him
 - [M'kenzy](mkenzy.md) — team; manual fieldwork; owns a cleaning company; PM-partner candidate
 - [Kenneth](kenneth.md) — team / partner
+- [Antonio](antonio.md) — trained by Josh on cash-flow underwriting (acquisitions/deal-analysis; role TBD)
 - [Aaron McCloskey](aaron-mccloskey.md) — tenant
 - [Austin Hughes](austin-hughes.md) — Thunder Sun Homes; 9-unit deal (paused)
 - [Don Pittman](don-pittman.md) — CPA; entity consolidation (verify approach)
@@ -131,6 +132,8 @@
 - [Voice Agents w/ ElevenLabs](source-voice-agents-elevenlabs.md) — code-first voice agent build; voice layer for Vince
 - [Vince Master Booklet](source-vince-master-booklet.md) — full spec/knowledge base for the Vince AI bot
 - [Session Captures (May 29–Jun 3)](source-session-captures.md) — reconciliation page for 57 session-capture memos
+- [Pre-Foreclosure Underwriting (Josh→Antonio)](source-underwriting-antonio.md) — cash-flow underwriting SOP: ARV pricing, interest bands, PITI, 20% net margin
+- [LBK Cleaners swivel logo](source-lbk-swivel-logo.md) — 2-sec silent brand asset (logo on green)
 
 ## Sources — Wholesale frameworks (2026)
 - [No Fluff Blueprint (Matt Beard)](source-wholesale-blueprint-next-market.md) — canonical 3-phase model + KPIs

@@ -26,10 +26,13 @@ Separate business entity from the real estate portfolio. Website is live. CRM is
 - **[[mkenzy]] is a candidate to run the crews.**
 (source: transcript-2026-05-27-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md)
 
+**Brand**: logo is "LUBBOCK" in small white caps over a bold white "LBK" (green leaf worked into the "K"), with "Cleaners" in gold script on a dark-green background — leaf motif signals fresh/eco-friendly cleaning (see [[source-lbk-swivel-logo]]).
+
 ## Related pages
 - [[lbk-cleaners-launch]]
 - [[lbk-commercial-strategy]]
 - [[draw-reimbursements]]
+- [[source-lbk-swivel-logo]]
 - [[bookingkoala]]
 - [[mostafa]]
 - [[mkenzy]]
