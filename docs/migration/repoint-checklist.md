@@ -59,7 +59,38 @@ These charge a card; they don't need a hub recipient. Just put the Mercury card 
 
 > **Note:** Sequence.io ($90.92/mo) is in this list only until Task 19 cancels it. DoorLoop and Baselane stay (DoorLoop = rent rail; Baselane = read-only books).
 
-## Open items pulled from Task 1 gaps
-- Confirm rent-collection + any debt for: 3423 E Baylor, 4626 S Lipscomb, 4618 45th, 5427 35th, 1926 27th, 4302 E 61st (no dedicated property-bank account found).
-- Confirm whether 2102 / 3602 / 4019 have debt payments not active in the captured months.
-- Identify any debt payees beyond the three above before cutover (Task 2 Sequence export will surface them).
+## Full portfolio debt/servicing reconciliation (2026-06-03 ingest)
+
+The daily ingest surfaced debt + servicing relationships beyond the Baselane/Sequence statements. Confidence varies — items marked ⚠️ need verification (amount or current servicer) before cutover.
+
+### Notes WE PAY → these become Mercury hub outbound (push) items
+| Property | Paid to | Amount/mo | Currently via | Confidence |
+|---|---|---|---|---|
+| 1312 65th Dr | Dillon Ford (seller finance) | $2,310.94 | Baselane/Sequence | Confirmed |
+| 2802 S Channing | underlying mortgage, **Rocket Mortgage** (formerly Mr. Cooper #7609254 — loan was sold, same debt) | $1,537.60 | Baselane | Confirmed |
+| 3904 Ave R | M&T Mortgage | $997.42 | Baselane/Sequence | Confirmed |
+| 7005 Winston Ave | (mortgagee TBD) ⚠️ | ~interest-only, amt TBD | TBD — confirm how paid | Low |
+| 3423 E Baylor | (mortgagee TBD) ⚠️ | TBD ($7,110.81 principal in 2025) | TBD | Low |
+| 4626 S Lipscomb / 4618 45th / 5427 35th | (mortgagees TBD) ⚠️ | TBD | TBD — confirm how paid | Low |
+| 2102 68th St | Kiavi Funding (hard money) | $181,600 note; $38,200 rehab holdback | TBD | Confirm if still active |
+
+> **Dig result (2026-06-03, conclusive within available statements):** a full grep of every Baselane statement for mortgage/servicer terms returns **only the three confirmed payments** (1312 Dillon Ford, 2802 Rocket/Mr.Cooper, 3904 M&T). 7005 Winston, 3423 E Baylor, 4626 Lipscomb, 4618 45th, 5427 35th show **no mortgage-servicer activity in Baselane at all** — their debt (if any is currently being paid) is paid from **outside Baselane**. So the Baselane→Mercury *money-routing* scope is exactly these 3 outbound payments + the internal Profit First splits. Anything paid elsewhere is either out of this migration's scope or needs its source account identified to fold in.
+
+### Notes WE RECEIVE → inflows; repoint the deposit, NOT a hub recipient
+| Property | Buyer pays | Serviced by (OUTSIDE Baselane/Sequence) | Migration action |
+|---|---|---|---|
+| 4438 Puffer St | seller-finance buyer | **One-Point Lending** (also: only property NOT on DoorLoop) | Repoint remittance deposit → Mercury |
+| 526 53rd St | Sharonda Fanell Lee ($911/mo P&I) | **Escrow Services, Inc.** (wrap; pays underlying Happy State Bank) | Repoint remittance deposit → Mercury |
+| 4019 37th St | Joseph (~$1,813/mo escrowed) | **Secured Sequence** escrow (≠ getsequence.io) | Repoint remittance deposit → Mercury |
+| 4513 48th St | Joseph ($1,813/mo escrowed) | **Secured Sequence** escrow | Repoint remittance deposit → Mercury |
+| 2802 S Channing | seller-finance buyer ($2,103.83/mo, incl. escrow shortage we're covering) | collected to our account (wrap over the Rocket underlying) | Repoint deposit → Mercury |
+
+> **2802 is a wrap (both columns):** buyer pays us $2,103.83 → we pay the $1,537.60 underlying to Rocket. Net positive spread; the escrow shortage is the gap we're temporarily absorbing.
+
+> **Key distinction:** third-party servicers (One-Point, Escrow Services, Secured Sequence) collect from the buyer and remit to us. For the migration they're just **payers-in** (Bucket A) — give them the new Mercury deposit account. They do NOT need to be hub recipients and their internal servicing does not migrate.
+
+## Open items for Joshua (verification)
+1. **2802 S Channing** — Mr. Cooper ($1,537.60) vs Rocket Mortgage ($2,103.83): which is the current servicer + amount?
+2. **How are the "we pay" mortgages currently paid** for 7005 Winston, 3423 E Baylor, 4626 Lipscomb, 4618 45th, 5427 35th — autopay/ACH pull, manual, or a Sequence rule that didn't fire in captured months? Each needs a payee + amount before cutover.
+3. **Is the Kiavi note on 2102 still active**, and is there a monthly payment to route?
+4. **ACH details** (account + routing) for every "we pay" recipient — needed to set up Mercury hub recipients (Task 9).

@@ -68,8 +68,8 @@
 
 | Manager | Bank | Routing Number | Account Number | Distribution % |
 |---|---|---|---|---|
-| Joshua Webber | Personal Bank | 124003116 | 1137906739 | 60% |
-| Oralia Rivera | Personal Bank | 111000025 | 488110635754 | 40% |
+| Joshua Webber | Personal Bank | 12XXX3116 | 11XXXX6739 | 60% |
+| Oralia Rivera | Personal Bank | 11XXX0025 | 48XXXXXX5754 | 40% |
 | Business (Mercury) | Mercury | See Mercury dashboard | — | N/A (Operating) |
 
 ## Manager Distributions

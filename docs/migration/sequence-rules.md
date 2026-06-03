@@ -34,7 +34,10 @@ The statement reconstruction gives the *effective* behavior. A live config expor
 2. **Any configured-but-dormant rule** that didn't fire in the captured months (e.g. a property whose tenant was vacant).
 3. The exact **fixed-vs-percentage** logic and trigger timing, vs. my inference from amounts/dates.
 
-## Open gaps this resolves vs. leaves open
+## Scope correction (2026-06-03 portfolio reconciliation)
 
-- **Resolves:** the complete external-payee list = the three above. No hidden 4th/5th payee.
-- **Still open (from `account-tree.md`):** the 6 properties with no Baselane account (3423 E Baylor, 4626 Lipscomb, 4618 45th, 5427 35th, 1926 27th, 4302 E 61st) show **no Sequence debt activity** — meaning they either have no financed debt, pay another way, or were inactive in these months. Confirm each is genuinely debt-free (or identify its payment) before cutover.
+The three debt payees above are the complete set **routed through Baselane/Sequence in the captured months** — but the wider portfolio carries more debt and uses other servicers. Do **not** read this as the full migration scope. See `repoint-checklist.md` → "Full portfolio debt/servicing reconciliation" for the complete picture. In short:
+
+- **More notes we PAY** (not seen as Sequence lines in the captured months — confirm how each is paid today): 7005 Winston Ave, 3423 E Baylor, 4626 Lipscomb, 4618 45th, 5427 35th, plus Kiavi hard money on 2102 68th St.
+- **Notes we RECEIVE, serviced OUTSIDE Baselane/Sequence** (these are inflows — repoint the deposit, not the hub): One-Point Lending (4438 Puffer), Escrow Services Inc (526 53rd wrap), Secured Sequence escrow (4019, 4513).
+- **Verify:** 2802 S Channing — statements show $1,537.60 to Mr. Cooper (#7609254); wiki says Rocket Mortgage services it at $2,103.83. Confirm current servicer + amount before cutover.

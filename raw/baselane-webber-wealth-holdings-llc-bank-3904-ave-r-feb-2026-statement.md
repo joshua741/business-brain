@@ -9,7 +9,7 @@
 | Date | Description | Withdrawal | Deposit | Balance |
 |---|---|---|---|---|
 | Feb 01 | Opening Balance | | | $997.42 |
-| Feb 17 | M & T MORTGAGE — MTG PYT — 0093797744 | $997.42 | | $0.00 |
+| Feb 17 | M & T MORTGAGE — MTG PYT — 00XXXX7744 | $997.42 | | $0.00 |
 | **Feb 28** | **Closing Balance** | | | **$0.00** |
 
 **Total Debits:** $997.42 | **Total Credits:** $0.00

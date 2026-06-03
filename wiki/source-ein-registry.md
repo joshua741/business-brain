@@ -30,7 +30,7 @@ updated: 2026-05-29
 
 All entities list registered-agent address 500 Westover Dr #35614, Sanford NC 27330; member Joshua D. Webber; name control W&MS (series) / WEBB (WWH).
 
-Texas SOS: W&M Series 4019 37th Street registered via SOSDirect (User ID 1073684625, 2025-06-18) (source: w-m-4019-37th-series-texas-state-registry-user-name.md).
+Texas SOS: W&M Series 4019 37th Street registered via SOSDirect (User ID 10XXXX4625, 2025-06-18) (source: w-m-4019-37th-series-texas-state-registry-user-name.md).
 
 > **Contradiction (lint):** The 7005 Winston K-1 lists the trust EIN as 39-2122418 (which is actually WWH's EIN). The standalone EIN notice gives the trust 42-6697103. See [[7005-winston-ave]].
 

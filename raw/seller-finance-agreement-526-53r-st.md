@@ -28,7 +28,7 @@
 | Field | Value |
 |---|---|
 | Underlying Lender | Happy State Bank |
-| Loan # | 4000015856 |
+| Loan # | 40XXXX5856 |
 | Underlying Balance | ~$54,000 |
 | Underlying PITI | $689.33/mo |
 | Underlying P&I | $456.00/mo |

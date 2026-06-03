@@ -230,16 +230,23 @@ def test_percentage_split_profit_first():
 
 ```python
 # scripts/migration/validate_rules.py
+# NOTE: "percent" rules apply to INCOMING funds, not the running balance — matches
+# Mercury's actual behavior. (15% + 5% of a $1,000 deposit = $150 + $50, leaving $800,
+# regardless of rule order. Computing off the running balance would wrongly give $42.50.)
 def apply_rules(deposits, rules):
     balances = {}
+    deposited = {}
     for d in deposits:
         balances[d["account"]] = balances.get(d["account"], 0) + d["amount"]
+        deposited[d["account"]] = deposited.get(d["account"], 0) + d["amount"]
     for r in rules:
         src = r["source"]
-        if balances.get(src, 0) <= 0:
+        available = balances.get(src, 0)
+        if available <= 0:
             continue
-        moved = balances[src] * (r["amount"] / 100) if r["type"] == "percent" else min(r["amount"], balances[src])
-        balances[src] -= moved
+        moved = deposited.get(src, 0) * (r["amount"] / 100) if r["type"] == "percent" else r["amount"]
+        moved = min(moved, available)
+        balances[src] = available - moved
         balances[r["dest"]] = balances.get(r["dest"], 0) + moved
     return balances
 ```

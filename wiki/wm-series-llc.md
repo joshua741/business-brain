@@ -31,7 +31,7 @@ All taxed as partnership (Form 1065), name control W&MS (source: ein notices; se
 | – 3423 E Baylor Street Series | 39-2849747 | Jun 24, 2025 | [[3423-e-baylor-st]] |
 | – E Street Series | 41-4473380 | Feb 24, 2026 | property TBD |
 
-- The 4019 37th Street Series is registered with the Texas SOS via SOSDirect (User ID 1073684625, set up Jun 18, 2025) (source: w-m-4019-37th-series-texas-state-registry-user-name.md).
+- The 4019 37th Street Series is registered with the Texas SOS via SOSDirect (User ID 10XXXX4625, set up Jun 18, 2025) (source: w-m-4019-37th-series-texas-state-registry-user-name.md).
 
 > **Note (lint):** The "E Street Series" (EIN 41-4473380, Feb 2026) has no identified property yet — possible stub/follow-up.
 

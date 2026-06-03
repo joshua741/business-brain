@@ -5,12 +5,12 @@
 ## Wire Details
 
 **Bank:** City Bank
-**Routing #:** 111301737
+**Routing #:** 11XXX1737
 **Address:** 5219 City Bank Pkwy, Lubbock TX 79407
 
 **Beneficiary:**
 - Hub City Title, LLC
-- Account #: 26370187
+- Account #: 26XX0187
 - 4415 66th Street, Suite 100, Lubbock, Texas 79414
 - Phone: (806) 412-1234
 
