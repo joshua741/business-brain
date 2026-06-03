@@ -124,12 +124,12 @@
     {
       "name": "supabase",
       "type": "api",
-      "status": "needs-credentials",
-      "source": "Supabase: wih-app data",
-      "extractor": "TBD (SQL/REST)",
+      "status": "active",
+      "source": "Supabase Postgres (wih-app DB): contacts, deals, messages, pipeline_stages, directory_contacts",
+      "extractor": "connectors/supabase_db.py",
       "cadence": "daily",
-      "credential_needed": "SUPABASE_URL + service/anon key (likely in wih-app/.env)",
-      "notes": "wih-app backend."
+      "credential_needed": "DATABASE_URL (in wih-app/.env)",
+      "notes": "Read-only DB snapshot -> raw/supabase-snapshot-DATE.md (masked). Most app tables still empty; directory_contacts ~14k. Wired into daily pipeline."
     },
     {
       "name": "google-sheets",

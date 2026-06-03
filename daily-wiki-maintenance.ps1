@@ -47,6 +47,10 @@ Log "GHL connector"
 Log "Twilio connector"
 & python "$repoPath\connectors\twilio_logs.py" 2>&1 | ForEach-Object { Log $_ }
 
+# 2b4. Supabase connector (read-only wih-app DB snapshot; self-skips if creds absent)
+Log "Supabase connector"
+& python "$repoPath\connectors\supabase_db.py" 2>&1 | ForEach-Object { Log $_ }
+
 # 2c. Connector discovery / gap detector -> connectors/STATUS.md
 Log "Connector gap detector"
 & python "$repoPath\connectors\discover_gaps.py" 2>&1 | ForEach-Object { Log $_ }
