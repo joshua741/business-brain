@@ -36,10 +36,10 @@
       "type": "api",
       "status": "needs-credentials",
       "source": "Google Drive folder 'Business Brain Briefings'",
-      "extractor": "daily-wiki-maintenance.ps1 Drive step",
+      "extractor": "connectors/google_drive_briefings.py",
       "cadence": "daily",
-      "credential_needed": "gcloud auth (Drive scope) OR rclone remote OR Google Drive MCP",
-      "notes": "Daily step currently cannot reach Drive; no auth configured."
+      "credential_needed": "gcloud auth application-default login (drive.readonly scope)",
+      "notes": "Connector built (ADC); replaced the old claude Drive step in the daily pipeline. Self-skips until gcloud ADC login. Downloads new briefing files -> masked raw/ .md."
     },
     {
       "name": "ghl",
@@ -136,10 +136,10 @@
       "type": "api",
       "status": "needs-credentials",
       "source": "Google Sheets: KPI + finance dashboards",
-      "extractor": "TBD (Sheets API)",
+      "extractor": "connectors/google_sheets.py",
       "cadence": "daily",
-      "credential_needed": "gcloud auth (Sheets scope) OR service account JSON",
-      "notes": "KPI trackers, finance models."
+      "credential_needed": "gcloud auth application-default login (spreadsheets.readonly scope)",
+      "notes": "Connector built (ADC, Drive-discovery of KPI/finance sheets -> masked snapshot). Self-skips until gcloud ADC login."
     },
     {
       "name": "telegram",

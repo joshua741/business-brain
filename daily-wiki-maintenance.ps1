@@ -23,17 +23,9 @@ Log "=== Daily maintenance started ==="
 Log "git pull"
 & $git pull origin master 2>&1 | ForEach-Object { Log $_ }
 
-# 2. Download today's briefing files from Google Drive into raw/
-Log "Downloading briefings from Google Drive"
-$downloadPrompt = @"
-Check Google Drive for a folder named 'Business Brain Briefings'.
-Find any files in that folder with today's date ($date) in the filename that have not already been copied to the raw/ directory.
-For each new file found, download its content and write it as a .md file in the raw/ directory of the current working directory.
-Name each file exactly as it appears in Google Drive.
-If no new files exist for today, output: NO_NEW_FILES
-Otherwise output: DOWNLOADED [comma-separated list of filenames]
-"@
-& $claude --print $downloadPrompt --dangerously-skip-permissions 2>&1 | ForEach-Object { Log $_ }
+# 2. Google Drive 'Business Brain Briefings' connector (ADC; self-skips if not authed)
+Log "Google Drive briefings connector"
+& python "$repoPath\connectors\google_drive_briefings.py" 2>&1 | ForEach-Object { Log $_ }
 
 # 2b. Local-files connector: convert drop-folder docs (pdf/csv/xlsx/md) into masked raw/ .md
 Log "Local-files connector (drop folder)"
@@ -50,6 +42,10 @@ Log "Twilio connector"
 # 2b4. Supabase connector (read-only wih-app DB snapshot; self-skips if creds absent)
 Log "Supabase connector"
 & python "$repoPath\connectors\supabase_db.py" 2>&1 | ForEach-Object { Log $_ }
+
+# 2b5. Google Sheets connector (ADC; self-skips if not authed)
+Log "Google Sheets connector"
+& python "$repoPath\connectors\google_sheets.py" 2>&1 | ForEach-Object { Log $_ }
 
 # 2c. Connector discovery / gap detector -> connectors/STATUS.md
 Log "Connector gap detector"
