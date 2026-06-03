@@ -60,10 +60,45 @@ def test_blocks_recurse():
     assert "Mostafa: hi" in md, md
 
 
+def test_is_meeting_title():
+    assert nm.is_meeting_title("Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00")
+    assert nm.is_meeting_title("Video Call with Yvonne and Josh 2026-05-30T14:30:00.000-05:00")
+    assert nm.is_meeting_title("Weekly Role Play w/ Jon")
+    assert nm.is_meeting_title("2026-05-19T09:02:00.000-05:00")  # bare timestamp recording
+    # non-meeting pages excluded
+    assert not nm.is_meeting_title("Joshua Webber - Business Master Prompt")
+    assert not nm.is_meeting_title("LLM Wiki (Personal)")
+    assert not nm.is_meeting_title("+18067244064")  # Vince SMS conversation
+    assert not nm.is_meeting_title("Meeting Transcripts")  # the container page itself
+    assert not nm.is_meeting_title("")
+
+
+def test_slug_from_title():
+    assert nm.slug_from_title(
+        "Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00"
+    ) == "morning-meeting-josh-mostafa"
+    assert nm.slug_from_title("2026-05-19T09:02:00.000-05:00") == "meeting"  # stamp stripped
+
+
+def test_page_title():
+    page = {"properties": {"Name": {"type": "title",
+            "title": [{"plain_text": "Morning Meeting"}]}}}
+    assert nm.page_title(page) == "Morning Meeting"
+
+
 def test_target_name():
-    assert nm.target_name("2026-06-03", set()) == "transcript-2026-06-03-team-meeting.md"
-    existing = {"transcript-2026-06-03-team-meeting.md"}
-    assert nm.target_name("2026-06-03", existing) == "transcript-2026-06-03-team-meeting-2.md"
+    assert nm.target_name("2026-06-03", "morning-meeting", set()) == \
+        "transcript-2026-06-03-morning-meeting.md"
+    existing = {"transcript-2026-06-03-morning-meeting.md"}
+    assert nm.target_name("2026-06-03", "morning-meeting", existing) == \
+        "transcript-2026-06-03-morning-meeting-2.md"
+
+
+def test_page_date_from_title():
+    page = {"properties": {"Name": {"type": "title", "title": [
+        {"plain_text": "Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00"}]}},
+        "created_time": "2026-01-01T00:00:00.000Z"}
+    assert nm.page_date(page) == "2026-06-02"  # date pulled from title, not created_time
 
 
 def test_needs_ingest():
@@ -117,11 +152,15 @@ def run():
     test_rich_text()
     test_blocks_to_markdown()
     test_blocks_recurse()
+    test_is_meeting_title()
+    test_slug_from_title()
+    test_page_title()
     test_target_name()
     test_needs_ingest()
     test_with_retries_succeeds()
     test_with_retries_gives_up()
     test_page_date()
+    test_page_date_from_title()
     print("test_notion_meetings PASS")
 
 

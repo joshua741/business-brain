@@ -3,8 +3,8 @@ name: lbk-commercial-strategy
 type: project
 tags: [cleaning, lubbock, commercial, strategy, lbk-cleaners]
 status: active
-sources: [Comprehensive Market Research Report Commercial Cleaning Target Markets & Lubbock, Texas Expansion Strategy.md]
-updated: 2026-05-29
+sources: [Comprehensive Market Research Report Commercial Cleaning Target Markets & Lubbock, Texas Expansion Strategy.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md]
+updated: 2026-06-03
 ---
 
 # LBK Commercial Strategy
@@ -13,11 +13,18 @@ updated: 2026-05-29
 
 **Sources**: Comprehensive Market Research Report Commercial Cleaning Target Markets & Lubbock, Texas Expansion Strategy.md (Manus AI, 2026-05-29)
 
-**Last updated**: 2026-05-29
+**Last updated**: 2026-06-03
 
 ---
 
 Commercial cleaning is the long-term play for [[lbk-cleaners]]. See [[cleaning-business-models]] for why commercial beats residential. This page covers Lubbock-specific execution.
+
+## Direction confirmed (May 2026)
+
+- **Commercial-only — no residential.** Confirmed direction, with possible expansion into construction cleaning.
+- **Strategic role:** the company exists to fund Joshua's personal income (~$2,000-3,000/mo) so he can stop drawing from [[wih]] and let the real estate business compound. See [[draw-reimbursements]].
+- **[[mkenzy]] is a candidate to run the crews.**
+(source: transcript-2026-05-29-morning-meeting-josh-mostafa.md)
 
 ## Tier Progression
 
@@ -79,3 +86,6 @@ Keep 2-3 trained part-time cleaners on standby at premium hourly rate. When a ne
 - [[source-cleaning-model-analysis]]
 - [[profit-first]]
 - [[mostafa]]
+- [[mkenzy]]
+- [[draw-reimbursements]]
+- [[wih]]

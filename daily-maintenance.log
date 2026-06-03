@@ -243,3 +243,310 @@
 [2026-06-03 01:21:58] Repo visibility check
 [2026-06-03 01:21:59] isPrivate=true
 [2026-06-03 01:21:59] Changes detected -- committing
+[2026-06-03 01:21:59] warning: in the working copy of 'CLAUDE.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'scripts/summarize-session.ps1', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/1312-65th-dr.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/1926-27th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/2102-68th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/2802-s-channing-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/3423-e-baylor-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/3904-ave-r.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/4019-37th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/4618-45th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/4626-s-lipscomb-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/5427-35th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/ai-automation-strategy.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/baselane.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/content-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/doorloop.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/index.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/lbk-cleaners-launch.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/log.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/n8n.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/pml-tl.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/property-management.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/rent-to-own.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/subject-to.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/twilio.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/vince-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/webber-wealth-holdings.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/wholesale.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/wih-ai-service.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/wih-app.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/wm-series-llc.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/3602-31st-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/4302-e-61st-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/526-53rd-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/7005-winston-ave.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/aaron-mccloskey.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/ai-operating-system.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/business-brain.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/davis-available-properties.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/draw-reimbursements.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/elevenlabs.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/gumloop.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/hub-city-title.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/infinite-banking.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/kpi-tracking.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/legal-document-templates.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/loan-servicing.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/nate-herk.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/notion.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/sales-scripts.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/seller-finance.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-2802-trust-addendum.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-4302-e-61st-creative-terms.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-4513-48th-st-amendment.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-53-al-properties.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-aios-nate-herk.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-assignment-of-contract.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-baselane-statement-analyzer-skill.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-baselane-statements.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-content-ai-script.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-ein-registry.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-gonzalez-inspection-notice.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-gumloop-manual.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-hud-222408.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-lbk-bid-calculators.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-lease-agreement-46th.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-n8n-acquisition-lookup.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-property-insurance.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-rto-disclosures.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-seller-finance-526-53rd.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-session-captures.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-vince-master-booklet.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-voice-agents-elevenlabs.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/source-webber-2025-pl.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] warning: in the working copy of 'wiki/watch-video-capability.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 01:21:59] [master f6a47bf] chore: daily wiki maintenance 2026-06-03
+[2026-06-03 01:21:59]  147 files changed, 3549 insertions(+), 140 deletions(-)
+[2026-06-03 01:21:59]  create mode 100644 raw/clip-2026-06-03-building-realistic-voice-agents-has-never-been-easier.md
+[2026-06-03 01:21:59]  create mode 100644 raw/clip-2026-06-03-how-to-build-a-business-intelligence-dashboard-with-claude-a.md
+[2026-06-03 01:21:59]  create mode 100644 raw/clip-2026-06-03-i-turned-claude-opus-4-8-into-my-entire-ai-operating-system.md
+[2026-06-03 01:21:59]  create mode 100644 raw/clip-2026-06-03-is-this-the-real-estate-wholesale-blueprint-that-wins-in-the.md
+[2026-06-03 01:21:59]  create mode 100644 raw/clip-2026-06-03-selling-wholesale-real-estate-deals-just-got-so-much-easier.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T11-54-03-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T11-58-20-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T11-58-50-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T11-59-40-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-07-07-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-07-44-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-07-54-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-08-00-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-11-54-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-12-02-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-13-22-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-14-55-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-17-47-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-20-24-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-24-30-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-26-29-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-27-35-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-29-29-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-29-58-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-30-14-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-30-37-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-31-13-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-33-12-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-33-56-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-34-32-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-36-05-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-46-51-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-50-34-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T12-52-17-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T13-00-41-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T13-21-12-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T14-01-42-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T14-05-20-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T14-14-06-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T14-20-22-session.md
+[2026-06-03 01:21:59]  delete mode 100644 raw/memo-2026-05-29T14-26-03-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-03-10-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-03-27-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-03-40-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-03-52-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-03-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-04-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-10-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-14-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-20-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-05-31T12-04-25-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T13-42-08-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T13-42-23-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T13-42-46-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T13-43-35-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T13-44-08-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T14-17-12-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T15-40-19-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T15-47-04-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T15-49-43-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T15-50-09-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T17-12-07-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T17-12-52-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T18-00-46-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T18-13-39-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-02T20-55-27-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-03T00-17-42-session.md
+[2026-06-03 01:21:59]  create mode 100644 raw/memo-2026-06-03T00-51-49-session.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/3602-31st-st.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/4302-e-61st-st.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/526-53rd-st.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/7005-winston-ave.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/aaron-mccloskey.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/ai-operating-system.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/business-brain.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/davis-available-properties.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/draw-reimbursements.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/elevenlabs.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/gumloop.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/hub-city-title.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/infinite-banking.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/kpi-tracking.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/legal-document-templates.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/loan-servicing.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/nate-herk.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/notion.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/sales-scripts.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/seller-finance.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-2802-trust-addendum.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-4302-e-61st-creative-terms.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-4513-48th-st-amendment.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-53-al-properties.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-aios-nate-herk.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-assignment-of-contract.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-baselane-statement-analyzer-skill.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-baselane-statements.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-content-ai-script.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-ein-registry.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-gonzalez-inspection-notice.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-gumloop-manual.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-hud-222408.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-lbk-bid-calculators.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-lease-agreement-46th.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-n8n-acquisition-lookup.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-property-insurance.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-rto-disclosures.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-seller-finance-526-53rd.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-session-captures.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-vince-master-booklet.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-voice-agents-elevenlabs.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/source-webber-2025-pl.md
+[2026-06-03 01:21:59]  create mode 100644 wiki/watch-video-capability.md
+[2026-06-03 01:22:01] To https://github.com/joshua741/business-brain.git
+[2026-06-03 01:22:01]    955b30a..f6a47bf  master -> master
+[2026-06-03 01:22:01] Pushed to GitHub
+[2026-06-03 01:22:01] === Daily maintenance complete ===
+[2026-06-03 03:00:33] === Notion meeting pull started ===
+[2026-06-03 03:00:33] git pull
+[2026-06-03 03:00:35] From https://github.com/joshua741/business-brain
+[2026-06-03 03:00:35]  * branch            master     -> FETCH_HEAD
+[2026-06-03 03:00:35] Already up to date.
+[2026-06-03 03:00:35] Notion meetings connector
+[2026-06-03 03:00:43] notion-meetings: pulled 0, skipped 14, failed 6
+[2026-06-03 03:00:43]   = Morning Meeting Josh, Mostafa 2026-05-21T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh & Mostafa 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = ≡ƒôîMeeting with Michael and Josh 2026-05-22T15:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Weekly Role Play w/ Jon 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh & Mostafa 2026-05-26T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh, Mostafa 2026-05-27T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh, Mostafa 2026-05-28T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh & Mostafa 2026-05-29T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = ≡ƒô▒Video Call with Yvonne , Scott, and Josh 2026-05-30T14:30:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = ≡ƒô▒Phone Call with Yvonne and Josh 2026-05-30T16:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh & Mostafa 2026-06-01T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = 2026-06-02T12:46:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   = Morning Meeting - Angel 2026-05-20T11:00:00.000-05:00 (unchanged)
+[2026-06-03 03:00:43]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-03 03:00:43]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-03 03:00:43]   ! 2026-05-20T12:03:00.000-05:00 (empty note)
+[2026-06-03 03:00:43]   ! 2026-05-20T16:02:00.000-05:00 (empty note)
+[2026-06-03 03:00:43]   ! Morning Meeting - Angel 2026-05-21T11:00:00.000-05:00 (empty note)
+[2026-06-03 03:00:43]   ! 2026-05-27T10:07:00.000-05:00 (empty note)
+[2026-06-03 03:00:43] Running wiki ingest agent
+[2026-06-03 03:34:49] Daily maintenance done. Here's the rundown.
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] ## Ingested ΓÇö 25 raw files, zero left uningested
+[2026-06-03 03:34:49] 14 daily meeting transcripts (May 20ΓÇôJun 2) + 11 YouTube/web clips. Ran it as a parallel fan-out: subagents extracted structured digests, disjoint-file writers built the pages, I finalized index/log myself.
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] - **25 source pages** created (3 transcripts were empty recordings ΓåÆ stubs).
+[2026-06-03 03:34:49] - **29 new pages**: properties `4513-48th-st`, `4438-puffer-st`, `2106-68th-st`, `7000-patterson-ave`, `915-tulane-st`; deal `yvonne-scott-subject-to`; concepts `no-fluff-model`, `agent-outreach`, `mls-two-call-closing`, `disposition`, `claude-code-workflow`, `information-moat`; 11 people; 6 tools/lenders.
+[2026-06-03 03:34:49] - **23 existing pages updated**, `index.md` rebuilt (also folded in pre-existing un-indexed pages), `log.md` appended, `.last-ingest` bumped.
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] ## Biggest signal from the batch
+[2026-06-03 03:34:49] - **9-unit is OFF for now** ΓÇö you declined (rehab ~$150K, too much bandwidth); revisit after 2 of 3 build-outs are delegated. Page flipped to `paused`. Squatters since hit the building; Austin authorized you to act.
+[2026-06-03 03:34:49] - **The wholesale playbook is now fully captured** ΓÇö Matt Beard's No Fluff 3-phase model, Alex Martinez's MLS two-call closing, and Hieu's direct-to-agent GHL machine. Together they're a buildable spec for Vince + wih-app (texting cadences, 15-part discovery state machine, A/B/C buyer tiers, TTB <12hr KPI).
+[2026-06-03 03:34:49] - **Manus dropped** for Claude Code + superpowers. **Vince runs on a GHL workflow, NOT Gumloop** (corrected). **wih-app = "Terrific Blessing"/"Us"** with the 16K-contact GHLΓåÆSupabase migration. **LBK Cleaners ΓåÆ commercial-only, built with your girlfriend, funds your personal draw.**
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] ## 4 flags I did NOT propagate ΓÇö need your call
+[2026-06-03 03:34:49] 1. **"31 properties / 31 entities" + "WIH is defunct"** ΓÇö you told the Yvonne/Scott sellers this. Reads like sales framing and contradicts the documented ~20 properties + WIH-as-primary-brand. Did NOT touch `wih.md`/portfolio until you confirm real counts.
+[2026-06-03 03:34:49] 2. **Don Pittman (CPA)** used sovereign-citizen-flavored language ("solid right attachment under spiritual seat") while consolidating your entities. Worth verifying that approach is legit before relying on it.
+[2026-06-03 03:34:49] 3. **"7500 Winston Ave" vs `7005 Winston Ave`** ΓÇö same property or two? Cross-linked both; confirm.
+[2026-06-03 03:34:49] 4. **2802 S Channing is in Amarillo, TX** (not Lubbock) ΓÇö corrected on the page.
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] ## Proposed CLAUDE.md updates (propose-then-confirm ΓÇö not applied)
+[2026-06-03 03:34:49] Want me to apply these?
+[2026-06-03 03:34:49] - **Tech stack:** add Claude Code + superpowers (replacing Manus), Secured Sequence (RTO escrow), Giggle Finance, One-Point Lending, Bank of America; note Sequence now has a balance-reading MCP and Supabase is absorbing the CRM.
+[2026-06-03 03:34:49] - **Active projects:** 9-unit ΓåÆ paused; wih-app "Us" + DoorLoop-replacement; LBK commercial-only + draw-removal; add Yvonne/Scott subject-to.
+[2026-06-03 03:34:49] - **Portfolio:** add 4513 48th St, 7005 Winston Ave, 4438 Puffer St; note 1312 is a six-unit; flag 2802 = Amarillo.
+[2026-06-03 03:34:49] - **SOPs:** Telegram primary comms; payment follow-ups via DoorLoop; skills-first / no external skills.
+[2026-06-03 03:34:49] 
+[2026-06-03 03:34:49] Say the word and I'll update CLAUDE.md (and flag what should sync to your Notion master prompts). I also saved the batch-ingest method to memory so future daily runs are faster.
+[2026-06-03 03:34:49] Secret audit (non-fatal warning)
+[2026-06-03 03:34:50] POTENTIAL UNMASKED SECRETS:
+[2026-06-03 03:34:50]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-feb-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 03:34:50]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-jan-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 03:34:50]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-jan-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234586890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5656434354'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '7468562544'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '3454557676'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '6434565664'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1122334455'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '2035551234'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 03:34:50]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 03:34:50]  - raw\lbk-cleaners-finance-tracker.md: long-digit-run '1137906739'
+[2026-06-03 03:34:50]  - raw\lbk-cleaners-finance-tracker.md: long-digit-run '488110635754'
+[2026-06-03 03:34:50]  - raw\seller-finance-agreement-526-53r-st.md: long-digit-run '4000015856'
+[2026-06-03 03:34:50]  - raw\w-m-4019-37th-series-texas-state-registry-user-name.md: long-digit-run '1073684625'
+[2026-06-03 03:34:50]  - wiki\3904-ave-r.md: long-digit-run '0093797744'
+[2026-06-03 03:34:50]  - wiki\526-53rd-st.md: long-digit-run '4000015856'
+[2026-06-03 03:34:50]  - wiki\log.md: long-digit-run '0093797744'
+[2026-06-03 03:34:50]  - wiki\source-ein-registry.md: long-digit-run '1073684625'
+[2026-06-03 03:34:50]  - wiki\wm-series-llc.md: long-digit-run '1073684625'
+[2026-06-03 03:34:50] Repo visibility check
+[2026-06-03 03:34:51] isPrivate=true
+[2026-06-03 03:34:51] Changes detected -- committing

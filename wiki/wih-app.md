@@ -3,7 +3,7 @@ name: wih-app
 type: project
 tags: [web-app, railway, supabase, crm, central]
 status: active
-sources: [CLAUDE.md seed, memo-2026-05-29T14-03-38-session.md]
+sources: [CLAUDE.md seed, memo-2026-05-29T14-03-38-session.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md, transcript-2026-06-02-meeting.md, clip-2026-06-03-how-to-build-a-business-intelligence-dashboard-with-claude-a.md]
 updated: 2026-06-03
 ---
 
@@ -29,6 +29,18 @@ Because it is the central system, **relevant knowledge accumulating in this Busi
 - **GitHub:** `github.com/joshua741/wih-app` -- pushes to `origin` auto-deploy to Railway
 - Note: wih-app-specific working/dev context lives in the `C--Users-joshu-wih-app` project memory, not this wiki. This page is the business-level view + the feature-idea pipeline.
 
+## "Us" — the consolidated in-house app
+Joshua now also calls the consolidated in-house app **"Us"** — the one-stop replacement for [[doorloop]], [[ghl]], and the contacts directory, i.e. "everything in the house." Internal [[railway]] project codename is **"Terrific Blessing."** Architecture: [[supabase]] = storage/backup, [[railway]] = hosting.
+
+Major build threads underway:
+- **Contacts migration** — moving all ~16,000 [[ghl]] contacts into [[supabase]] as a deduplicated Contacts directory. Data quality is poor: ~89% untagged and only 39 contacts have emails, so cleanup/dedup is part of the work.
+- **Wholesale KPI command-center dashboard** — a three-phase build that mirrors the No Fluff Operator GHL→Supabase→Railway/Vercel pattern (see [[source-bi-dashboard-claude]], [[no-fluff-model]], and [[claude-code-workflow]]). Surfaces [[kpi-tracking]] and [[disposition]] metrics.
+- **AI lead-reply** via [[twilio]].
+- **Google Maps street view** in-app.
+- **Notes tab.**
+
+**Long-term goal:** replace [[doorloop]] (~$265/mo, billed per-lease) with a custom property-management dashboard + tenant portal inside this app.
+
 ## Feature context to fold in
 Running backlog of app-relevant ideas pulled from ingested sources. The daily ingest appends here whenever a new source touches CRM features, AI agents, dashboards, or the three verticals. Review periodically and pull the best into the wih-app dev project.
 - **AI / voice agent layer** -- voice agents via ElevenLabs + Twilio for [[vince-ai]]-style flows; could power in-app call/SMS ([[source-voice-agents-elevenlabs]], [[elevenlabs]]).
@@ -43,3 +55,7 @@ Running backlog of app-relevant ideas pulled from ingested sources. The daily in
 - [[vince-ai]]
 - [[business-brain]]
 - [[ai-automation-strategy]]
+- [[claude-code-workflow]]
+- [[no-fluff-model]]
+- [[disposition]]
+- [[kpi-tracking]]

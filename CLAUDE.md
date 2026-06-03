@@ -186,7 +186,9 @@ Full AI automation of real estate business across three verticals: Wholesale + C
 ### 9. Strategic Direction
 Full AI automation of real estate operations across wholesale, property management, and capital raising. GHL is the single hub where all AI agents live, and **wih-app is being built as the central CRM / one-stop shop the whole operation runs from** — the long-term destination that consolidates the three verticals into one system. Matt Beard's AI-augmented wholesale framework is the primary external model being studied. Every new initiative routes through GHL.
 
-*Last updated: May 28, 2026 — compiled from sessions, files, and Notion context*
+**North star — the billion-dollar ladder** (full detail: `wiki/company-roadmap.md`): the current businesses exist to throw off cash flow that funds each higher tier. Tier 0 cash-flow engines (LBK Cleaners + wholesale + rent-to-own) → Tier 1 new development → Tier 2 private money lending + commercial real estate → Tier 3 large-scale neighborhood development with in-house mortgage / rent-to-own / seller-finance products (originate *and* service the paper in-house). Operating thesis: **AI-run company** (hire only vital in-house roles or AI-multiplier operators) and **own the software** — replace paid SaaS with in-house apps to kill recurring/servicing/setup fees. Banking is consolidating onto **Mercury** so AI can own the money layer via API/MCP (see `wiki/baselane-to-mercury-migration.md`); the committed later build is an in-house management app that replaces DoorLoop (tenant portals + in-house note/RTO servicing).
+
+*Last updated: June 3, 2026 — compiled from sessions, files, and Notion context*
 *Note: Full business interview session (Dan/Trell method) not yet completed — update this section when done*
 
 ---

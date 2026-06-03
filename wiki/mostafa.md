@@ -2,8 +2,8 @@
 name: mostafa
 type: person
 tags: [team, operations, communications]
-sources: [CLAUDE.md seed]
-updated: 2026-05-29
+sources: [CLAUDE.md seed, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md]
+updated: 2026-06-03
 ---
 
 # Mostafa (Elkhamisy)
@@ -12,15 +12,23 @@ updated: 2026-05-29
 
 **Sources**: CLAUDE.md seed
 
-**Last updated**: 2026-05-29
+**Last updated**: 2026-06-03
 
 ---
 
-Mostafa is the execution layer for [[wih]] and [[lbk-cleaners]]. Every outbound message — texts, emails, GHL sequences — routes through him. Joshua does not send outbound comms directly.
+Mostafa is the execution layer for [[wih]] and [[lbk-cleaners]]. Every outbound message — texts, emails, GHL sequences — routes through him. Joshua does not send outbound comms directly. **SOP reaffirmed (May 2026): all outbound comms route through Mostafa.**
 
 He is also the human-in-the-loop for all AI automations. When [[vince-ai]] or other agents need a human decision or review, Mostafa handles it.
 
 For [[lbk-cleaners]], he oversees the [[bookingkoala]] platform — managing bookings, cleaner coordination, and customer communications through [[ghl]] via [[zapier]] integration.
+
+## Role and tooling (May 2026)
+
+Mostafa's role is best described as transaction coordinator + appointment setter + IT tech + "master of automations." He is now onboarded onto VS Code + Claude Code + the superpowers plugin and is building automations/skills hands-on (GitHub handle `m_khamisy`; Claude account on docs@webberinvestmenthomes.com). (source: transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md)
+
+He is named on lender authorization forms as Joshua's authorized assistant (e.g. the [[yvonne-scott-subject-to]] deal).
+
+Works remotely from Egypt, often overnight relative to Central time. Task management is migrating from [[ghl]] into [[notion]] (a dedicated Team Space).
 
 ## Related pages
 - [[wih]]
@@ -31,3 +39,5 @@ For [[lbk-cleaners]], he oversees the [[bookingkoala]] platform — managing boo
 - [[joshua]]
 - [[mkenzy]]
 - [[kenneth]]
+- [[notion]]
+- [[yvonne-scott-subject-to]]

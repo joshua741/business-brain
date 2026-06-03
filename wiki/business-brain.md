@@ -20,8 +20,17 @@ The Business Brain is the `wiki/` knowledge base in `C:\Users\joshu\Documents\Bu
 
 It is the implementation of the [[ai-operating-system]] pattern ([[nate-herk]]) — strong on **Context** and **Capabilities**, with live **Connections** ([[ghl]], [[baselane]], [[doorloop]], [[google-sheets]]) the main gap. New ingestion surfaces include the `/watch` [[watch-video-capability]] (video → transcript → wiki). The brain underpins the broader [[ai-automation-strategy]].
 
+**The information moat:** the wiki is Joshua's [[information-moat]]. Per Boris Cherny / the Bitter Lesson, the durable advantage is the quality of context fed to the model — not prompt-tuning. Accumulating high-quality, business-specific context compounds in a way competitors can't easily copy, and it directly powers the [[claude-code-workflow]] build stack.
+
+**Proof-content engine:** the brain also doubles as a content engine — transcripts → "interesting moments" → [[content-ai]] backlog — so the act of running the business generates marketing material at zero extra capture cost.
+
+Live ingest now spans **Notion, [[ghl]], Google Drive, Google Calendar, and [[doorloop]]** into the Obsidian graph.
+
 ## Related pages
 - [[ai-operating-system]]
 - [[ai-automation-strategy]]
 - [[nate-herk]]
 - [[watch-video-capability]]
+- [[information-moat]]
+- [[claude-code-workflow]]
+- [[content-ai]]
