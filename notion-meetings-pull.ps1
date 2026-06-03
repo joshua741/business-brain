@@ -1,0 +1,79 @@
+# Business Brain -- Notion Meeting Notes Pull + Ingest
+# Runs at 4:00 PM via Windows Task Scheduler
+# Sequence: git pull > pull Notion meeting notes > ingest > privacy gate > commit > push
+
+$repoPath = "C:\Users\joshu\Documents\Business_Brain"
+$logFile  = "$repoPath\daily-maintenance.log"
+$claude   = "C:\Users\joshu\AppData\Roaming\npm\claude.cmd"
+$git      = "C:\Program Files\Git\cmd\git.exe"
+$gh       = "C:\Program Files\GitHub CLI\gh.exe"
+$date     = Get-Date -Format "yyyy-MM-dd"
+
+function Log($msg) {
+    $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    "[$ts] $msg" | Out-File -Append -Encoding utf8 $logFile
+}
+
+Set-Location $repoPath
+$env:BB_CAPTURE_RUNNING = "1"
+Log "=== Notion meeting pull started ==="
+
+Log "git pull"
+& $git pull origin master 2>&1 | ForEach-Object { Log $_ }
+
+Log "Notion meetings connector"
+& python "$repoPath\connectors\notion_meetings.py" 2>&1 | ForEach-Object { Log $_ }
+
+Log "Running wiki ingest agent"
+$maintPrompt = @"
+You are the daily maintenance agent for Joshua Webber's Business Brain wiki stored in the current directory ($repoPath).
+
+CRITICAL: You are running fully autonomous with NO human present. Nobody can answer questions or approve anything. Do NOT ask questions. Do NOT produce a report and wait for approval. Directly CREATE and EDIT the files yourself with your file tools. Make your best judgment on any uncertainty and proceed. Your ONLY chat output should be a one-line summary at the very end.
+
+Skip any source file that is empty (0 bytes) or contains no meaningful content -- do not create a page for it.
+
+Do the following in order:
+
+1. Read wiki/.last-ingest for reference only (do NOT use it as a filter).
+2. INGEST BY RECONCILIATION (not by date). For every file in raw/ (recursively, *.md), determine whether a wiki/source-*.md page already lists that exact filename in its sources: frontmatter. For each raw file with NO such source page, ingest it now:
+   - Create a source page in wiki/ named source-[kebab-title].md (frontmatter: name, type: source, tags, sources: [<exact raw filename>], updated: $date) with a detailed summary including specific figures, dates, parties, (source: <filename>) citations, and [[wikilinks]]
+   - Create or update entity, project, concept, and person pages it touches
+   - Add wikilinks throughout
+   - Add the source to wiki/index.md under Sources
+   - APP ROUTING: if the source is relevant to the wih-app CRM (CRM features, AI agents, dashboards, automations, or any of the three verticals: wholesale/creative finance, property management, capital raising), also append a one-line idea with a [[wikilink]] to the "Feature context to fold in" section of wiki/wih-app.md.
+3. Run wiki lint:
+   - Orphan pages: find pages with no inbound wikilinks, add a link from the most relevant page
+   - Missing pages: find [[wikilinks]] with no corresponding file, create stub pages with correct frontmatter
+   - Contradictions: flag in wiki/log.md, do not auto-resolve
+   - Stale status: update status fields where evidence supports it
+4. Append to wiki/log.md: ## [$date] notion-pull | [one-line summary of what was ingested]
+5. Write $date to wiki/.last-ingest
+
+Do not run any git commands. Exit when done.
+"@
+& $claude --print $maintPrompt --dangerously-skip-permissions 2>&1 | ForEach-Object { Log $_ }
+
+Log "Secret audit (non-fatal warning)"
+& python "$repoPath\lib\audit_secrets.py" 2>&1 | ForEach-Object { Log $_ }
+
+Log "Repo visibility check"
+$isPrivate = (& $gh repo view joshua741/business-brain --json isPrivate -q .isPrivate 2>&1 | Out-String).Trim()
+Log "isPrivate=$isPrivate"
+if ($isPrivate -ne 'true') {
+    Log "ABORT: repo is NOT private -- refusing to commit/push sensitive data."
+    Log "=== Notion meeting pull halted on privacy gate ==="
+    exit 1
+}
+
+$changes = & $git status --porcelain 2>&1
+if ($changes) {
+    Log "Changes detected -- committing"
+    & $git add -A 2>&1 | ForEach-Object { Log $_ }
+    & $git commit -m "chore: notion meeting pull $date" 2>&1 | ForEach-Object { Log $_ }
+    & $git push origin master 2>&1 | ForEach-Object { Log $_ }
+    Log "Pushed to GitHub"
+} else {
+    Log "No changes -- nothing to commit"
+}
+
+Log "=== Notion meeting pull complete ==="

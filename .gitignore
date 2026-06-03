@@ -2,6 +2,7 @@ hooks/.live-state/
 __pycache__/
 *.pyc
 connectors/.local-ingest-manifest.json
+connectors/.notion-meetings-manifest.json
 drop/*
 !drop/.gitkeep
 .env

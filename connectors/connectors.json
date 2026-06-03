@@ -64,12 +64,12 @@
     {
       "name": "notion",
       "type": "api",
-      "status": "needs-credentials",
-      "source": "Notion: master prompts, Vince memory, databases",
-      "extractor": "TBD (Notion API)",
-      "cadence": "daily",
-      "credential_needed": "NOTION_API_KEY (internal integration token) + shared db/page ids",
-      "notes": "Also an output target for master-prompt sync."
+      "status": "active",
+      "source": "Notion: Team Meetings database (AI meeting notes)",
+      "extractor": "connectors/notion_meetings.py",
+      "cadence": "daily-4pm",
+      "credential_needed": "NOTION_API_KEY + NOTION_MEETINGS_DB_ID in .env",
+      "notes": "Pulls morning team meeting notes -> raw/ -> wiki via notion-meetings-pull.ps1. Master-prompt sync still TODO under a separate path."
     },
     {
       "name": "doorloop",
