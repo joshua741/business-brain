@@ -26,6 +26,9 @@ def run():
     assert mask_text("Authorization: Bearer sk-abcdefghij1234567890") == "Authorization: Bearer <REDACTED-TOKEN>"
     # key=value secret assignment redacts the value
     assert mask_text("password: hunter2longpassword123") == "password: <REDACTED>"
+    # Mercury token format redacted (fake sample)
+    assert mask_text("secret-token:mercury_production_cma_ABCDEFGHIJKLMNOP_xyz") == "<REDACTED-TOKEN>"
+    assert mask_text("mercury_production_cma_ABCDEFGHIJKLMNOP") == "<REDACTED-TOKEN>"
     print("test_mask_sensitive PASS")
 
 if __name__ == "__main__":

@@ -84,12 +84,12 @@
     {
       "name": "mercury",
       "type": "api",
-      "status": "needs-credentials",
-      "source": "Mercury: balances, transactions",
-      "extractor": "TBD",
+      "status": "active",
+      "source": "Mercury: account balances + transactions (read); invoicing + payments (write, planned)",
+      "extractor": "connectors/mercury.py (read-only snapshot)",
       "cadence": "daily",
-      "credential_needed": "MERCURY_API_TOKEN (read-only)",
-      "notes": "Profit First allocations."
+      "credential_needed": "MERCURY_API_TOKEN (FULL-ACCESS token in .env)",
+      "notes": "Read snapshot live -> raw/mercury-snapshot-DATE.md (acct/routing masked). Token is full read/write, but write/money-moving + invoicing actions are intentionally NOT wired yet -- they will live in a separate APPROVAL-GATED tool. Long-term: AI owns the money layer; pin token IP to a fixed server. Mercury also supports native invoicing (see [[mercury]])."
     },
     {
       "name": "baselane",

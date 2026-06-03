@@ -47,6 +47,10 @@ Log "Supabase connector"
 Log "Google Sheets connector"
 & python "$repoPath\connectors\google_sheets.py" 2>&1 | ForEach-Object { Log $_ }
 
+# 2b6. Mercury connector (read-only balances/transactions snapshot; self-skips if creds absent)
+Log "Mercury connector"
+& python "$repoPath\connectors\mercury.py" 2>&1 | ForEach-Object { Log $_ }
+
 # 2c. Connector discovery / gap detector -> connectors/STATUS.md
 Log "Connector gap detector"
 & python "$repoPath\connectors\discover_gaps.py" 2>&1 | ForEach-Object { Log $_ }

@@ -12,12 +12,14 @@ import sys
 SSN_RE = re.compile(r"\b(\d{3})-(\d{2})-(\d{4})\b")
 # API tokens / secrets by known prefix -> fully redacted (never show any of it).
 TOKEN_RE = re.compile(
-    r"\b(?:pit-[0-9a-fA-F-]{16,}"
-    r"|sk-[A-Za-z0-9]{16,}|sk_(?:live|test)_[A-Za-z0-9]{16,}"
-    r"|(?:ghp|gho|ghs|github_pat)_[A-Za-z0-9_]{16,}"
-    r"|xox[baprs]-[A-Za-z0-9-]{10,}"
-    r"|AKIA[0-9A-Z]{12,}"
-    r"|AC[0-9a-fA-F]{30,})\b"
+    r"(?:secret-token:[A-Za-z0-9_:.\-]{12,}"      # Mercury API token form
+    r"|mercury_[a-z]+_[A-Za-z0-9_]{12,}"          # Mercury token body
+    r"|\bpit-[0-9a-fA-F-]{16,}"
+    r"|\bsk-[A-Za-z0-9]{16,}|\bsk_(?:live|test)_[A-Za-z0-9]{16,}"
+    r"|\b(?:ghp|gho|ghs|github_pat)_[A-Za-z0-9_]{16,}"
+    r"|\bxox[baprs]-[A-Za-z0-9-]{10,}"
+    r"|\bAKIA[0-9A-Z]{12,}"
+    r"|\bAC[0-9a-fA-F]{30,})"
 )
 # key=value / "key": "value" secret assignments -> redact the value only.
 KV_SECRET_RE = re.compile(
