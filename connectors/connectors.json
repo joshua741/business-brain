@@ -46,10 +46,10 @@
       "type": "api",
       "status": "needs-credentials",
       "source": "GoHighLevel: pipelines, contacts, conversations, opportunities",
-      "extractor": "TBD (n8n or local API script)",
+      "extractor": "connectors/ghl.py",
       "cadence": "daily",
-      "credential_needed": "GHL_API_KEY + location id (GHL API v2)",
-      "notes": "Contacts currently exported manually as CSV via Downloads."
+      "credential_needed": "GHL_API_TOKEN + GHL_LOCATION_ID (GHL API v2 Private Integration Token)",
+      "notes": "Connector built; wired into daily pipeline; self-skips until creds are in vault .env. Writes raw/ghl-snapshot-DATE.md."
     },
     {
       "name": "stripe",

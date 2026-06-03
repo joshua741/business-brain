@@ -39,6 +39,10 @@ Otherwise output: DOWNLOADED [comma-separated list of filenames]
 Log "Local-files connector (drop folder)"
 & python "$repoPath\connectors\local_files.py" 2>&1 | ForEach-Object { Log $_ }
 
+# 2b2. GHL connector (read-only daily snapshot; self-skips if creds absent)
+Log "GHL connector"
+& python "$repoPath\connectors\ghl.py" 2>&1 | ForEach-Object { Log $_ }
+
 # 2c. Connector discovery / gap detector -> connectors/STATUS.md
 Log "Connector gap detector"
 & python "$repoPath\connectors\discover_gaps.py" 2>&1 | ForEach-Object { Log $_ }

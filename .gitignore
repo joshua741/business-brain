@@ -4,3 +4,4 @@ __pycache__/
 connectors/.local-ingest-manifest.json
 drop/*
 !drop/.gitkeep
+.env
