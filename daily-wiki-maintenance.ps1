@@ -43,6 +43,10 @@ Log "Local-files connector (drop folder)"
 Log "GHL connector"
 & python "$repoPath\connectors\ghl.py" 2>&1 | ForEach-Object { Log $_ }
 
+# 2b3. Twilio connector (read-only SMS log snapshot; self-skips if creds absent)
+Log "Twilio connector"
+& python "$repoPath\connectors\twilio_logs.py" 2>&1 | ForEach-Object { Log $_ }
+
 # 2c. Connector discovery / gap detector -> connectors/STATUS.md
 Log "Connector gap detector"
 & python "$repoPath\connectors\discover_gaps.py" 2>&1 | ForEach-Object { Log $_ }

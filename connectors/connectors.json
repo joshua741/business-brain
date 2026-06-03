@@ -114,12 +114,12 @@
     {
       "name": "twilio",
       "type": "api",
-      "status": "needs-credentials",
-      "source": "Twilio: SMS/voice logs",
-      "extractor": "TBD (Twilio REST API)",
+      "status": "active",
+      "source": "Twilio: SMS logs",
+      "extractor": "connectors/twilio_logs.py",
       "cadence": "daily",
-      "credential_needed": "TWILIO_ACCOUNT_SID + TWILIO_AUTH_TOKEN",
-      "notes": "SMS logs currently arrive as CSV via Downloads."
+      "credential_needed": "TWILIO_ACCOUNT_SID + TWILIO_API_KEY + TWILIO_API_SECRET (in wih-app/.env)",
+      "notes": "Read-only SMS log snapshot -> raw/twilio-sms-log-DATE.md (phones masked). Wired into daily pipeline."
     },
     {
       "name": "supabase",
