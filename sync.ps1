@@ -1,4 +1,4 @@
-# Business Brain daily sync — pulls latest wiki + CLAUDE.md from GitHub
+# Business Brain daily sync -- pulls latest wiki + CLAUDE.md from GitHub
 Set-Location "C:\Users\joshu\Documents\Business_Brain"
 git pull origin master 2>&1 | Out-Null
 

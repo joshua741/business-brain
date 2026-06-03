@@ -1,6 +1,6 @@
-# Business Brain — Daily Wiki Maintenance
+# Business Brain -- Daily Wiki Maintenance
 # Runs at 6:57 AM via Windows Task Scheduler
-# Sequence: git pull → download Drive briefings → ingest → lint → commit → push
+# Sequence: git pull  download Drive briefings  ingest  lint  commit  push
 
 $repoPath = "C:\Users\joshu\Documents\Business_Brain"
 $rawPath  = "$repoPath\raw"
@@ -16,6 +16,7 @@ function Log($msg) {
 }
 
 Set-Location $repoPath
+$env:BB_CAPTURE_RUNNING = "1"  # suppress session-capture hooks during the automated run
 Log "=== Daily maintenance started ==="
 
 # 1. Pull latest from GitHub
@@ -41,7 +42,7 @@ You are the daily maintenance agent for Joshua Webber's Business Brain wiki stor
 
 CRITICAL: You are running fully autonomous with NO human present. Nobody can answer questions or approve anything. Do NOT ask questions. Do NOT produce a report and wait for approval. Directly CREATE and EDIT the files yourself with your file tools. Make your best judgment on any uncertainty and proceed. Your ONLY chat output should be a one-line summary at the very end.
 
-Skip any source file that is empty (0 bytes) or contains no meaningful content — do not create a page for it.
+Skip any source file that is empty (0 bytes) or contains no meaningful content -- do not create a page for it.
 
 Do the following in order:
 
@@ -63,7 +64,7 @@ Do not run any git commands. Exit when done.
 "@
 & $claude --print $maintPrompt --dangerously-skip-permissions 2>&1 | ForEach-Object { Log $_ }
 
-# 3b. Privacy gate — audit for unmasked secrets (warning) + hard repo-private check
+# 3b. Privacy gate -- audit for unmasked secrets (warning) + hard repo-private check
 Log "Secret audit (non-fatal warning)"
 & python "$repoPath\lib\audit_secrets.py" 2>&1 | ForEach-Object { Log $_ }
 
@@ -71,7 +72,7 @@ Log "Repo visibility check"
 $isPrivate = (& $gh repo view joshua741/business-brain --json isPrivate -q .isPrivate 2>&1 | Out-String).Trim()
 Log "isPrivate=$isPrivate"
 if ($isPrivate -ne 'true') {
-    Log "ABORT: repo is NOT private — refusing to commit/push sensitive data."
+    Log "ABORT: repo is NOT private -- refusing to commit/push sensitive data."
     Log "=== Daily maintenance halted on privacy gate ==="
     exit 1
 }
@@ -79,13 +80,13 @@ if ($isPrivate -ne 'true') {
 # 4. Commit and push if anything changed
 $changes = & $git status --porcelain 2>&1
 if ($changes) {
-    Log "Changes detected — committing"
+    Log "Changes detected -- committing"
     & $git add -A 2>&1 | ForEach-Object { Log $_ }
     & $git commit -m "chore: daily wiki maintenance $date" 2>&1 | ForEach-Object { Log $_ }
     & $git push origin master 2>&1 | ForEach-Object { Log $_ }
     Log "Pushed to GitHub"
 } else {
-    Log "No changes — nothing to commit"
+    Log "No changes -- nothing to commit"
 }
 
 Log "=== Daily maintenance complete ==="

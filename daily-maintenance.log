@@ -149,3 +149,97 @@
 [2026-05-29 09:44:22] **To apply today's 5 fixes right now**, just say "apply the lint fixes" in an interactive session.
 [2026-05-29 09:44:23] Changes detected â€
 [2026-05-29 09:44:23] === Daily maintenance complete ===
+[2026-06-03 01:03:27] >>> MANUAL LIVE-TEST TRIGGER <<<
+[2026-06-03 01:07:52] === Daily maintenance started ===
+[2026-06-03 01:07:52] git pull
+[2026-06-03 01:07:54] From https://github.com/joshua741/business-brain
+[2026-06-03 01:07:54]  * branch            master     -> FETCH_HEAD
+[2026-06-03 01:07:54] Already up to date.
+[2026-06-03 01:07:54] Downloading briefings from Google Drive
+[2026-06-03 01:07:57] Warning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.
+[2026-06-03 01:09:57] I can't reach Google Drive from this session, and I've now confirmed why on every path:
+[2026-06-03 01:09:57] 
+[2026-06-03 01:09:57] - **No Drive MCP** connected — there are no native Drive tools.
+[2026-06-03 01:09:57] - **Nothing mounted** — only `C:` exists; no `My Drive`/`Google Drive` mount.
+[2026-06-03 01:09:57] - **`rclone`** — running it is gated behind an approval prompt that got denied.
+[2026-06-03 01:09:57] - **Filesystem search blocked** — this session is sandboxed to `C:\Users\joshu\Documents\Business_Brain`, so I can't even scan your home folder for a locally-synced copy.
+[2026-06-03 01:09:57] 
+[2026-06-03 01:09:57] So checking Drive isn't possible right now without you unlocking one of those. Pick the one that matches your setup and I'll run with it:
+[2026-06-03 01:09:57] 
+[2026-06-03 01:09:57] 1. **rclone** — approve the command next time and I'll list `Business Brain Briefings` (only works if you've got a Drive remote configured).
+[2026-06-03 01:09:57] 2. **Local sync** — if Google Drive desktop syncs it to a folder, give me the path (e.g. `C:\Users\joshu\My Drive\...`) and approve read access to it.
+[2026-06-03 01:09:57] 3. **Drive MCP** — connect a Google Drive MCP server for native access going forward.
+[2026-06-03 01:09:57] 
+[2026-06-03 01:09:57] Which one's true for you?
+[2026-06-03 01:09:59] Running wiki ingest and lint agent
+[2026-06-03 01:10:02] Warning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.
+[2026-06-03 01:21:56] Daily maintenance complete. Here's what I found and did.
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] ## Done
+[2026-06-03 01:21:56] **Reconciled all 179 raw files** against the wiki. Everything financial/legal/property was already ingested — **58 files were not**, and I handled all of them:
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] **1. Voice-agents clip (the high-value one)** → created `source-voice-agents-elevenlabs.md` + `elevenlabs.md`, updated `vince-ai`, `twilio`, `nate-herk`, `ai-automation-strategy`.
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] The real takeaway: this is the blueprint for **giving Vince a voice/phone layer**. Same persona, qualification logic, and booking tools Vince already runs over SMS — wrapped in an ElevenLabs agent on a Twilio number, so it answers inbound lender calls. Built code-first through Claude Code, ~45 min in the demo. Watch-outs are real: lock the hostname (open widgets eat your credits), set per-call caps, ~$0.08–0.12/min.
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] **2. 57 session-capture memos** → one consolidation page (`source-session-captures.md`) instead of 57 noise pages. Routed the durable facts out: wih-app Railway details (`terrific-blessing`, live URL, stack), wih-ai-service link, the "Daily Tasks — Mostafa" Notion DB plan, DoorLoop's no-live-data status, and the `/watch` video capability (`watch-video-capability.md`). Created `business-brain.md` and cleaned up dangling `[[Business Brain]]` links.
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] Updated `index.md`, `log.md`, `.last-ingest`. No git commit — that's not my call unless you want it.
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] ## Two things for you
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] **4302 E 61st St is in the wiki but missing from your CLAUDE.md property portfolio** (the 10-property list). The wiki is the source of truth, so the master prompt is stale. Want me to add it? — *4302 E 61st St — creative-finance close ~Mar 2026, $119K purchase / $76K balance / ~$43K equity, W&M Series.*
+[2026-06-03 01:21:56] 
+[2026-06-03 01:21:56] **Your session capture is broken.** The two newest memos (06-03) are just the error `claude.cmd : The command line is too long` from `summarize-session.ps1:87` — the prompt outgrew the Windows command-line limit, so recent sessions aren't being summarized. Worth fixing (pipe the prompt via stdin or a temp file instead of an inline arg). Want me to patch it?
+[2026-06-03 01:21:58] Secret audit (non-fatal warning)
+[2026-06-03 01:21:58] POTENTIAL UNMASKED SECRETS:
+[2026-06-03 01:21:58]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-feb-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 01:21:58]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-jan-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 01:21:58]  - raw\baselane-webber-wealth-holdings-llc-bank-3904-ave-r-jan-2026-statement.md: long-digit-run '0093797744'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5656434354'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '7468562544'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '3454557676'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '6434565664'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1122334455'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '2035551234'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 01:21:58]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 01:21:58]  - raw\lbk-cleaners-finance-tracker.md: long-digit-run '1137906739'
+[2026-06-03 01:21:58]  - raw\lbk-cleaners-finance-tracker.md: long-digit-run '488110635754'
+[2026-06-03 01:21:58]  - raw\seller-finance-agreement-526-53r-st.md: long-digit-run '4000015856'
+[2026-06-03 01:21:58]  - raw\w-m-4019-37th-series-texas-state-registry-user-name.md: long-digit-run '1073684625'
+[2026-06-03 01:21:58] Repo visibility check
+[2026-06-03 01:21:59] isPrivate=true
+[2026-06-03 01:21:59] Changes detected -- committing

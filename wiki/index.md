@@ -37,6 +37,8 @@
 - [Supabase](supabase.md) — database for wih-app
 - [Google Sheets](google-sheets.md) — KPI tracking, financial dashboards, content automation
 - [n8n](n8n.md) — workflow automation
+- [ElevenLabs](elevenlabs.md) — AI voice / TTS + voice-agent builder; candidate voice layer for Vince AI
+- [/watch Video Capability](watch-video-capability.md) — Claude Code video-analysis plugin; ingests video → transcript → wiki
 
 ## Projects
 - [Vince AI](vince-ai.md) — PML/TL qualification chatbot, GHL + Twilio + Claude, needs number and publishing
@@ -54,6 +56,8 @@
 - [PML/TL](pml-tl.md) — Private Money Lenders and Transactional Lenders, capital raising
 - [Wholesale](wholesale.md) — top-of-funnel deal sourcing, AI-automated outreach pipeline
 - [AI Automation Strategy](ai-automation-strategy.md) — GHL as hub, Matt Beard framework, three verticals
+- [AI Operating System](ai-operating-system.md) — Four Cs / Three Ms / Bike Method framework for the Business Brain (Nate Herk)
+- [Business Brain](business-brain.md) — the Claude-maintained wiki itself; single source of truth, AIOS implementation
 - [Property Management](property-management.md) — self-managed portfolio ops, Mostafa as lead, AI automation roadmap
 
 ## People
@@ -69,6 +73,10 @@
 - [Ed Mylett](ed-mylett.md) — role model
 - [Grant Cardone](grant-cardone.md) — role model
 - [Matt Beard](matt-beard.md) — AI-augmented wholesale framework reference
+- [Nate Herk](nate-herk.md) — AI automation creator, source of the AI Operating System framework
 
 ## Sources
 - [BookingKoala Help Center](source-bookingkoala-help-center.md) — 370-article complete reference for BookingKoala, prepared for LBK Cleaners
+- [AIOS video (Nate Herk)](source-aios-nate-herk.md) — "I Turned Claude Opus 4.8 Into My Entire AI Operating System" — Four Cs framework
+- [Voice Agents w/ ElevenLabs (Nate Herk)](source-voice-agents-elevenlabs.md) — code-first voice agent build; blueprint for a voice layer on Vince AI
+- [Session Captures (May 29 – Jun 3)](source-session-captures.md) — reconciliation page for 57 session-capture memos; durable facts routed to their pages

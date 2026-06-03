@@ -20,9 +20,19 @@ updated: 2026-05-29
 
 Strategic direction: full AI automation of property management workflows. [[ghl]] is the hub for all tenant-facing communications. [[ai-automation-strategy]] covers the broader roadmap across all three verticals including this one.
 
+## Tenant operations
+- Prospect intake uses the [[tenant-script]] within [[sales-scripts]] (move-in timing, pets, occupancy → application/tour).
+- Lease enforcement examples: [[aaron-mccloskey]] smoking violation (Unit E, [[1312-65th-dr]]) and the Steffanie Gonzalez pest inspection notice (Unit A) — see [[source-gonzalez-inspection-notice]].
+- Lease/addendum/disclosure stack (AS-IS repair shift, auto-bank-draft requirement, tenant financing disclosure) on [[legal-document-templates]].
+- Rent collection via auto-ACH; financials flow into [[doorloop]] P&Ls and [[baselane]].
+
 ## Related pages
 - [[wih]]
 - [[mostafa]]
 - [[doorloop]]
 - [[ghl]]
 - [[ai-automation-strategy]]
+- [[sales-scripts]]
+- [[legal-document-templates]]
+- [[aaron-mccloskey]]
+- [[source-gonzalez-inspection-notice]]

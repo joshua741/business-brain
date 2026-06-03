@@ -40,6 +40,20 @@ Never update silently. Always flag it and confirm first.
 
 ---
 
+## Continuous Learning Capture (Non-Negotiable)
+
+When you fight through a non-obvious problem, find a better way to do anything, hit a tool/environment quirk, or correct a wrong assumption — capture it immediately, in the same session, before moving on. Never let a hard-won lesson evaporate. Relearning the same thing is exactly the wasted time and repetition Joshua refuses to tolerate.
+
+Route each learning with this rubric — score **Nature** (HOW I work vs WHAT the business is) and **Durability** (will it recur or save real future pain?):
+- HOW to work + durable → **Claude brain** (a memory file)
+- WHAT the business is + durable → **this wiki**
+- Both audiences → **both**
+- Trivial / one-off → skip
+
+Business facts still follow the propose-then-confirm rule before touching CLAUDE.md or Notion; memory files are maintained directly. The full rubric and seeded examples live in the `learning-capture-process` memory.
+
+---
+
 ## Who I Am — Personal
 
 ### 1. Core Identity: The Architect
