@@ -44,7 +44,7 @@
     {
       "name": "ghl",
       "type": "api",
-      "status": "needs-credentials",
+      "status": "active",
       "source": "GoHighLevel: pipelines, contacts, conversations, opportunities",
       "extractor": "connectors/ghl.py",
       "cadence": "daily",

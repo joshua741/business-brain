@@ -48,6 +48,8 @@ def api_get(path: str, token: str, params: dict) -> dict:
         "Authorization": f"Bearer {token}",
         "Version": VERSION,
         "Accept": "application/json",
+        # GHL sits behind Cloudflare, which blocks the default Python-urllib UA (error 1010).
+        "User-Agent": "BusinessBrain-Connector/1.0",
     })
     with urllib.request.urlopen(req, timeout=60) as resp:
         return json.loads(resp.read().decode("utf-8"))

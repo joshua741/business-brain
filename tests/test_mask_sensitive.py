@@ -21,6 +21,11 @@ def run():
     assert mask_text("account 998877665544.") == "account 99XXXXXX5544."
     # regression: a real decimal amount (digits.digit) stays unmasked
     assert mask_text("balance 12345678.90 dollars") == "balance 12345678.90 dollars"
+    # API tokens fully redacted (fake token, never a real one)
+    assert mask_text("pit-12345678-1234-1234-1234-123456789abc") == "<REDACTED-TOKEN>"
+    assert mask_text("Authorization: Bearer sk-abcdefghij1234567890") == "Authorization: Bearer <REDACTED-TOKEN>"
+    # key=value secret assignment redacts the value
+    assert mask_text("password: hunter2longpassword123") == "password: <REDACTED>"
     print("test_mask_sensitive PASS")
 
 if __name__ == "__main__":
