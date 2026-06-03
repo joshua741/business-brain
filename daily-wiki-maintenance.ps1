@@ -7,6 +7,7 @@ $rawPath  = "$repoPath\raw"
 $logFile  = "$repoPath\daily-maintenance.log"
 $claude   = "C:\Users\joshu\AppData\Roaming\npm\claude.cmd"
 $git      = "C:\Program Files\Git\cmd\git.exe"
+$gh       = "C:\Program Files\GitHub CLI\gh.exe"
 $date     = Get-Date -Format "yyyy-MM-dd"
 
 function Log($msg) {
@@ -38,11 +39,15 @@ Log "Running wiki ingest and lint agent"
 $maintPrompt = @"
 You are the daily maintenance agent for Joshua Webber's Business Brain wiki stored in the current directory ($repoPath).
 
+CRITICAL: You are running fully autonomous with NO human present. Nobody can answer questions or approve anything. Do NOT ask questions. Do NOT produce a report and wait for approval. Directly CREATE and EDIT the files yourself with your file tools. Make your best judgment on any uncertainty and proceed. Your ONLY chat output should be a one-line summary at the very end.
+
+Skip any source file that is empty (0 bytes) or contains no meaningful content — do not create a page for it.
+
 Do the following in order:
 
-1. Read wiki/.last-ingest to get the last ingest timestamp.
-2. List all files in raw/. For any file newer than .last-ingest, auto-ingest it:
-   - Create a source page in wiki/ named source-[kebab-title].md
+1. Read wiki/.last-ingest for reference only (do NOT use it as a filter).
+2. INGEST BY RECONCILIATION (not by date). For every file in raw/ (recursively, *.md), determine whether a wiki/source-*.md page already lists that exact filename in its `sources:` frontmatter. For each raw file with NO such source page, ingest it now:
+   - Create a source page in wiki/ named source-[kebab-title].md (frontmatter: name, type: source, tags, sources: [<exact raw filename>], updated: $date) with a detailed summary including specific figures, dates, parties, (source: <filename>) citations, and [[wikilinks]]
    - Create or update entity, project, concept, and person pages it touches
    - Add wikilinks throughout
    - Add the source to wiki/index.md under Sources
@@ -57,6 +62,19 @@ Do the following in order:
 Do not run any git commands. Exit when done.
 "@
 & $claude --print $maintPrompt --dangerously-skip-permissions 2>&1 | ForEach-Object { Log $_ }
+
+# 3b. Privacy gate — audit for unmasked secrets (warning) + hard repo-private check
+Log "Secret audit (non-fatal warning)"
+& python "$repoPath\lib\audit_secrets.py" 2>&1 | ForEach-Object { Log $_ }
+
+Log "Repo visibility check"
+$isPrivate = (& $gh repo view joshua741/business-brain --json isPrivate -q .isPrivate 2>&1 | Out-String).Trim()
+Log "isPrivate=$isPrivate"
+if ($isPrivate -ne 'true') {
+    Log "ABORT: repo is NOT private — refusing to commit/push sensitive data."
+    Log "=== Daily maintenance halted on privacy gate ==="
+    exit 1
+}
 
 # 4. Commit and push if anything changed
 $changes = & $git status --porcelain 2>&1
