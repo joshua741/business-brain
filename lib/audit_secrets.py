@@ -11,8 +11,9 @@ import sys
 import pathlib
 
 SSN_RE = re.compile(r"\b\d{3}-\d{2}-\d{4}\b")
-# 10-19 digit bare runs (higher floor than the masker to limit false positives in audit)
-DIGIT_RUN_RE = re.compile(r"(?<![\d.,$-])\d{10,19}(?![\d.,-])")
+# 10-19 digit bare runs (higher floor than the masker to limit false positives in audit).
+# Right side excludes only a decimal/grouping continuation, not a sentence period.
+DIGIT_RUN_RE = re.compile(r"(?<![\d.,$-])\d{10,19}(?!\d)(?!\.\d)(?!,\d)")
 CHECKS = [(SSN_RE, "SSN"), (DIGIT_RUN_RE, "long-digit-run")]
 
 

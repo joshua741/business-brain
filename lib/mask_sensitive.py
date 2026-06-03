@@ -10,9 +10,11 @@ import re
 import sys
 
 SSN_RE = re.compile(r"\b(\d{3})-(\d{2})-(\d{4})\b")
-# 8-19 digits not adjacent to a digit, dot, comma, dollar sign, or dash.
-# The dash exclusion preserves EINs (NN-NNNNNNN); the $/comma/dot exclusion preserves amounts.
-DIGIT_RUN_RE = re.compile(r"(?<![\d.,$-])\d{8,19}(?![\d.,-])")
+# 8-19 digits not adjacent to a digit, dot, comma, dollar sign, or dash on the LEFT
+# (preserves EINs NN-NNNNNNN and $ amounts). On the RIGHT, only exclude a true
+# decimal/grouping continuation (.5 or ,5) or another digit -- NOT a sentence period,
+# so an account number at the end of a sentence still gets masked.
+DIGIT_RUN_RE = re.compile(r"(?<![\d.,$-])\d{8,19}(?!\d)(?!\.\d)(?!,\d)")
 
 
 def _mask_run(m: "re.Match") -> str:

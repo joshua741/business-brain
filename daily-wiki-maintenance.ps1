@@ -35,6 +35,14 @@ Otherwise output: DOWNLOADED [comma-separated list of filenames]
 "@
 & $claude --print $downloadPrompt --dangerously-skip-permissions 2>&1 | ForEach-Object { Log $_ }
 
+# 2b. Local-files connector: convert drop-folder docs (pdf/csv/xlsx/md) into masked raw/ .md
+Log "Local-files connector (drop folder)"
+& python "$repoPath\connectors\local_files.py" 2>&1 | ForEach-Object { Log $_ }
+
+# 2c. Connector discovery / gap detector -> connectors/STATUS.md
+Log "Connector gap detector"
+& python "$repoPath\connectors\discover_gaps.py" 2>&1 | ForEach-Object { Log $_ }
+
 # 3. Run Claude wiki ingest + lint
 Log "Running wiki ingest and lint agent"
 $maintPrompt = @"

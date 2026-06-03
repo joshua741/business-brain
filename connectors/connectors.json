@@ -1,0 +1,155 @@
+{
+  "_comment": "Connector registry for the Business Brain. status: active | needs-credentials | manual. The discover_gaps.py detector reconciles this against what is actually connected and writes connectors/STATUS.md.",
+  "connectors": [
+    {
+      "name": "local-files",
+      "type": "local",
+      "status": "active",
+      "source": "drop/ folder (auto) + Downloads (on-demand --include-downloads)",
+      "extractor": "connectors/local_files.py",
+      "cadence": "daily",
+      "credential_needed": null,
+      "notes": "Converts pdf/csv/xlsx/md/txt to masked .md in raw/. Drop folder is the intentional channel."
+    },
+    {
+      "name": "session-capture",
+      "type": "hook",
+      "status": "active",
+      "source": "Claude Code sessions on this machine",
+      "extractor": "hooks/live_session_update.py (Stop) + hooks/capture_conversation.py (SessionEnd)",
+      "cadence": "real-time",
+      "credential_needed": null,
+      "notes": "Throttled live updates + final masked report per session."
+    },
+    {
+      "name": "video-report",
+      "type": "skill",
+      "status": "active",
+      "source": "YouTube / local video files",
+      "extractor": "video-report skill (Gemini 2.5)",
+      "cadence": "on-demand",
+      "credential_needed": "GEMINI_API_KEY (present; free tier = Flash)",
+      "notes": "Writes transcripts/reports into raw/."
+    },
+    {
+      "name": "google-drive-briefings",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Google Drive folder 'Business Brain Briefings'",
+      "extractor": "daily-wiki-maintenance.ps1 Drive step",
+      "cadence": "daily",
+      "credential_needed": "gcloud auth (Drive scope) OR rclone remote OR Google Drive MCP",
+      "notes": "Daily step currently cannot reach Drive; no auth configured."
+    },
+    {
+      "name": "ghl",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "GoHighLevel: pipelines, contacts, conversations, opportunities",
+      "extractor": "TBD (n8n or local API script)",
+      "cadence": "daily",
+      "credential_needed": "GHL_API_KEY + location id (GHL API v2)",
+      "notes": "Contacts currently exported manually as CSV via Downloads."
+    },
+    {
+      "name": "stripe",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Stripe: payments, payouts, disputes",
+      "extractor": "TBD (local API script)",
+      "cadence": "daily",
+      "credential_needed": "STRIPE_SECRET_KEY (read-only restricted key recommended)",
+      "notes": "Merchant account tied to 3423 E Baylor."
+    },
+    {
+      "name": "notion",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Notion: master prompts, Vince memory, databases",
+      "extractor": "TBD (Notion API)",
+      "cadence": "daily",
+      "credential_needed": "NOTION_API_KEY (internal integration token) + shared db/page ids",
+      "notes": "Also an output target for master-prompt sync."
+    },
+    {
+      "name": "doorloop",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "DoorLoop: leases, tenants, maintenance, P&L",
+      "extractor": "TBD",
+      "cadence": "daily",
+      "credential_needed": "DOORLOOP_API_KEY",
+      "notes": "P&Ls currently arrive as exports."
+    },
+    {
+      "name": "mercury",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Mercury: balances, transactions",
+      "extractor": "TBD",
+      "cadence": "daily",
+      "credential_needed": "MERCURY_API_TOKEN (read-only)",
+      "notes": "Profit First allocations."
+    },
+    {
+      "name": "baselane",
+      "type": "manual",
+      "status": "manual",
+      "source": "Baselane / Thread Bank statements",
+      "extractor": "local-files connector (PDF statements)",
+      "cadence": "on-arrival",
+      "credential_needed": "none (no robust public API) - drop PDFs into drop/",
+      "notes": "Statements flow in as PDFs via the local-files connector."
+    },
+    {
+      "name": "bookingkoala",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "BookingKoala: bookings, customers, payouts",
+      "extractor": "TBD (API or native Google Sheets sync)",
+      "cadence": "daily",
+      "credential_needed": "BookingKoala API key OR Sheets sync access",
+      "notes": "LBK Cleaners CRM."
+    },
+    {
+      "name": "twilio",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Twilio: SMS/voice logs",
+      "extractor": "TBD (Twilio REST API)",
+      "cadence": "daily",
+      "credential_needed": "TWILIO_ACCOUNT_SID + TWILIO_AUTH_TOKEN",
+      "notes": "SMS logs currently arrive as CSV via Downloads."
+    },
+    {
+      "name": "supabase",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Supabase: wih-app data",
+      "extractor": "TBD (SQL/REST)",
+      "cadence": "daily",
+      "credential_needed": "SUPABASE_URL + service/anon key (likely in wih-app/.env)",
+      "notes": "wih-app backend."
+    },
+    {
+      "name": "google-sheets",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Google Sheets: KPI + finance dashboards",
+      "extractor": "TBD (Sheets API)",
+      "cadence": "daily",
+      "credential_needed": "gcloud auth (Sheets scope) OR service account JSON",
+      "notes": "KPI trackers, finance models."
+    },
+    {
+      "name": "telegram",
+      "type": "api",
+      "status": "needs-credentials",
+      "source": "Telegram: personal channel",
+      "extractor": "TBD (Bot API)",
+      "cadence": "daily",
+      "credential_needed": "TELEGRAM_BOT_TOKEN + chat id",
+      "notes": "Joshua's primary personal channel."
+    }
+  ]
+}

@@ -17,6 +17,10 @@ def run():
     assert mask_text("closed 2026-06-03") == "closed 2026-06-03"
     # already-masked values left alone (contain X, not pure digits)
     assert mask_text("acct 20XXXXXX6030") == "acct 20XXXXXX6030"
+    # regression: account number at END OF SENTENCE (trailing period) must still mask
+    assert mask_text("account 998877665544.") == "account 99XXXXXX5544."
+    # regression: a real decimal amount (digits.digit) stays unmasked
+    assert mask_text("balance 12345678.90 dollars") == "balance 12345678.90 dollars"
     print("test_mask_sensitive PASS")
 
 if __name__ == "__main__":
