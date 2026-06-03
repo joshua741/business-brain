@@ -52,6 +52,7 @@ Do the following in order:
    - Create or update entity, project, concept, and person pages it touches
    - Add wikilinks throughout
    - Add the source to wiki/index.md under Sources
+   - APP ROUTING: if the source is relevant to the wih-app CRM (CRM features, AI agents, dashboards, automations, or any of the three verticals: wholesale/creative finance, property management, capital raising), also append a one-line idea with a [[wikilink]] to the "Feature context to fold in" section of wiki/wih-app.md.
 3. Run wiki lint:
    - Orphan pages: find pages with no inbound wikilinks, add a link from the most relevant page
    - Missing pages: find [[wikilinks]] with no corresponding file, create stub pages with correct frontmatter
