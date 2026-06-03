@@ -167,7 +167,7 @@ Full AI automation of real estate business across three verticals: Wholesale + C
 - **LBK Cleaners:** Website live, BookingKoala CRM configured, booking page next, then cleaner hiring.
 - **Vince AI:** PML/TL qualification chatbot — GHL + Twilio + Claude. Architecture complete, needs dedicated number and publishing.
 - **Content AI:** Automated social media for Rent2OwnCribs — Google Sheets + daily automation.
-- **wih-app:** Main WIH web application (deployed on Railway, Supabase backend).
+- **wih-app:** The central CRM and one-stop shop for the entire business — the strategic centerpiece everything feeds into, spanning all three verticals (wholesale/creative finance, property management, capital raising). Deployed on Railway, Supabase backend. Relevant knowledge from the Business Brain (especially uploaded video transcripts) continuously feeds its feature backlog.
 - **wih-ai-service:** AI service layer for WIH automations.
 
 ### 7. Financial Model
@@ -183,7 +183,7 @@ Full AI automation of real estate business across three verticals: Wholesale + C
 - Entity names (Webber Investment Homes, Webber Wealth Holdings) are NOT used in external communications with vendors, plumbers, or third parties.
 
 ### 9. Strategic Direction
-Full AI automation of real estate operations across wholesale, property management, and capital raising. GHL is the single hub where all AI agents live. Matt Beard's AI-augmented wholesale framework is the primary external model being studied. Every new initiative routes through GHL.
+Full AI automation of real estate operations across wholesale, property management, and capital raising. GHL is the single hub where all AI agents live, and **wih-app is being built as the central CRM / one-stop shop the whole operation runs from** — the long-term destination that consolidates the three verticals into one system. Matt Beard's AI-augmented wholesale framework is the primary external model being studied. Every new initiative routes through GHL.
 
 *Last updated: May 28, 2026 — compiled from sessions, files, and Notion context*
 *Note: Full business interview session (Dan/Trell method) not yet completed — update this section when done*
