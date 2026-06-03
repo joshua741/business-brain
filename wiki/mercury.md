@@ -1,10 +1,10 @@
 ---
 name: mercury
 type: entity
-tags: [banking, profit-first, finance]
+tags: [banking, profit-first, finance, invoicing]
 status: active
 sources: [CLAUDE.md seed]
-updated: 2026-05-28
+updated: 2026-06-03
 ---
 
 # Mercury
@@ -20,6 +20,9 @@ updated: 2026-05-28
 Mercury holds all business bank accounts for [[wih]] and related entities. Accounts are allocated by percentage following the [[profit-first]] model — profit, owner pay, taxes, and operating expenses each have dedicated accounts. Financial dashboard tracked via [[google-sheets]].
 
 > **Becoming the primary money layer:** Under [[baselane-to-mercury-migration]], Mercury is set to replace both [[baselane]] (banking — unlimited free sub-accounts) and [[sequence]] (routing — native percentage auto-transfer rules, up to 20 accounts). The decisive advantage is Mercury's **full Banking API + MCP server**, which lets the AI layer query balances, pull transactions, and trigger payments programmatically — the thing Baselane structurally can't do. Constraints to mind: auto-transfer rules only work between same-partner-bank accounts; Treasury auto-transfers are capped at 2/mo, ≥7 days apart.
+
+## Invoicing (capability identified 2026-06-03)
+Mercury can **create and send invoices natively** — a capability we hadn't logged before. WIH invoices frequently, so this is a real opportunity: consolidate invoicing into Mercury rather than a separate tool, and (via the Banking API) automate invoice creation/tracking from [[wih-app]] — fits the "own the software / one-stop app" direction. Action: evaluate Mercury invoicing vs. the current method and consider wiring it into the in-house app's billing.
 
 ## Related pages
 - [[profit-first]]
