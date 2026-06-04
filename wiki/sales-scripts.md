@@ -41,6 +41,38 @@ A second script family, distinct from the NEPQ **seller-facing** scripts above �
 
 **Key reusable rule:** *finish every objection answer with a question* — keep the prospect talking and surrender control of the call back to the script.
 
+## RTO outreach scripts (text-based, via wih-app / Twilio)
+
+Built from the R2OC FAQ and RTO terms (see [[rent-to-own]]). Used by Mostafa and eventually automated via the wih-app AI layer.
+
+### Initial blast SMS (attach front-of-house photo)
+> Hey [First Name]! We just listed a new rent-to-own home in Lubbock — [ADDRESS]. [BEDS] bed/[BATHS] bath, $[MONTHLY]/mo, ~$[DOWN]k down, no bank needed. Credit 520+ qualifies. See it here: rent2owncribs.com/property/[SLUG] — Interested? Reply YES or NO
+
+### Response A — Interested (YES)
+Qualification sequence (3 messages):
+1. "That's great! Quick questions to see if you're a good fit — what's your current living situation? Renting, with family, or something else?"
+2. "And roughly what's your monthly income before taxes? We need about $[2.5x monthly payment]/mo for this one."
+3. "Last one — do you know your approximate credit score? We work with 520+."
+
+→ **Qualifies**: "You sound like a great fit. Apply at rent2owncribs.com — $49.90 app fee. We'll get back to you within 24–48 hours. Ready to apply?"
+→ **Doesn't qualify**: "You're a little short on [credit/income] right now, but that's fixable. Want to talk through what it would take in the next 60–90 days?"
+
+### Response B — Not interested (NO)
+1. "No problem! Can I ask — is it the price, location, or just not the right time?"
+2. If timing/price: "Totally understand. Do you know anyone looking? We pay $500 referral fee if someone you send closes."
+3. If fully out: "Got it. We list new properties regularly — want to stay on the list for future ones?"
+
+### FAQ knowledge base (for question responses)
+| Question | Answer |
+|---|---|
+| What's the down payment? | "$[OPTION FEE] — credited toward your purchase price at closing. Locks in your price today." |
+| Do I need perfect credit? | "Nope. 520+ minimum. Income and stability matter more than score." |
+| Does rent go toward buying? | "Monthly payment mirrors a future mortgage but isn't directly credited. Your option fee is what's credited at purchase." |
+| What if I can't buy at the end? | "1-year terms with annual renewals. After 12 months of on-time payments you can convert to seller financing — we carry the note, no bank." |
+| Can I make changes? | "Cosmetic changes are fine. Structural changes need written approval. You're treated like an owner from day one." |
+| How do I apply? | "Go to rent2owncribs.com, find [ADDRESS], and apply there. $49.90 fee. We'll review within 24–48 hours." |
+| Is it still available? | "Yes, still available — moving fast. Get your application in this week." |
+
 ## Related pages
 - [[wih]]
 - [[wholesale]]
