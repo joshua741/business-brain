@@ -130,10 +130,10 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 > So our program is an income-based approval. Do you know approximately how much per month your household brings in?
 
 **Step 2A — Income too low (below 3× monthly payment):**
-> So for this home we are looking to see that your household income is at least 3 times the monthly payment. That would mean earning at least $[3× PAYMENT] per month for this home. Are there any other sources of income? Or maybe a spouse or partner? We do verify this, however I want to be sure that I understand.
+> So that's actually a little off from what we look for on this home. Are there any other sources of income? Maybe a spouse or partner? We do verify this, however I want to be sure that I understand.
 
-**Step 3A — Denial: offer a different home:**
-> So for this home your income is not as high as we'd need it, however we have another that may be a better fit based on your income. Would you like me to send you over the details for this one?
+**Step 3A — Denial: reveal threshold + offer a different home:**
+> So for this home we are looking for households earning at least $[3× PAYMENT] per month — that's 3 times the monthly payment. Your income is a little short of that, however we do have another home that may be a better fit. Would you like me to send you the details?
 
 **Step 4A — Denial: no qualifying home available:**
 > I totally understand, feel free to join our Facebook community since we do post other homes that we have there.
