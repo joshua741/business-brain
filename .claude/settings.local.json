@@ -19,7 +19,8 @@
       "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-create-pages",
       "mcp__48687191-3053-4b53-a842-1bf3e3c18a12__execute_sql",
       "mcp__48687191-3053-4b53-a842-1bf3e3c18a12__apply_migration",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_get_attachment_by_filename"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_get_attachment_by_filename",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_create_data_source_item"
     ]
   }
 }
