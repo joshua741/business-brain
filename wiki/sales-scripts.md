@@ -165,6 +165,10 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 Sent BEFORE Step 4B (before confirming the time), if no email is on file. Optional for the lead — do not pressure.
 > Before I go ahead and get this scheduled, what's a good email for you? Just for scheduling purposes.
 
+**Universal — No-reply follow-up after Step 4B:**
+If the lead does not respond to the Step 4B message within 2–30 minutes, send this as a standalone follow-up:
+> Just locking you in for [TIME]. Don't forget to watch that video before the call — it'll make a big difference.
+
 ## Related pages
 - [[wih]]
 - [[wholesale]]
