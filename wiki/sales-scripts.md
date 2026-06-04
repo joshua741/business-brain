@@ -125,7 +125,11 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 > Seller Finance is $[SF_DOWN] ([SF_%]) down
 > Payments are $[MONTHLY]/mo ([RATE]% interest — taxes and insurance included)
 
-*For 4513 48th St:* RTO $9,200 (3.7%) | SF $20,400 (8.2%) | $2,525/mo | 8.5%
+*For 4513 48th St:* RTO $9,200 (3.7%) | SF $20,400 (8.2%) | RTO payment: $2,525/mo | 8.5%
+
+**Note on SF monthly payment:** SF payment is different from RTO — the down payment reduces the loan, so P&I is lower. Present SF payment as an estimate since insurance varies by policy and exact taxes must come from LCAD. Say: "approximately $[SF_ESTIMATED]/mo — taxes and insurance are included but insurance is an estimate until you have your own policy." M'kenzy will give the exact figure on the pre-qual call.
+
+*For 4513 48th St SF estimate:* Loan $229,600 | P&I ~$1,765 | Taxes (exact from LCAD — see Mostafa task) | Insurance ~$350 est. | **Total est. ~$2,115 + exact taxes**
 
 ---
 
