@@ -146,7 +146,8 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 > So the next step is a Pre-Qualification call with our property manager M'kenzy. She will ask some questions as well as answer yours. Would you like to book this call?
 
 **Step 3B — Offer meeting times:**
-> So M'kenzy is available today at 10:30am, 2:00pm, and 4:30pm. Which time works for your schedule? Also what's a good number for her to reach you?
+*(SMS flow — phone number already known. Facebook Marketplace flow — add "Also what's a good number for her to reach you?" at the end.)*
+> So M'kenzy is available today at 10:30am, 2:00pm, and 4:30pm. Which time works for your schedule?
 
 **Step 4B — Confirm meeting:**
 > Perfect, I'll schedule you guys for [TIME]. You'll receive a text reminder leading up to the meeting.
