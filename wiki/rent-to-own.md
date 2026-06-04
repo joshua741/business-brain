@@ -33,6 +33,8 @@ How deals are priced and cash-flowed (from Josh's training of [[antonio]], see [
 - **Sell price** = 110% of ARV, rounded DOWN to the nearest $10,000 (e.g., $251,900 → $250,000). Manual adjustment allowed to improve marketing attractiveness.
 - **Interest rate by ARV band, not credit**: $120–150k → 9.5%; $151–210k → 9.0%; $211k+ → 8.5%. Start low, raise slowly as the portfolio grows.
 - **Monthly payment = PITI** (P&I at sell price, 30yr; + taxes + insurance). Round DOWN to nearest $5 (ones digit 0–4 → 0; ones digit 5–9 → 5). Manual adjustment allowed.
+  - **Taxes**: Pull the exact annual tax bill from [Lubbock Central Appraisal District](https://lubbockcad.org) — search by address, get dollars and cents, divide by 12. Never estimate. An n8n workflow exists to automate this lookup (future automation).
+  - **Insurance**: Use Joshua's estimate until actual policy is in hand (currently ~$350/mo).
 - **Income qualifier**: 3× monthly payment.
 - **RTO deposit formula** (from calculator, June 2026):
   - Approx Mortgage = Monthly Payment × 0.85
