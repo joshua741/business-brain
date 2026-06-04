@@ -45,8 +45,23 @@ A second script family, distinct from the NEPQ **seller-facing** scripts above �
 
 Built from the R2OC FAQ and RTO terms (see [[rent-to-own]]). Used by Mostafa and eventually automated via the wih-app AI layer.
 
-### Initial blast SMS (attach front-of-house photo)
-> Hey [First Name]! We just listed a new rent-to-own home in Lubbock — [ADDRESS]. [BEDS] bed/[BATHS] bath, $[MONTHLY]/mo, ~$[DOWN]k down, no bank needed. Credit 520+ qualifies. See it here: rent2owncribs.com/property/[SLUG] — Interested? Reply YES or NO
+### Initial blast SMS (attach front-of-house photo as MMS)
+Joshua's actual voice — casual, paragraph-spaced, personal, conversational close:
+
+> Hey [First Name], it's Josh!
+>
+> I saw you're on our rent-to-own list and wanted to personally reach out — we just got a home available that I think could be a great fit for you.
+>
+> It's a [BEDS] bed / [BATHS] bath on [STREET] here in Lubbock.
+>
+> $[OPTION_FEE] deposit to lock it in and $[MONTHLY]/mo.
+>
+> Here's the link with all the pictures and details:
+> rent2owncribs.com/property/[SLUG]
+>
+> Is this something you'd want to come check out?
+
+Style rules: paragraph break between every point. First name + "it's Josh" opener. End with open question — never "Reply YES/NO" or robotic command phrases. Medium length. Feels like a real person sent it.
 
 ### Response A — Interested (YES)
 Qualification sequence (3 messages):
