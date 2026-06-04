@@ -142,12 +142,16 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 >
 > I look forward to seeing you in there.
 
-**Step 2B — Income approved: offer pre-qual call:**
-> So the next step is a Pre-Qualification call with our property manager M'kenzy. She will ask some questions as well as answer yours. Would you like to book this call?
+**Step 2B — Income approved: assume the sale, offer times directly:**
+*(Do not ask if they want to book — assume yes and go straight to times. Make it clear it's a call, not a showing.)*
+> M'kenzy can get you all set up — she's available today at 10:30am, 2:00pm, and 4:30pm for a quick call. Which of those works best for you?
 
-**Step 3B — Offer meeting times:**
+**Step 2B rebuttal — lead says they want to see the house instead of a call:**
+> M'kenzy can get you all set up — she's available today at 10:30am, 2:00pm, and 4:30pm for a quick call. Which of those works best for you?
+
+**Step 3B — Offer meeting times (if Step 2B needs a second push):**
 *(SMS flow — phone number already known. Facebook Marketplace flow — add "Also what's a good number for her to reach you?" at the end.)*
-> So M'kenzy is available today at 10:30am, 2:00pm, and 4:30pm. Which time works for your schedule?
+> So M'kenzy is available today at 10:30am, 2:00pm, and 4:30pm for a quick call. Which time works for your schedule?
 
 **Step 4B — Confirm meeting:**
 > Perfect, I'll schedule you guys for [TIME]. You'll receive a text reminder leading up to the meeting.
