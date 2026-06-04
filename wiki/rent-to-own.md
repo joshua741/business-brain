@@ -21,7 +21,7 @@ The dominant exit strategy in the [[wih]] portfolio. A lease that grants the ten
 ## Program terms (R2OC)
 - Initial deposit formula-based (see Underwriting SOP below) — credited toward purchase price; non-refundable.
 - 3-year terms; purchase price locked at signing; monthly payments mirror a future mortgage (incl. taxes/insurance escrow) but are **not** applied to price (source: faq-rent-to-own.md).
-- **Qualification: NO credit minimum** — income-based only (3× monthly payment). No credit pull. Basic background check. As-Is acceptance required (source: doc-2026-06-04-r2oc-program-knowledge-base.md).
+- **Qualification: credit ~520+ (internal floor, not disclosed externally)**, income 3× monthly payment, basic background check, As-Is acceptance required. No foreclosure (5 yr), no bankruptcy (2 yr), no evictions/judgments. Credit floor is flexible — exceptions made when income is significantly strong (e.g., 500 credit score + $30K/mo income would likely qualify). Never disclose the 520 threshold to applicants. (source: faq-rent-to-own.md, confirmed Joshua June 2026)
 - All properties sold/rented **strictly AS-IS** — all repairs (plumbing, HVAC, roof, appliances, cosmetic) are tenant/buyer's responsibility from move-in. The repair reserve in the deposit is WIH's protection, not a fund the buyer draws from.
 - Tenant-buyer responsible for repairs/upkeep like an owner; cosmetic changes OK, structural needs written approval; renters insurance required (source: rent-to-own-and-seller-finance-faq.md).
 - Conversion to [[seller-finance]] available after month 12 with 80%+ on-time payments — via **Secondary Deposit** (see below).

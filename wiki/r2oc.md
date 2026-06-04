@@ -48,7 +48,7 @@ When a new RTO property is available:
 
 ## Key differentiators (for outreach/bot use)
 - No bank loan needed — WIH is the lender
-- No credit minimum — income-based qualification only, no credit pull
+- Credit floor ~520 (internal, never disclosed) — flexible when income is significantly strong. Never market or share this threshold externally.
 - Two paths: RTO (flexible, smaller deposit) or Direct Seller Finance (own Day 1)
 - Built-in conversion path with formula-based [[secondary-deposit]]
 - $0 secondary deposit possible at months 25–36 with clean payment history
