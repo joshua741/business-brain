@@ -205,10 +205,61 @@ If no income is on file by the end of the conversation, ask before closing out. 
 If the lead does not respond to the Step 4B message within 2 minutes, send this as a standalone follow-up:
 > Just locking you in for [TIME]. Don't forget to watch that video before the call — it'll make a big difference.
 
+**Universal — Lead day-of reminder (1 hour before M'kenzy call):**
+> Hey [Name], just a reminder you're scheduled with M'kenzy today at [TIME]. The call is only 10–15 minutes — she just wants to make sure everything lines up before you meet. Don't forget to watch this beforehand:
+> https://rent2owncribs.com/how-it-works
+
 **Universal — Facebook group close (applies across all scenarios):**
 End every conversation with the Facebook group invite if it hasn't been sent yet. Keeps the close warm and non-abrupt. Send AFTER any disqualification message, any "keep you in the loop" wrap-up, or any close that doesn't route to M'kenzy.
 > In the meantime, feel free to join our Facebook community — we post all our available homes there too:
 > https://www.facebook.com/share/g/1AsARPmnAf/?mibextid=wwXIfr
+
+---
+
+## M'kenzy briefing & reminder protocol
+
+Triggered every time a lead books a pre-qual call with M'kenzy.
+
+**Calendar:** Create a 30-minute event on Joshua's calendar. Add M'kenzy and the lead as guests.
+
+**Immediate booking confirmation (text to M'kenzy):**
+> Hey M'kenzy, pre-qual booked. [NAME] at [TIME] for [PROPERTY ADDRESS]. Income: $[X]/mo | Leaning: [RTO/SF] | [any notes from convo].
+
+**Countdown reminders to M'kenzy:**
+- **15 min out:** "Pre-qual with [Name] in 15."
+- **10 min out:** "10 minutes — [Name] for [ADDRESS]."
+- **5 min out:** Full brief (see below)
+- **2 min out:** "2 minutes — [Name] is about to call."
+
+**M'kenzy 5-minute full brief:**
+> Pre-qual in 5 — here's everything:
+>
+> **Property:** [ADDRESS] | [BEDS]/[BATHS]
+> **Sell Price:** $[X] | Rate: [X]%
+> **RTO:** $[RTO_DEPOSIT] down | $[RTO_PAYMENT]/mo
+> **SF:** $[SF_DOWN] down | ~$[SF_PAYMENT]/mo (est.)
+> **P&I:** $[X]/mo | Taxes: $[X]/mo | Insurance: ~$350/mo
+>
+> **Lead:** [NAME] | Income: $[X]/mo | Leaning: [RTO/SF]
+> [Any other notes — household size, questions asked, concerns mentioned]
+
+---
+
+## Rescheduling protocol
+
+Either the lead or M'kenzy may request a reschedule.
+
+**When lead reschedules:**
+> No problem, I'll check with M'kenzy and confirm a new time with you shortly.
+
+Text M'kenzy immediately with the rescheduling request. Follow up every 30 minutes, up to 3 times.
+
+**If M'kenzy doesn't respond after 3 follow-ups:**
+- Create a task for Mostafa to reach M'kenzy directly
+- Add to Joshua's next-day task board: "M'kenzy hasn't confirmed rescheduled time for [NAME] — [PROPERTY]"
+- Do NOT text Joshua immediately; escalate only if unresolved by next morning
+
+**When M'kenzy reschedules:** Notify the lead immediately with new time options; confirm both parties before closing the loop.
 
 ---
 

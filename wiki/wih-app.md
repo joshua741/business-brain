@@ -52,6 +52,9 @@ Running backlog of app-relevant ideas pulled from ingested sources. The daily in
 - **Email + SMS unified thread** -- all contact correspondence (email + SMS) in one scrollable thread per contact. Click an email in the thread → dropdown shows full email chain → respond from there. Filter view to see only SMS or only email. AI email address for outbound; toggle between email/SMS when composing.
 - **Document signing** -- send agreements from within the app. In-house if possible (minimize subscriptions). Signed by counterparty, stored on contact profile. Eventual replacement for any external e-sign subscription.
 - **Cash flow gap detection** -- monitor upcoming payment obligations against incoming funds. When a payment is scheduled to pull (e.g., Evergreen on the 1st) and funds are in transit / arriving after the pull date, flag it proactively so funds can be temporarily covered from reserves and restored when the payment lands. Core use case: avoid NSF events caused by timing gaps, not actual shortfalls.
+- **RTO outreach KPI dashboard** -- track texts sent, response rate, qualification rate, booking rate (M'kenzy calls booked), no-show rate. Filterable by time period. Lives inside the app; powers performance review for the RTO outreach AI.
+- **Google Calendar integration** -- auto-create 30-min events on Joshua's calendar when a lead books a pre-qual call with M'kenzy; add M'kenzy + lead as guests automatically.
+- **M'kenzy automated briefing** -- countdown reminders to M'kenzy at 15/10/5/2 min before each pre-qual call; 5-min message includes full property + lead brief (see sales-scripts.md M'kenzy briefing protocol).
 - **Incoming (queued for next ingest):** a "build a business intelligence dashboard with Claude" clip and two wholesale-blueprint clips -- relevant to CRM dashboards and the wholesale vertical. Fold their takeaways here once ingested.
 
 ## Related pages
