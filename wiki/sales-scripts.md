@@ -48,7 +48,7 @@ Built from the R2OC FAQ and RTO terms (see [[rent-to-own]]). Used by Mostafa and
 ### Initial blast SMS (attach front-of-house photo as MMS)
 Joshua's actual voice — casual, paragraph-spaced, personal, conversational close:
 
-> Hey [First Name], it's Josh!
+> Hey [First Name], it's Vince!
 >
 > I saw you're on our rent-to-own list and wanted to personally reach out — we just got a home available that I think could be a great fit for you.
 >
@@ -61,7 +61,7 @@ Joshua's actual voice — casual, paragraph-spaced, personal, conversational clo
 >
 > Is this something you'd want to come check out?
 
-Style rules: paragraph break between every point. First name + "it's Josh" opener. End with open question — never "Reply YES/NO" or robotic command phrases. Medium length. Feels like a real person sent it.
+Style rules: paragraph break between every point. First name + "it's Vince" opener. End with open question — never "Reply YES/NO" or robotic command phrases. Medium length. Feels like a real person sent it.
 
 ### RTO FB Inbound Script — 8 Scenarios
 
