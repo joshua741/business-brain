@@ -132,15 +132,35 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 **Step 2A — Income too low (below 3× monthly payment):**
 > So that's actually a little off from what we look for on this home. Are there any other sources of income? Maybe a spouse or partner? We do verify this, however I want to be sure that I understand.
 
-**Step 3A — Denial: reveal threshold + offer a different home:**
+**Step 3A — Denial: reveal threshold + offer a different home (income qualifies for $1,400+/mo but not current property):**
 > So for this home we are looking for households earning at least $[3× PAYMENT] per month — that's 3 times the monthly payment. Your income is a little short of that, however we do have another home that may be a better fit. Would you like me to send you the details?
 
-**Step 4A — Denial: no qualifying home available:**
+**Step 3A-MIN — Income below $1,400/mo floor (income < $4,200/mo — can't qualify for anything in portfolio):**
+Before disqualifying, probe to see if they can stretch:
+> So just to make sure I understand — are you specifically looking for something around that payment range, or is that just what your income allows right now?
+
+*If they say they want something cheap AND income confirms they can't qualify for $1,400/mo → Step 4A-MIN.*
+*If they say they'd be open to more, reveal what they could qualify for:*
+> Based on your income you could qualify for a home up to about $[income ÷ 3]/mo. If we found something in that range that worked for you, would that be something you'd be open to?
+*If yes → keep on buyers list, note expanded max payment. If no → Step 4A-MIN.*
+
+**Step 4A — Denial: no qualifying home available (income qualifies for $1,400+ but no matching property):**
 > I totally understand, feel free to join our Facebook community since we do post other homes that we have there.
 >
 > https://www.facebook.com/share/g/1AsARPmnAf/?mibextid=wwXIfr
 >
 > I look forward to seeing you in there.
+
+**Step 4A-MIN — Hard disqualification (income can't reach $1,400/mo floor, no path to expand):**
+> I totally understand, feel free to join our Facebook community since we do post other homes that we have there.
+>
+> https://www.facebook.com/share/g/1AsARPmnAf/?mibextid=wwXIfr
+>
+> I look forward to seeing you in there.
+>
+> **[Internal: tag contact "do not send properties" — keep on buyers list for future re-engagement campaigns. Do NOT remove from list.]**
+
+**Minimum payment floor: $1,400/mo** — income required: $4,200/mo (3×). No WIH property is currently priced below this. Any lead whose income can't reach $1,400/mo goes to Step 3A-MIN regardless of which property they're inquiring about.
 
 **Step 2B — Income approved: assume the sale, offer times directly:**
 *(Do not ask if they want to book — assume yes and go straight to times. Make it clear it's a call, not a showing.)*
