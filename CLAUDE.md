@@ -98,6 +98,7 @@ Always maintain a priority queue. Pick up the highest-priority unblocked item. W
 ### Notion AI Task Board — Cross-Session Tracker
 **URL:** https://app.notion.com/p/14c0529424614fbc85cba3291eff83d5
 **Data source ID:** 98b7252a-afb9-4343-b861-7b67923167a4
+**Location in Notion:** Joshua Webber's Space HQ (Team Space)
 
 Every session starts by reading this board. Every session ends with all statuses updated. This is how sessions communicate with each other.
 
