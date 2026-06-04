@@ -3,7 +3,7 @@ name: rent-to-own
 type: concept
 tags: [creative-financing, exit-strategy, r2oc]
 sources: [CLAUDE.md seed, faq-rent-to-own.md, rent-to-own-and-seller-finance-faq.md, tenant-financing-disclosure.md, u-r2o-move-in-disclosure.md]
-updated: 2026-05-29
+updated: 2026-06-04
 ---
 
 # Rent-to-Own
@@ -21,7 +21,7 @@ The dominant exit strategy in the [[wih]] portfolio. A lease that grants the ten
 ## Program terms (R2OC)
 - Option fee/deposit **$2,000** (confirmed by Joshua June 2026) — credited toward purchase price; non-refundable. This is the standard lock-in amount across all R2OC properties.
 - 1-year terms, annually renewable; purchase price locked at signing; monthly payments mirror a future mortgage (incl. taxes/insurance escrow) but are **not** applied to price (source: faq-rent-to-own.md).
-- Qualification: credit **520+**, income **2.5x** rent, no foreclosure (5 yr), no bankruptcy (2 yr), no evictions/judgments (source: faq-rent-to-own.md).
+- Qualification: credit **520+**, income **3×** monthly payment, no foreclosure (5 yr), no bankruptcy (2 yr), no evictions/judgments (source: faq-rent-to-own.md).
 - Tenant-buyer responsible for repairs/upkeep like an owner; cosmetic changes OK, structural needs written approval; renters insurance required (source: rent-to-own-and-seller-finance-faq.md).
 - Conversion to [[seller-finance]] available with 80%+ on-time payments after month 12 (source: rent-to-own-and-seller-finance-faq.md).
 - Disclosures: tenant financing disclosure and R2O move-in disclosure govern the arrangement (source: tenant-financing-disclosure.md, u-r2o-move-in-disclosure.md). See [[source-rto-disclosures]].
@@ -30,9 +30,18 @@ Application flow: prequalify → apply ($49.90 fee) at rent2owncribs.com (source
 
 ## Underwriting / cash-flow SOP
 How deals are priced and cash-flowed (from Josh's training of [[antonio]], see [[source-underwriting-antonio]]):
-- **Sell price** = 105–110% of ARV (rounded to a clean promo number).
+- **Sell price** = 110% of ARV, rounded DOWN to the nearest $10,000 (e.g., $251,900 → $250,000). Manual adjustment allowed to improve marketing attractiveness.
 - **Interest rate by ARV band, not credit**: $120–150k → 9.5%; $151–210k → 9.0%; $211k+ → 8.5%. Start low, raise slowly as the portfolio grows.
-- Buyer's payment = **PITI** (+ PMI if <20% down), mirroring the underlying mortgage; round up to the nearest $10. Option fee (deposit) = **$2,000 flat** (confirmed June 2026); credited at closing. P&I based on loan = sell price − $2,000.
+- **Monthly payment = PITI** (P&I at sell price, 30yr; + taxes + insurance). Round DOWN to nearest $5 (ones digit 0–4 → 0; ones digit 5–9 → 5). Manual adjustment allowed.
+- **Income qualifier**: 3× monthly payment.
+- **RTO deposit formula** (from calculator, June 2026):
+  - Approx Mortgage = Monthly Payment × 0.85
+  - Deposit = (3 × Approx Mortgage) + $1,500 + (Sell Price × 0.005)
+  - Round DOWN: below $10k → nearest $100; above $10k → nearest $1,000. Manual adjustment allowed.
+- **Seller finance down payment formula**:
+  - Approx Mortgage = Monthly Payment × 0.85
+  - Down = (6 × Approx Mortgage) + $3,500 + $1,500 + (Sell Price × 0.01)
+  - Same rounding rules as RTO deposit. Manual adjustment allowed.
 - **PM fee 2.5%** of selling rent; **target net margin = 20%** of selling rent (selling rent − PM fee − actual mortgage PITI) (source: clip-2026-06-03-pre-foreclosure-underwriting-with-antonio-and-josh-2026-05-0.md).
 
 ## Related pages

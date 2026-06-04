@@ -66,7 +66,7 @@ Style rules: paragraph break between every point. First name + "it's Josh" opene
 ### Response A — Interested (YES)
 Qualification sequence (3 messages):
 1. "That's great! Quick questions to see if you're a good fit — what's your current living situation? Renting, with family, or something else?"
-2. "And roughly what's your monthly income before taxes? We need about $[2.5x monthly payment]/mo for this one."
+2. "And roughly what's your monthly income before taxes? We need about $[3x monthly payment]/mo for this one."
 3. "Last one — do you know your approximate credit score? We work with 520+."
 
 → **Qualifies**: "You sound like a great fit. Apply at rent2owncribs.com — $49.90 app fee. We'll get back to you within 24–48 hours. Ready to apply?"
@@ -80,7 +80,7 @@ Qualification sequence (3 messages):
 ### FAQ knowledge base (for question responses)
 | Question | Answer |
 |---|---|
-| What's the down payment? | "$2,000 — credited toward your purchase price at closing. Locks in your price today." |
+| What's the down payment? | "$[DEPOSIT] to move in — credited toward your purchase price at closing. Locks in your price today." |
 | Do I need perfect credit? | "Nope. 520+ minimum. Income and stability matter more than score." |
 | Does rent go toward buying? | "Monthly payment mirrors a future mortgage but isn't directly credited. Your option fee is what's credited at purchase." |
 | What if I can't buy at the end? | "1-year terms with annual renewals. After 12 months of on-time payments you can convert to seller financing — we carry the note, no bank." |
