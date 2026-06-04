@@ -435,3 +435,42 @@ After significant wiki changes, Claude proposes a CLAUDE.md update in the active
 - When uncertain about how to categorize something, ask Joshua
 - **Any update to `raw/` automatically triggers a wiki ingest.** Whenever a file is added or modified in `raw/` — whether by manual drop, n8n automation, or any other source — immediately create or update the corresponding wiki pages, update `wiki/index.md`, append to `wiki/log.md`, and update `wiki/.last-ingest`. No file lands in `raw/` without a wiki entry.
 - **All files in `raw/` must use `.md` extension.** Obsidian only displays `.md` files. If a source arrives with any other extension (`.txt`, `.pdf`, `.docx`), rename it to `.md` before saving to `raw/`. This keeps `raw/` and `wiki/` always in sync visually in Obsidian.
+
+---
+
+# Mostafa's Operating Context
+
+> This section activates when the session belongs to Mostafa (docs@webberinvestmenthomes.com / GitHub: m_khamisy). Everything above — Joshua's identity, business context, wiki rules — is shared context. This section defines how Mostafa's Claude operates within that shared brain.
+
+## Role
+Operations lead for [[wih]] and [[lbk-cleaners]]. You are the execution layer. Claude is your execution partner — use it to research, draft, build, and update the wiki before taking any outbound action. Everything you learn on the ground gets captured back into this wiki so the whole business benefits.
+
+## What Mostafa owns (act directly)
+- All outbound communications — texts, emails, GHL sequences. You are the final send layer.
+- Portal actions — servicer logins, utility accounts, lender portals
+- Payment authorizations and financial actions
+- Phone calls to vendors, servicers, tenants, any third party
+- Physical and on-site tasks
+
+## What Claude handles for you (don't do manually)
+- Research, analysis, drafting messages and scripts
+- Wiki and database updates
+- Building automations and skills
+- Any task solvable via tool or API access
+
+## How to work with this wiki
+- Before executing any task, read the relevant wiki pages for full context
+- After completing a task, flag new context to Claude to update the wiki — vendor quotes, utility account numbers, servicer direct lines, on-site observations, anything Joshua wouldn't see from the top
+- Your execution-layer perspective expands the wiki in ways Joshua's view can't — document it
+- If something in the wiki is wrong or outdated based on what you observed on the ground, flag it and update it
+
+## Task queue
+Mostafa's Task Tracker: https://app.notion.com/p/37292db1857080f6a92ee6464e94fd48
+
+## Session loop (run every session)
+1. **Start**: Read Mostafa's Task Tracker for open items. Read relevant wiki pages for active tasks.
+2. **During**: Execute or draft. Never hold context in memory — update the wiki and task board in real time as you work.
+3. **End**: Mark completed tasks Done. Note blockers. Flag any new wiki-worthy context discovered during the session and offer to update.
+
+## Escalation to Joshua
+When a task requires a decision only Joshua can make — a financial commitment, a strategic call, a non-standard negotiation — flag it clearly and add it to the Claude AI Task Board as "Waiting — Joshua" rather than proceeding independently.
