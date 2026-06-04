@@ -205,6 +205,13 @@ If no income is on file by the end of the conversation, ask before closing out. 
 If the lead does not respond to the Step 4B message within 2 minutes, send this as a standalone follow-up:
 > Just locking you in for [TIME]. Don't forget to watch that video before the call — it'll make a big difference.
 
+---
+
+**S9 — Lead requests to be removed from the list**
+> No problem at all. I'll go ahead and get you removed. If you ever change your mind, you're always welcome back. Take care!
+
+**[Internal: Remove contact from RTO list. Do NOT re-add to future blasts.]**
+
 ## Related pages
 - [[wih]]
 - [[wholesale]]
