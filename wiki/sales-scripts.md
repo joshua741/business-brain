@@ -65,7 +65,7 @@ Qualification sequence (3 messages):
 ### FAQ knowledge base (for question responses)
 | Question | Answer |
 |---|---|
-| What's the down payment? | "$[OPTION FEE] — credited toward your purchase price at closing. Locks in your price today." |
+| What's the down payment? | "$2,000 — credited toward your purchase price at closing. Locks in your price today." |
 | Do I need perfect credit? | "Nope. 520+ minimum. Income and stability matter more than score." |
 | Does rent go toward buying? | "Monthly payment mirrors a future mortgage but isn't directly credited. Your option fee is what's credited at purchase." |
 | What if I can't buy at the end? | "1-year terms with annual renewals. After 12 months of on-time payments you can convert to seller financing — we carry the note, no bank." |

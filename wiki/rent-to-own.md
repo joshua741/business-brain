@@ -19,7 +19,7 @@ updated: 2026-05-29
 The dominant exit strategy in the [[wih]] portfolio. A lease that grants the tenant-buyer an **option to buy** at a locked-in price; the buyer holds **equitable interest** while title stays with the seller. Part of the broader [[creative-financing]] toolkit alongside [[subject-to]] and [[seller-finance]]. [[r2oc]] is the marketing brand.
 
 ## Program terms (R2OC)
-- Option fee/deposit **$3,500–$5,000**, credited toward purchase price; non-refundable (source: faq-rent-to-own.md).
+- Option fee/deposit **$2,000** (confirmed by Joshua June 2026) — credited toward purchase price; non-refundable. This is the standard lock-in amount across all R2OC properties.
 - 1-year terms, annually renewable; purchase price locked at signing; monthly payments mirror a future mortgage (incl. taxes/insurance escrow) but are **not** applied to price (source: faq-rent-to-own.md).
 - Qualification: credit **520+**, income **2.5x** rent, no foreclosure (5 yr), no bankruptcy (2 yr), no evictions/judgments (source: faq-rent-to-own.md).
 - Tenant-buyer responsible for repairs/upkeep like an owner; cosmetic changes OK, structural needs written approval; renters insurance required (source: rent-to-own-and-seller-finance-faq.md).
