@@ -162,7 +162,7 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 > M'kenzy will be referring to this video on the Pre-Qualification call. Could you watch this prior to the meeting?
 
 **Universal — Email capture (applies across all scenarios):**
-If no email is on file for the contact, ask before closing out the conversation. It is optional for the lead — do not pressure them.
+Sent as a separate message after Step 4B if no email is on file. Optional for the lead — do not pressure.
 > Also, what's a good email for you? Just for scheduling purposes.
 
 ## Related pages
