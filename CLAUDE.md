@@ -73,6 +73,18 @@ This governs how Claude operates on every task. The goal is to scale AI usage af
 
 ---
 
+## Build-and-Use Principle (Non-Negotiable)
+
+The moment any part of a system is functional, start using it with real work. Don't wait for the full build before onboarding live data, real leads, or actual operations.
+
+**Why it works:** Working within the product while building it creates an internal perspective that no amount of planning or spec work can replicate. It accelerates production and surfaces improvements that only become visible from the inside. Concepts that are hard to grasp from the outside click immediately once you're working with them firsthand.
+
+**How to apply it:** As soon as one layer works — ship it to real use before finishing the next layer. For wih-app: the moment contacts are viewable, start working them. The moment the pipeline is up, put real deals in it. Don't wait for outreach to be built before using what's already there.
+
+**This applies to every build** — app features, automations, agent workflows, any system. Partial functionality in active use beats complete functionality sitting idle.
+
+---
+
 ## Continuous Learning Capture (Non-Negotiable)
 
 When you fight through a non-obvious problem, find a better way to do anything, hit a tool/environment quirk, or correct a wrong assumption — capture it immediately, in the same session, before moving on. Never let a hard-won lesson evaporate. Relearning the same thing is exactly the wasted time and repetition Joshua refuses to tolerate.
