@@ -104,11 +104,11 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 ---
 
 **S5 — Lead asks if more down lowers payment**
-> So the monthly payments are based on the remaining balance after your down payment. To decrease the payment $200–$300 for instance would take around 20–30% down — on this home that would be around $[20% of sell price] to $[30% of sell price]. That's not something we require, just so you have the full picture.
+> So the monthly payments are based on the remaining balance after your down payment. To decrease the payment $200–$300 for instance would take around 20–30% down — on this home that's around $[20% of sell price] to $[30% of sell price]. That's not something we require. For this home, Rent to Own is $[RTO_DEPOSIT] down and Seller Finance is $[SF_DOWN] down. Are you leaning towards Rent to Own or Seller Finance?
 
-*For 4513 48th St:* 20% = $50,000 | 30% = $75,000
+*For 4513 48th St:* 20% = $50,000 | 30% = $75,000 | RTO deposit = $9,200 | SF down = $20,400
 
-Then include one unanswered question: income (S8 Step 1) OR program preference (S7).
+After program preference is answered → go to income (S8 Step 1).
 
 ---
 
