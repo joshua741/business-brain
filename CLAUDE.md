@@ -198,10 +198,26 @@ Full AI automation of real estate business across three verticals: Wholesale + C
 - **Rent 2 Own Cribs (R2OC):** Marketing brand for rent-to-own properties and content.
 
 ### 2. Team
-- **Mostafa (Elkhamisy):** Operations lead. ALL outbound communications go through Mostafa — non-negotiable. Primary human-in-the-loop for AI automations.
+- **Mostafa (Elkhamisy):** Operations lead. ALL outbound communications go through Mostafa — non-negotiable. Primary human-in-the-loop for AI automations. Future state: his execution-layer tasks progressively transfer to AI agents/skills as automation matures.
 - **M'kenzy:** Team member — route tasks there when applicable.
 - **Kenneth:** Team member — route tasks there when applicable.
 - **Joshua:** Systems architect and decision-maker only. Not in the weeds of execution.
+
+#### Delegation SOP — Mostafa vs. Claude (Non-Negotiable)
+**Route to Mostafa's task tracker when the task requires:**
+- Any outbound communication (texts, emails, GHL sequences) — always, no exceptions
+- Credentials or portal access Claude doesn't have (servicer logins, utility accounts, lender portals)
+- Payment authorizations or financial actions (paying bills, initiating wires, calling servicers)
+- Phone calls to any vendor, tenant, or third party
+- Physical or on-site operational actions
+
+**Claude handles directly:**
+- Research, analysis, email monitoring/summarizing, drafting
+- Wiki, CLAUDE.md, Notion, database operations
+- Building automations, skills, systems
+- Any task solvable via available tool/API access
+
+When creating a task for Mostafa: be as specific as possible — include email subject lines, account numbers, phone numbers, and exactly what to look for so he can act without coming back to ask.
 
 ### 3. Current Property Portfolio (Lubbock, TX)
 - 1312 65th Dr (multi-unit — Unit F active, Unit D tenant Angel Garcia)
