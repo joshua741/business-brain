@@ -172,9 +172,9 @@ Before disqualifying, probe to see if they can stretch:
 
 **Minimum payment floor: $1,400/mo** — income required: $4,200/mo (3×). No WIH property is currently priced below this. Any lead whose income can't reach $1,400/mo goes to Step 3A-MIN regardless of which property they're inquiring about.
 
-**Step 2B — Income approved: assume the sale, offer times directly:**
-*(Do not ask if they want to book — assume yes and go straight to times. Make it clear it's a call, not a showing.)*
-> M'kenzy can get you all set up — she's available today at 10:30am, 2:00pm, and 4:30pm for a quick call. Which of those works best for you?
+**Step 2B — Income approved: affirm, transition, offer times:**
+*(Affirm their income looks good. Frame the call as the next step before meeting in person. Assume the sale — go straight to times, don't ask if they want to book.)*
+> So your income looks good. M'kenzy will jump on a quick call with you to go over everything before you guys meet. She's available today at 10:30am, 2:00pm, and 4:30pm. Which of those works best for you?
 
 **Step 2B rebuttal — lead says they want to see the house instead of a call:**
 > M'kenzy can get you all set up — she's available today at 10:30am, 2:00pm, and 4:30pm for a quick call. Which of those works best for you?
