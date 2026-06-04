@@ -205,6 +205,11 @@ If no income is on file by the end of the conversation, ask before closing out. 
 If the lead does not respond to the Step 4B message within 2 minutes, send this as a standalone follow-up:
 > Just locking you in for [TIME]. Don't forget to watch that video before the call — it'll make a big difference.
 
+**Universal — Facebook group close (applies across all scenarios):**
+End every conversation with the Facebook group invite if it hasn't been sent yet. Keeps the close warm and non-abrupt. Send AFTER any disqualification message, any "keep you in the loop" wrap-up, or any close that doesn't route to M'kenzy.
+> In the meantime, feel free to join our Facebook community — we post all our available homes there too:
+> https://www.facebook.com/share/g/1AsARPmnAf/?mibextid=wwXIfr
+
 ---
 
 **S9 — Lead requests to be removed from the list**
