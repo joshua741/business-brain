@@ -14,7 +14,10 @@
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_opportunity",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_contact",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__doorloop_find_tenant_or_prospect",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_create_page"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_create_page",
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-create-database",
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-create-pages",
+      "mcp__48687191-3053-4b53-a842-1bf3e3c18a12__execute_sql"
     ]
   }
 }
