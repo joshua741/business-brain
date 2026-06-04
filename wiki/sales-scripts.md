@@ -63,30 +63,98 @@ Joshua's actual voice — casual, paragraph-spaced, personal, conversational clo
 
 Style rules: paragraph break between every point. First name + "it's Josh" opener. End with open question — never "Reply YES/NO" or robotic command phrases. Medium length. Feels like a real person sent it.
 
-### Response A — Interested (YES)
-Qualification sequence (3 messages):
-1. "That's great! Quick questions to see if you're a good fit — what's your current living situation? Renting, with family, or something else?"
-2. "And roughly what's your total household income before taxes?"
-3. "Last one — do you know your approximate credit score? We work with 520+."
+### RTO FB Inbound Script — 8 Scenarios
 
-→ **Qualifies**: "You sound like a great fit. Apply at rent2owncribs.com — $49.90 app fee. We'll get back to you within 24–48 hours. Ready to apply?"
-→ **Doesn't qualify**: "You're a little short on [credit/income] right now, but that's fixable. Want to talk through what it would take in the next 60–90 days?"
+**No credit score question. Income is the primary qualifier. Always work in program preference (S7) and income (S8) if not yet answered.**
 
-### Response B — Not interested (NO)
-1. "No problem! Can I ask — is it the price, location, or just not the right time?"
-2. If timing/price: "Totally understand. Do you know anyone looking? We pay $500 referral fee if someone you send closes."
-3. If fully out: "Got it. We list new properties regularly — want to stay on the list for future ones?"
+---
 
-### FAQ knowledge base (for question responses)
-| Question | Answer |
-|---|---|
-| What's the down payment? | "$[DEPOSIT] to move in — credited toward your purchase price at closing. Locks in your price today." |
-| Do I need perfect credit? | "Nope. 520+ minimum. Income and stability matter more than score." |
-| Does rent go toward buying? | "Monthly payment mirrors a future mortgage but isn't directly credited. Your option fee is what's credited at purchase." |
-| What if I can't buy at the end? | "1-year terms with annual renewals. After 12 months of on-time payments you can convert to seller financing — we carry the note, no bank." |
-| Can I make changes? | "Cosmetic changes are fine. Structural changes need written approval. You're treated like an owner from day one." |
-| How do I apply? | "Go to rent2owncribs.com, find [ADDRESS], and apply there. $49.90 fee. We'll review within 24–48 hours." |
-| Is it still available? | "Yes, still available — moving fast. Get your application in this week." |
+**S1 — Lead asks if home is available**
+> Yes this home is available, would you be interested?
+
+---
+
+**S2 — Home is under contract**
+> So we just went under contract with this home today. We do have other homes available — were you only interested in this one?
+
+---
+
+**S3 — Lead asks about a bedroom count we don't have**
+> We don't have a property within those specs as of now. However, would you like me to keep you informed when we do?
+
+*If yes:* "I'll keep a note of what you're looking for and when we have that home available we'll send you a message. What's a good phone number for you?"
+
+---
+
+**S4 — Lead asks about SF payments**
+> Principal & Interest: $[P&I]
+> Taxes & Insurance (estimated): $[T&I]
+> Total: $[TOTAL]
+>
+> Your final payment would depend on how much your home insurance policy would be.
+
+Then include one unanswered question: income (S8 Step 1) OR program preference (S7).
+
+---
+
+**S5 — Lead asks if more down lowers payment**
+> So the monthly payments are based on the remaining balance after your down payment. To decrease the payment $200–$300 for instance would take 20–30% down. Complete your decision if you want to do this.
+
+Then include one unanswered question: income (S8 Step 1) OR program preference (S7).
+
+---
+
+**S6 — Lead asks difference between SF and RTO**
+> So Rent to Own is leasing with the option to purchase the home later. The term is 3 years. You don't own the home yet, however you have equitable title where you have the right to buy.
+>
+> Seller Finance is when you own the title. The term is 30 years. At this point we are the lender and you are the borrower, and you are paying the home off through payments.
+
+Then include one unanswered question: income (S8 Step 1) OR program preference (S7).
+
+---
+
+**S7 — Verify which program the lead wants**
+> Are you leaning towards Rent to Own or Seller Finance?
+>
+> Rent to Own is $[RTO_DEPOSIT] ([RTO_%]) down
+> Seller Finance is $[SF_DOWN] ([SF_%]) down
+> Payments are $[MONTHLY]/mo ([RATE]% interest — taxes and insurance included)
+
+*For 4513 48th St:* RTO $9,200 (3.7%) | SF $20,400 (8.2%) | $2,525/mo | 8.5%
+
+---
+
+**S8 — Income qualification**
+
+**Step 1 — Ask income:**
+> So our program is an income-based approval. Do you know approximately how much per month your household brings in?
+
+**Step 2A — Income too low (below 3× monthly payment):**
+> So for this home we are looking to see that your household income is at least 3 times the monthly payment. That would mean earning at least $[3× PAYMENT] per month for this home. Are there any other sources of income? Or maybe a spouse or partner? We do verify this, however I want to be sure that I understand.
+
+**Step 3A — Denial: offer a different home:**
+> So for this home your income is not as high as we'd need it, however we have another that may be a better fit based on your income. Would you like me to send you over the details for this one?
+
+**Step 4A — Denial: no qualifying home available:**
+> I totally understand, feel free to join our Facebook community since we do post other homes that we have there.
+>
+> https://www.facebook.com/share/g/1AsARPmnAf/?mibextid=wwXIfr
+>
+> I look forward to seeing you in there.
+
+**Step 2B — Income approved: offer pre-qual call:**
+> So the next step is a Pre-Qualification call with our property manager M'kenzy. She will ask some questions as well as answer yours. Would you like to book this call?
+
+**Step 3B — Offer meeting times:**
+> So M'kenzy is available today at 10:30am, 2:00pm, and 4:30pm. Which time works for your schedule? Also what's a good number for her to reach you?
+
+**Step 4B — Confirm meeting:**
+> Perfect, I'll schedule you guys for [TIME]. You'll receive a text reminder leading up to the meeting.
+>
+> This part is important — here is a video explaining how our program works:
+> https://rent2owncribs.com/how-it-works
+>
+> M'kenzy will be referring to this video on the Pre-Qualification call. Could you watch this prior to the meeting?
 
 ## Related pages
 - [[wih]]
