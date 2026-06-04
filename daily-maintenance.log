@@ -953,3 +953,133 @@
 [2026-06-04 07:03:02] Repo visibility check
 [2026-06-04 07:03:03] isPrivate=true
 [2026-06-04 07:03:03] Changes detected -- committing
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/.last-ingest', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/ghl.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/mercury.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/supabase.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/twilio.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/vince-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/wih-app.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/source-ghl-snapshot-2026-06-04.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/source-mercury-snapshot-2026-06-04.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/source-supabase-snapshot-2026-06-04.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] warning: in the working copy of 'wiki/source-twilio-sms-log-2026-06-04.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-04 07:03:03] [master 552a753] chore: daily wiki maintenance 2026-06-04
+[2026-06-04 07:03:03]  19 files changed, 648 insertions(+), 13 deletions(-)
+[2026-06-04 07:03:03]  create mode 100644 raw/ghl-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 raw/mercury-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 raw/supabase-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 raw/twilio-sms-log-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 wiki/source-ghl-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 wiki/source-mercury-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 wiki/source-supabase-snapshot-2026-06-04.md
+[2026-06-04 07:03:03]  create mode 100644 wiki/source-twilio-sms-log-2026-06-04.md
+[2026-06-04 07:03:05] To https://github.com/joshua741/business-brain.git
+[2026-06-04 07:03:05]    00b91f7..552a753  master -> master
+[2026-06-04 07:03:05] Pushed to GitHub
+[2026-06-04 07:03:05] === Daily maintenance complete ===
+[2026-06-04 16:00:02] === Notion meeting pull started ===
+[2026-06-04 16:00:02] git pull
+[2026-06-04 16:00:04] From https://github.com/joshua741/business-brain
+[2026-06-04 16:00:04]  * branch            master     -> FETCH_HEAD
+[2026-06-04 16:00:04] Already up to date.
+[2026-06-04 16:00:04] Notion meetings connector
+[2026-06-04 16:00:32] notion-meetings: pulled 1, skipped 14, failed 6
+[2026-06-04 16:00:32]   + raw/transcript-2026-06-04-morning-meeting-josh-mostafa.md   <- Morning Meeting Josh, Mostafa 2026-06-04T12:00:00.000-05:00
+[2026-06-04 16:00:32]   = Morning Meeting Josh, Mostafa 2026-05-21T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh & Mostafa 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = ≡ƒôîMeeting with Michael and Josh 2026-05-22T15:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Weekly Role Play w/ Jon 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh & Mostafa 2026-05-26T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh, Mostafa 2026-05-27T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh, Mostafa 2026-05-28T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh & Mostafa 2026-05-29T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = ≡ƒô▒Video Call with Yvonne , Scott, and Josh 2026-05-30T14:30:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = ≡ƒô▒Phone Call with Yvonne and Josh 2026-05-30T16:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh & Mostafa 2026-06-01T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = 2026-06-02T12:46:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   = Morning Meeting - Angel 2026-05-20T11:00:00.000-05:00 (unchanged)
+[2026-06-04 16:00:32]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-04 16:00:32]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-04 16:00:32]   ! 2026-05-20T12:03:00.000-05:00 (empty note)
+[2026-06-04 16:00:32]   ! 2026-05-20T16:02:00.000-05:00 (empty note)
+[2026-06-04 16:00:32]   ! Morning Meeting - Angel 2026-05-21T11:00:00.000-05:00 (empty note)
+[2026-06-04 16:00:32]   ! 2026-05-27T10:07:00.000-05:00 (empty note)
+[2026-06-04 16:00:32] Running wiki ingest agent
+[2026-06-04] Ingest complete — transcript-2026-06-04-morning-meeting-josh-mostafa.md. Created: source page, crystal-sherwood.md, josh-fox.md. Updated: 4513-48th-st (closing Jun 5, $250K@8.5%, taxes $2,590), 4302-e-61st-st (Alyssa $3,007 termination, McKenzie 14.2%, Shelby McDonald), 4626-s-lipscomb-st (Excel Energy URGENT past due since Feb, AutoPay stopped), 4019-37th-st (Evergreen NSF → wire → Josh Fox direct), 1312-65th-dr (Aaron Unit E $850/mo Aug 1, Crystal Sherwood PM), mkenzy (commission + AI briefing meeting), mostafa (GitHub collab), index.md, log.md. Changes on disk — awaiting commit.
+[2026-06-04] FLAGS: (1) 4626 Excel Energy past due since Feb 2026 — collection agency threat, URGENT. (2) 4513 closing TODAY Jun 5 — HUD needed from Michael Bullis. (3) 7500 Winston Freedom Mortgage account alert unresolved — Mostafa to log in. (4) 4019 Evergreen NSF — wire outstanding amount, then set up Josh Fox direct auto-draft. (5) New acquisition lead: lady with 5 E61st-type properties (McKenzie sourced).
+=== Notion meeting pull complete ===
+[2026-06-04 16:06:35] All wiki writes are complete. Here's the summary of what was done:
+[2026-06-04 16:06:35] 
+[2026-06-04 16:06:35] ---
+[2026-06-04 16:06:35] 
+[2026-06-04 16:06:35] **Ingest: transcript-2026-06-04-morning-meeting-josh-mostafa.md**
+[2026-06-04 16:06:35] 
+[2026-06-04 16:06:35] **Created:**
+[2026-06-04 16:06:35] - `wiki/source-transcript-2026-06-04-morning-meeting-josh-mostafa.md` ΓÇö full source page with action items
+[2026-06-04 16:06:35] - `wiki/crystal-sherwood.md` ΓÇö property manager for 1312 65th Dr Unit E
+[2026-06-04 16:06:35] - `wiki/josh-fox.md` ΓÇö individual note holder on 4019 37th St
+[2026-06-04 16:06:35] 
+[2026-06-04 16:06:35] **Updated (9 pages):**
+[2026-06-04 16:06:35] - `4513-48th-st` ΓÇö closing June 5; $250K @ 8.5%; taxes $2,590/yr; HUD from Michael needed
+[2026-06-04 16:06:35] - `4302-e-61st-st` ΓÇö Alyssa termination $3,007.37; McKenzie 14.2% commission; Shelby McDonald contractor
+[2026-06-04 16:06:35] - `4626-s-lipscomb-st` ΓÇö Excel Energy **URGENT** (FebΓÇôpresent, collection threat); AutoPay may be stopped
+[2026-06-04 16:06:35] - `4019-37th-st` ΓÇö Evergreen NSF ΓåÆ wire payment ΓåÆ set up Josh Fox direct auto-draft
+[2026-06-04 16:06:35] - `1312-65th-dr` ΓÇö Aaron Unit E $850/mo lease, Aug 1 start, July 20 signature deadline via Crystal Sherwood
+[2026-06-04 16:06:35] - `mkenzy` ΓÇö $418.72 commission on Alyssa deal; AI briefing meeting next week (Mon/Wed/Thu/Fri, 3pm)
+[2026-06-04 16:06:35] - `mostafa` ΓÇö added as GitHub collaborator on Business Brain repo
+[2026-06-04 16:06:35] - `index.md` + `log.md`
+[2026-06-04 16:06:35] 
+[2026-06-04 16:06:35] **5 open flags for Joshua:**
+[2026-06-04 16:06:35] 1. **4626 S Lipscomb Excel Energy** ΓÇö past due since February, collection agency threat. Mostafa needs to resolve today.
+[2026-06-04 16:06:35] 2. **4513 48th St closing today (Jun 5)** ΓÇö HUD statement from Michael Bullis still needed.
+[2026-06-04 16:06:35] 3. **7500 Winston Freedom Mortgage** ΓÇö repeated "account status change" alerts; Mostafa needs to log in to the portal.
+[2026-06-04 16:06:35] 4. **4019 37th St Evergreen** ΓÇö wire outstanding amount now ($15 fee), then get Josh Fox's bank details for direct auto-draft going forward.
+[2026-06-04 16:06:35] 5. **New acquisition lead** ΓÇö lady with 5 E61st-type properties (McKenzie's contact). Circle back when ready to push.
+[2026-06-04 16:06:35] Secret audit (non-fatal warning)
+[2026-06-04 16:06:37] POTENTIAL UNMASKED SECRETS:
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234586890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5656434354'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '7468562544'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '3454557676'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '6434565664'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1122334455'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '2035551234'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 16:06:37]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 16:06:37] Repo visibility check
+[2026-06-04 16:06:38] isPrivate=true
+[2026-06-04 16:06:38] Changes detected -- committing

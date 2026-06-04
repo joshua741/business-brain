@@ -104,6 +104,8 @@
 - [Aaron McCloskey](aaron-mccloskey.md) — tenant
 - [Austin Hughes](austin-hughes.md) — Thunder Sun Homes; 9-unit deal (paused)
 - [Don Pittman](don-pittman.md) — CPA; entity consolidation (verify approach)
+- [Crystal Sherwood](crystal-sherwood.md) — property manager intermediary at 1312 65th Dr (Unit E lease comms)
+- [Josh Fox](josh-fox.md) — individual note holder on 4019 37th St loan via Evergreen; plan to pay directly
 - [Curtis William](curtis-william.md) — private/transactional lender ($15k → 4513 48th St)
 - [Michael Bullis](michael-bullis.md) — seller-side counterparty on 4513 48th St (TMGLC)
 - [Shane Leary](shane-leary.md) — HVAC/plumbing vendor
@@ -122,6 +124,9 @@
 - [Jerry Norton](jerry-norton.md) — wholesale educator (Flipping Mastery)
 - [Boris Cherny](boris-cherny.md) — creator of Claude Code; workflow reference
 - [Nate Herk](nate-herk.md) — AI automation creator; AI Operating System framework
+
+## Sources — Daily meeting transcripts (Jun 4, 2026)
+- [2026-06-04 Morning Meeting](source-transcript-2026-06-04-morning-meeting-josh-mostafa.md) — Alyssa termination $3,007; 4513 closing Jun 5; 4626 Excel Energy urgent; 4019 Evergreen NSF; GitHub collab Mostafa
 
 ## Sources — Daily connector snapshots (2026-06-04)
 - [GHL Snapshot 2026-06-04](source-ghl-snapshot-2026-06-04.md) — 500 opps, 12 pipelines, 16,375 contacts; Ashley Paz hot in Send Deposit Agreement

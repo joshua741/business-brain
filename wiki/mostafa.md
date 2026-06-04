@@ -2,8 +2,8 @@
 name: mostafa
 type: person
 tags: [team, operations, communications]
-sources: [CLAUDE.md seed, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md]
-updated: 2026-06-03
+sources: [CLAUDE.md seed, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md, transcript-2026-06-04-morning-meeting-josh-mostafa.md]
+updated: 2026-06-04
 ---
 
 # Mostafa (Elkhamisy)
@@ -27,6 +27,9 @@ For [[lbk-cleaners]], he oversees the [[bookingkoala]] platform — managing boo
 Mostafa's role is best described as transaction coordinator + appointment setter + IT tech + "master of automations." He is now onboarded onto VS Code + Claude Code + the superpowers plugin and is building automations/skills hands-on (GitHub handle `m_khamisy`; Claude account on docs@webberinvestmenthomes.com). (source: transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md)
 
 He is named on lender authorization forms as Joshua's authorized assistant (e.g. the [[yvonne-scott-subject-to]] deal).
+
+## GitHub collaboration — Business Brain (Jun 2026)
+Mostafa was **added as a collaborator on the Business Brain GitHub repository** on June 4, 2026. His Claude Code instance (opened in the Business Brain directory) reads the same CLAUDE.md automatically — giving him full business context from the start of every session. His Claude operates from the same wiki but with a different lens: execute and handle operations, escalate decisions to Joshua's Claude. No separate repo or sync drift. (source: transcript-2026-06-04-morning-meeting-josh-mostafa.md)
 
 Works remotely from Egypt, often overnight relative to Central time. Task management is migrating from [[ghl]] into [[notion]] (a dedicated Team Space).
 
