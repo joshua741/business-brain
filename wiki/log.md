@@ -30,3 +30,5 @@ Operations: seed | ingest | lint | query | update
 ## [2026-06-03] video-ingest | Ingested Antonio pre-foreclosure underwriting training (video-report). Created source-underwriting-antonio.md + antonio.md; enriched rent-to-own.md with the cash-flow SOP (105-110% ARV pricing, 9.5/9/8.5% interest bands, PITI passthrough, 2.5% PM fee, 20% net-margin target). Noted Gemini transcript artifact (repeated-16 loop) trimmed in wiki.
 
 ## [2026-06-03] video-ingest | LBK swivel logo clip (2-sec silent brand asset) -> source-lbk-swivel-logo.md; added brand note to lbk-cleaners.md. Completes the two Downloads videos.
+
+## [2026-06-04] ingest | MAPS Framework (YouTube clip, manually ingested) — created maps-framework.md (concept); added to index. Framework: Mission / Ask / Parameters / Shape — structured prompting standard and internal guardrails for all AI interactions across the business and agentic systems.

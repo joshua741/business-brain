@@ -86,6 +86,7 @@
 - [Sales Scripts](sales-scripts.md) — NEPQ seller scripts + 2026 agent-outreach/MLS scripts
 - [AI Automation Strategy](ai-automation-strategy.md) — GHL hub, Matt Beard framework, three verticals
 - [AI Operating System](ai-operating-system.md) — Four Cs / Three Ms / Bike Method (Nate Herk)
+- [MAPS Framework](maps-framework.md) — Mission / Ask / Parameters / Shape; structured prompting standard for all AI use
 - [Claude Code Workflow](claude-code-workflow.md) — Plan Mode, minimal CLAUDE.md, verification loops, skills (Boris Cherny)
 - [Information Moat](information-moat.md) — quality of context > prompt-tuning; the wiki as durable asset
 - [Business Brain](business-brain.md) — the Claude-maintained wiki itself; source of truth + proof-content engine

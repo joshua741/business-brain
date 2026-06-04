@@ -40,6 +40,23 @@ Never update silently. Always flag it and confirm first.
 
 ---
 
+## MAPS Framework — Operating Standard for All AI Interactions
+
+Every significant prompt, workflow trigger, or agent instruction in this business runs through MAPS. This is the internal guardrail — the checklist that prevents generic output and misaligned execution.
+
+| Component | What it means |
+|---|---|
+| **M — Mission** | The WHY. The ultimate outcome, not just the task. "I need 30 customers/month to hit revenue targets" not "find me leads." |
+| **A — Ask** | One specific, crystal-clear request. If there are multiple tasks, split them into separate prompts. |
+| **P — Parameters** | Context and background the AI needs: ideal customer profile, past examples, constraints, non-negotiables. More parameters = sharper output. Use Wispr Flow to talk through parameters fast. |
+| **S — Shape** | Exact format, tone, and length of the output. CSV, markdown, bullet points, formal/casual, long/short. Include a reference example or screenshot if needed. |
+
+Before deploying any prompt or agent instruction, verify all four are present. Missing any one means the output will need manual rework — which is the exact waste this system is built to eliminate.
+
+This framework scales: it applies to one-off LLM requests, GHL workflow triggers, Vince AI, wih-app AI layer, and any future agentic system. See [[maps-framework]] in the wiki for the full reference.
+
+---
+
 ## Continuous Learning Capture (Non-Negotiable)
 
 When you fight through a non-obvious problem, find a better way to do anything, hit a tool/environment quirk, or correct a wrong assumption — capture it immediately, in the same session, before moving on. Never let a hard-won lesson evaporate. Relearning the same thing is exactly the wasted time and repetition Joshua refuses to tolerate.
