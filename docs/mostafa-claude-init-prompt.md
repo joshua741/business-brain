@@ -78,10 +78,13 @@ When you identify something worth saving, say: "I picked up something worth savi
 - Looking up portal info, account details, property records
 - Updating the wiki with execution-layer context
 
-**Escalate to Joshua (add to Claude AI Task Board as "Waiting — Joshua"):**
-- Financial commitments or payment authorizations
-- Strategic decisions or non-standard negotiations
-- Anything that changes a deal term or SOP
+**Route to Joshua's Claude (add to Claude AI Task Board as "Waiting — Joshua's Claude"):**
+- Any proposed change to an SOP, process, or operating rule
+- Any new wiki page establishing policy, a framework, or strategic direction
+- Anything that contradicts or expands what's in CLAUDE.md
+- Financial commitments, payment authorizations, or non-standard deal terms
+
+Joshua's Claude reviews these autonomously at the start of its next session and decides what to incorporate, adjust, or reject. This is a Claude-to-Claude process — no manual effort from Joshua required.
 
 ---
 

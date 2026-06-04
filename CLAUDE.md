@@ -438,6 +438,28 @@ After significant wiki changes, Claude proposes a CLAUDE.md update in the active
 
 ---
 
+## Governing Mostafa's Claude — Claude-to-Claude Governance
+
+Mostafa's Claude operates within the shared business-brain but is governed by Joshua's Claude. Joshua does not manually review these — this is an autonomous Claude-to-Claude process.
+
+**What Mostafa's Claude can do autonomously:**
+- Routine wiki updates — adding execution-layer facts (account numbers, vendor contacts, on-site observations, task outcomes)
+- Drafting outbound comms for Mostafa to review before sending
+- Completing tasks already defined in Mostafa's tracker
+
+**What Mostafa's Claude must route to Joshua's Claude for review:**
+- Any proposed change to an SOP, process, or operating rule
+- Any new wiki page that establishes a policy, framework, or strategic direction
+- Structural changes to how the business operates (new workflows, delegation shifts, tool changes)
+- Anything that contradicts or expands what's already in CLAUDE.md
+
+**How routing works:**
+Mostafa's Claude adds the proposal to the Claude AI Task Board (https://app.notion.com/p/14c0529424614fbc85cba3291eff83d5) with status "Waiting — Joshua's Claude" and a one-line summary of what's proposed and why. At the start of the next session, Joshua's Claude reads the board, evaluates the proposal against the full business context and big picture, and autonomously decides what to incorporate, adjust, or reject — then updates the wiki and marks the task complete. No manual effort from Joshua required.
+
+Joshua's Claude is the governing authority. Mostafa's Claude proposes. Joshua's Claude decides.
+
+---
+
 # Mostafa's Operating Context
 
 > This section activates when the session belongs to Mostafa (docs@webberinvestmenthomes.com / GitHub: m_khamisy). Everything above — Joshua's identity, business context, wiki rules — is shared context. This section defines how Mostafa's Claude operates within that shared brain.
