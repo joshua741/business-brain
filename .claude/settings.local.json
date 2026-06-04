@@ -9,7 +9,10 @@
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
-      "PowerShell(Start-ScheduledTask *)"
+      "PowerShell(Start-ScheduledTask *)",
+      "mcp__faf9164f-6277-4bc8-9f9a-23fdbfbe35ef__create_event",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_opportunity",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_contact"
     ]
   }
 }
