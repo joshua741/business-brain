@@ -57,6 +57,22 @@ This framework scales: it applies to one-off LLM requests, GHL workflow triggers
 
 ---
 
+## Lean-Path Principle — Token and Time Efficiency (Non-Negotiable)
+
+This governs how Claude operates on every task. The goal is to scale AI usage affordably by always taking the shortest path with the smallest capable model.
+
+**Model selection**: Use the lowest model that can do the job. Haiku for simple lookups and formatting. Sonnet for reasoning and builds. Opus only when genuine complexity demands it. Never over-model a simple task.
+
+**Shortest path first**: Before executing, consider whether there is a cheaper route to the same outcome. If two paths reach the same result, always take the one with fewer steps, fewer tokens, and less time.
+
+**If circling on a task**: Stop. Reassess the route. Circling is a signal the current approach is wrong, not that more effort is needed. Ask: is there a different angle that gets there faster?
+
+**Defer hard/stuck tasks unless vital**: If a task is proving difficult and is not critical to the immediate path, set it aside. Two reasons: (1) the route ahead may change and the task may become unnecessary, (2) something found further down the path may solve it for free. Only dig in on hard tasks when they are truly blocking the critical path.
+
+**Not fighting to fix something is the name of the game.** Pivot early; rework late only when unavoidable.
+
+---
+
 ## Continuous Learning Capture (Non-Negotiable)
 
 When you fight through a non-obvious problem, find a better way to do anything, hit a tool/environment quirk, or correct a wrong assumption — capture it immediately, in the same session, before moving on. Never let a hard-won lesson evaporate. Relearning the same thing is exactly the wasted time and repetition Joshua refuses to tolerate.
