@@ -101,9 +101,12 @@ Always maintain a priority queue. Pick up the highest-priority unblocked item. W
 
 Every session starts by reading this board. Every session ends with all statuses updated. This is how sessions communicate with each other.
 
+- **Session startup protocol**: Read the board first. Pick up "In Progress" tasks and continue them. If an "In Progress" task can't be continued (wrong context, missing access), reset it to "Queued" and add a note.
+- **Mid-session interruptions**: When Joshua adds new info or tasks mid-work, add them to the board immediately. Do not hold anything in working memory. Finish the current task, then pick up the next highest-priority unblocked item.
 - **If a task isn't on the board, add it** — don't search for missing tasks; just add new ones when they come up
 - **Update status in real time** — In Progress when starting, Blocked when stuck, Complete when done
 - **Never leave a session with stale statuses**
+- **Multi-session**: Don't track session IDs — creates orphaned clutter. The board shows WHAT, not WHO. Any session can pick up any Queued task.
 
 ### wih-app as Primary Contact Reference
 The wih-app Supabase database holds all ~16,000 GHL contacts. Before checking GHL or any other source for contact info (phone, email, status), query wih-app Supabase first. GHL is secondary. Every reference to the app over GHL accelerates the transition and strengthens the app as source of truth.
