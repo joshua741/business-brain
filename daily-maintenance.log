@@ -550,3 +550,302 @@
 [2026-06-03 03:34:50] Repo visibility check
 [2026-06-03 03:34:51] isPrivate=true
 [2026-06-03 03:34:51] Changes detected -- committing
+[2026-06-03 03:34:51] warning: in the working copy of 'CLAUDE.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'connectors/connectors.json', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'connectors/notion_meetings.py', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'tests/test_notion_meetings.py', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/.last-ingest', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/1312-65th-dr.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/2802-s-channing-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/3904-ave-r.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/4019-37th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/7005-winston-ave.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/9-unit-acquisition.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/ai-automation-strategy.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/austin-hughes.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/baselane.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/business-brain.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/content-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/doorloop.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/ghl.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/index.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/lbk-cleaners.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/log.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/matt-beard.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/mercury.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/mkenzy.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/sales-scripts.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/supabase.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/vince-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/wholesale.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/wih-app.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'docs/migration/account-tree.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'docs/migration/repoint-checklist.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'docs/migration/sequence-rules.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'docs/superpowers/plans/2026-06-03-baselane-to-mercury-migration.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'docs/superpowers/specs/2026-06-03-baselane-to-mercury-migration-design.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'google-login.bat', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/2106-68th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/4438-puffer-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/4513-48th-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/7000-patterson-ave.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/915-tulane-st.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/agent-outreach.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/alex-martinez.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/baselane-to-mercury-migration.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/boris-cherny.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/claude-code-workflow.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/company-roadmap.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/curtis-william.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/disposition.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/don-pittman.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/dondi-cook.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/giggle-finance.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/hieu.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/information-moat.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/jacob-swim.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/jerry-norton.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/john-garcia.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/lakeview.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/manus.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/michael-bullis.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/mls-two-call-closing.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/no-fluff-model.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/one-point-lending.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/rocket-mortgage.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/secured-sequence.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/sequence.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/shane-leary.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-agent-script-freescript.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-bi-dashboard-claude.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-claude-code-creator-starts-project.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-hieu-1-3m-process.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-new-way-content-ai.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-selling-wholesale-easier.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-start-wholesale-2026.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-this-exact-wholesale-script-1-2m.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-20-morning-meeting-angel.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-21-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-22-meeting-with-michael-and-josh.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-22-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-22-weekly-role-play-w-jon.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-26-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-27-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-28-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-29-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-30-phone-call-with-yvonne-and-josh.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-05-30-video-call-with-yvonne-scott-and-josh.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-06-01-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-06-02-meeting.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-transcript-2026-06-02-morning-meeting-josh-mostafa.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-ultimate-agent-outreach-script.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-wholesale-blueprint-next-market.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/source-wholesaling-follow-up-strategy.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] warning: in the working copy of 'wiki/yvonne-scott-subject-to.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 03:34:51] [master edae8c9] chore: notion meeting pull 2026-06-03
+[2026-06-03 03:34:51]  114 files changed, 24578 insertions(+), 191 deletions(-)
+[2026-06-03 03:34:51]  create mode 100644 docs/migration/account-tree.md
+[2026-06-03 03:34:51]  create mode 100644 docs/migration/repoint-checklist.md
+[2026-06-03 03:34:51]  create mode 100644 docs/migration/sequence-rules.md
+[2026-06-03 03:34:51]  create mode 100644 docs/superpowers/plans/2026-06-03-baselane-to-mercury-migration.md
+[2026-06-03 03:34:51]  create mode 100644 docs/superpowers/specs/2026-06-03-baselane-to-mercury-migration-design.md
+[2026-06-03 03:34:51]  create mode 100644 google-login.bat
+[2026-06-03 03:34:51]  create mode 100644 raw/clip-2026-06-03-agent-script-freescript-FULL.md
+[2026-06-03 03:34:51]  create mode 100644 raw/clip-2026-06-03-hieu-1-3m-process-FULL.md
+[2026-06-03 03:34:51]  create mode 100644 raw/clip-2026-06-03-how-claude-code-s-creator-starts-every-project.md
+[2026-06-03 03:34:51]  create mode 100644 raw/clip-2026-06-03-start-wholesale-2026-FULL.md
+[2026-06-03 03:34:51]  create mode 100644 raw/clip-2026-06-03-the-new-way-of-making-content-in-the-age-of-ai.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-20-morning-meeting-angel.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-21-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-22-meeting-with-michael-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-22-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-22-weekly-role-play-w-jon.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-26-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-27-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-28-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-29-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-30-phone-call-with-yvonne-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-05-30-video-call-with-yvonne-scott-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-06-01-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-06-02-meeting.md
+[2026-06-03 03:34:51]  create mode 100644 raw/transcript-2026-06-02-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/2106-68th-st.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/4438-puffer-st.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/4513-48th-st.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/7000-patterson-ave.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/915-tulane-st.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/agent-outreach.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/alex-martinez.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/baselane-to-mercury-migration.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/boris-cherny.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/claude-code-workflow.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/company-roadmap.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/curtis-william.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/disposition.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/don-pittman.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/dondi-cook.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/giggle-finance.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/hieu.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/information-moat.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/jacob-swim.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/jerry-norton.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/john-garcia.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/lakeview.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/manus.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/michael-bullis.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/mls-two-call-closing.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/no-fluff-model.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/one-point-lending.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/rocket-mortgage.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/secured-sequence.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/sequence.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/shane-leary.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-agent-script-freescript.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-bi-dashboard-claude.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-claude-code-creator-starts-project.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-hieu-1-3m-process.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-new-way-content-ai.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-selling-wholesale-easier.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-start-wholesale-2026.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-this-exact-wholesale-script-1-2m.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-20-morning-meeting-angel.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-21-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-22-meeting-with-michael-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-22-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-22-weekly-role-play-w-jon.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-26-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-27-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-28-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-29-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-30-phone-call-with-yvonne-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-05-30-video-call-with-yvonne-scott-and-josh.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-06-01-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-06-02-meeting.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-transcript-2026-06-02-morning-meeting-josh-mostafa.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-ultimate-agent-outreach-script.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-wholesale-blueprint-next-market.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/source-wholesaling-follow-up-strategy.md
+[2026-06-03 03:34:51]  create mode 100644 wiki/yvonne-scott-subject-to.md
+[2026-06-03 03:34:53] To https://github.com/joshua741/business-brain.git
+[2026-06-03 03:34:53]    0628b14..edae8c9  master -> master
+[2026-06-03 03:34:53] Pushed to GitHub
+[2026-06-03 03:34:53] === Notion meeting pull complete ===
+[2026-06-03 16:00:01] === Notion meeting pull started ===
+[2026-06-03 16:00:01] git pull
+[2026-06-03 16:00:03] From https://github.com/joshua741/business-brain
+[2026-06-03 16:00:03]  * branch            master     -> FETCH_HEAD
+[2026-06-03 16:00:03] Already up to date.
+[2026-06-03 16:00:03] Notion meetings connector
+[2026-06-03 16:00:13] notion-meetings: pulled 0, skipped 14, failed 6
+[2026-06-03 16:00:13]   = Morning Meeting Josh, Mostafa 2026-05-21T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:13]   = Morning Meeting Josh & Mostafa 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:13]   = ≡ƒôîMeeting with Michael and Josh 2026-05-22T15:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Weekly Role Play w/ Jon 2026-05-22T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh & Mostafa 2026-05-26T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh, Mostafa 2026-05-27T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh, Mostafa 2026-05-28T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh & Mostafa 2026-05-29T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = ≡ƒô▒Video Call with Yvonne , Scott, and Josh 2026-05-30T14:30:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = ≡ƒô▒Phone Call with Yvonne and Josh 2026-05-30T16:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh & Mostafa 2026-06-01T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting Josh & Mostafa 2026-06-02T12:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = 2026-06-02T12:46:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   = Morning Meeting - Angel 2026-05-20T11:00:00.000-05:00 (unchanged)
+[2026-06-03 16:00:14]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-03 16:00:14]   ! 2026-05-19T09:02:00.000-05:00 (empty note)
+[2026-06-03 16:00:14]   ! 2026-05-20T12:03:00.000-05:00 (empty note)
+[2026-06-03 16:00:14]   ! 2026-05-20T16:02:00.000-05:00 (empty note)
+[2026-06-03 16:00:14]   ! Morning Meeting - Angel 2026-05-21T11:00:00.000-05:00 (empty note)
+[2026-06-03 16:00:14]   ! 2026-05-27T10:07:00.000-05:00 (empty note)
+[2026-06-03 16:00:14] Running wiki ingest agent
+[2026-06-03 16:04:15] All 5 link targets exist, index/log/reciprocal-links updated. Ingest is complete. I'm leaving the commit to the maintenance wrapper (it auto-commits after this step), but one branch flag is worth surfacing.
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] ## Daily maintenance ΓÇö done
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] **Finished the stalled ingest of 3 shortlisted YouTube clips** that were already pulled into `raw/` with source pages built, but never registered in the index/log (the 16:00 wiki-ingest step that invoked me).
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] **What was already on disk (verified complete, transcripts embedded verbatim):**
+[2026-06-03 16:04:15] - `source-pace-morby-creative-finance-agents` ΓÇö live sub-to call with an agent (CC&Rs, seller net sheet, "lead the conversation")
+[2026-06-03 16:04:15] - `source-nate-herk-dynamic-workflows` ΓÇö Claude Code workflows vs skill/subagent/agent-team/`/goal`; the cost-discipline ladder
+[2026-06-03 16:04:15] - `source-koerner-ai-agent-money` ΓÇö Brandon Doyle/OpenClaw ΓåÆ **$8K MRR** building free local-business sites + Lob postcards + cold calls
+[2026-06-03 16:04:15] - `chris-koerner.md` (person)
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] **What I did to finalize:**
+[2026-06-03 16:04:15] - Added all 4 to `index.md` (People + AI clips + Wholesale sources)
+[2026-06-03 16:04:15] - Added reciprocal links on `pace-morby.md` and `nate-herk.md` so nothing orphans
+[2026-06-03 16:04:15] - Appended 3 log entries; confirmed all wikilinks resolve (no stubs needed)
+[2026-06-03 16:04:15] - `.last-ingest` already 2026-06-03
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] **Three things for you:**
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] 1. **The Koerner clip is genuinely actionable, not just content.** The play ΓÇö *build the asset free ΓåÆ physical postcard w/ QR ΓåÆ hard cold-call the scanners* ΓÇö maps cleanly onto **LBK commercial outreach** and your **agent-outreach** funnel. "Compound the hard things; online├ùoffline." I logged it as an insight but didn't spin up a concept page ΓÇö say the word if you want it operationalized into the Vince/wih-app backlog.
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] 2. **Approval-vs-ingest mismatch.** `review-queue/2026-06-03.md` still shows these as **unchecked** (`- [ ]`), yet the clips and pages already existed on disk. I completed the ingest per the firm "no `raw/` file without a wiki entry" rule. Heads up that something pulled+built them ahead of your checkbox approval. (Item 3, the Nate Herk "AI Operating System" video, was *not* a new clip ΓÇö already covered by `source-aios-nate-herk.md`.)
+[2026-06-03 16:04:15] 
+[2026-06-03 16:04:15] 3. **You're on branch `feat/meeting-tasks`, not `master`.** Prior daily runs committed to master. If the wrapper auto-commits, these wiki changes land on `feat/meeting-tasks`. Want me to commit them to master instead, or leave them on this branch?
+[2026-06-03 16:04:15] Secret audit (non-fatal warning)
+[2026-06-03 16:04:16] POTENTIAL UNMASKED SECRETS:
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234586890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5656434354'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '7468562544'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '3454557676'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '6434565664'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1122334455'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '2035551234'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-03 16:04:16]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-03 16:04:16] Repo visibility check
+[2026-06-03 16:04:17] isPrivate=true
+[2026-06-03 16:04:17] Changes detected -- committing
+[2026-06-03 16:04:17] warning: in the working copy of 'wiki/index.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 16:04:17] warning: in the working copy of 'wiki/log.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 16:04:17] warning: in the working copy of 'wiki/nate-herk.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 16:04:17] warning: in the working copy of 'wiki/pace-morby.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 16:04:17] warning: in the working copy of 'wiki/chris-koerner.md', LF will be replaced by CRLF the next time Git touches it
+[2026-06-03 16:04:17] [feat/meeting-tasks e114a9e] chore: notion meeting pull 2026-06-03
+[2026-06-03 16:04:17]  14 files changed, 1492 insertions(+), 1 deletion(-)
+[2026-06-03 16:04:17]  create mode 100644 raw/clip-2026-06-03-claude-code-dynamic-workflows-clearly-explained.md
+[2026-06-03 16:04:17]  create mode 100644 raw/clip-2026-06-03-how-to-negotiate-creative-finance-with-agents.md
+[2026-06-03 16:04:17]  create mode 100644 raw/clip-2026-06-03-i-told-an-ai-agent-to-make-me-money-it-did.md
+[2026-06-03 16:04:17]  create mode 100644 review-queue/2026-06-03.md
+[2026-06-03 16:04:17]  create mode 100644 review-queue/log.md
+[2026-06-03 16:04:17]  create mode 100644 wiki/chris-koerner.md
+[2026-06-03 16:04:17]  create mode 100644 wiki/source-koerner-ai-agent-money.md
+[2026-06-03 16:04:17]  create mode 100644 wiki/source-nate-herk-dynamic-workflows.md
+[2026-06-03 16:04:17]  create mode 100644 wiki/source-pace-morby-creative-finance-agents.md
+[2026-06-03 16:04:18] Everything up-to-date
+[2026-06-03 16:04:18] Pushed to GitHub
+[2026-06-03 16:04:18] === Notion meeting pull complete ===
