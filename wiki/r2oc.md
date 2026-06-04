@@ -3,8 +3,8 @@ name: r2oc
 type: entity
 tags: [marketing-brand, rent-to-own, content, social-media]
 status: active
-sources: [CLAUDE.md seed]
-updated: 2026-05-28
+sources: [CLAUDE.md seed, doc-2026-06-04-r2oc-program-knowledge-base.md]
+updated: 2026-06-04
 ---
 
 # Rent 2 Own Cribs (R2OC)
@@ -39,6 +39,19 @@ When a new RTO property is available:
 3. Facebook Marketplace post (Joshua's personal page) — title formula above, R2OC listing link, unique images
 4. Responses handled via RTO script system (see [[sales-scripts]])
 5. Interested contacts enter wih-app as `rto_buyer` at "New Inquiry" stage in the `rent_to_own` pipeline
+
+## Property status definitions
+- **Available** (green) — Ready to move in
+- **Upcoming** (yellow) — Coming soon; prospect can join notification list
+- **Pending** (orange) — Under contract with another buyer
+- **Sold** (red) — No longer available
+
+## Key differentiators (for outreach/bot use)
+- No bank loan needed — WIH is the lender
+- No credit minimum — income-based qualification only, no credit pull
+- Two paths: RTO (flexible, smaller deposit) or Direct Seller Finance (own Day 1)
+- Built-in conversion path with formula-based [[secondary-deposit]]
+- $0 secondary deposit possible at months 25–36 with clean payment history
 
 ## Related pages
 - [[wih]]

@@ -3,6 +3,9 @@
 Append-only. Format: `## [YYYY-MM-DD] operation | title`
 Operations: seed | ingest | lint | query | update
 
+## [2026-06-04] ingest | doc-2026-06-04-r2oc-program-knowledge-base.md
+Source: rent2owncribs.com Lovable website program knowledge base. Updated wiki/rent-to-own.md (secondary deposit formula + eligibility tiers, qualification requirements, AS-IS policy, lifecycle). Updated wiki/r2oc.md (property statuses, key differentiators). No credit minimum confirmed — income-based only.
+
 ---
 
 ## [2026-05-28] seed | Initial wiki seeded from CLAUDE.md context — 54 pages created: 5 companies, 11 properties, 13 tools, 6 projects, 12 people, 7 concepts
