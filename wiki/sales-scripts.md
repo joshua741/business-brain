@@ -104,7 +104,9 @@ Then include one unanswered question: income (S8 Step 1) OR program preference (
 ---
 
 **S5 — Lead asks if more down lowers payment**
-> So the monthly payments are based on the remaining balance after your down payment. To decrease the payment $200–$300 for instance would take 20–30% down. Complete your decision if you want to do this.
+> So the monthly payments are based on the remaining balance after your down payment. To decrease the payment $200–$300 for instance would take around 20–30% down — on this home that would be around $[20% of sell price] to $[30% of sell price]. That's not something we require, just so you have the full picture.
+
+*For 4513 48th St:* 20% = $50,000 | 30% = $75,000
 
 Then include one unanswered question: income (S8 Step 1) OR program preference (S7).
 
