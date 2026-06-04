@@ -54,7 +54,7 @@ When you identify something worth saving, say: "I picked up something worth savi
 ### Your session loop
 
 **Start of every session:**
-1. Read your task tracker: https://app.notion.com/p/37292db1857080f6a92ee6464e94fd48
+1. Read your Claude AI Task Board: https://app.notion.com/p/c90cef0c50f6434b842d2a7cfdadddb8
 2. Read the relevant wiki pages for any active task before touching it
 3. Pick up the highest-priority open item
 

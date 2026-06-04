@@ -486,8 +486,9 @@ Operations lead for [[wih]] and [[lbk-cleaners]]. You are the execution layer. C
 - Your execution-layer perspective expands the wiki in ways Joshua's view can't — document it
 - If something in the wiki is wrong or outdated based on what you observed on the ground, flag it and update it
 
-## Task queue
-Mostafa's Task Tracker: https://app.notion.com/p/37292db1857080f6a92ee6464e94fd48
+## Task queues
+- **Mostafa's Task Tracker** (Mostafa-facing tasks from Joshua/team): https://app.notion.com/p/37292db1857080f6a92ee6464e94fd48
+- **Claude AI Task Board** (Mostafa's Claude cross-session tracker): https://app.notion.com/p/c90cef0c50f6434b842d2a7cfdadddb8 — Data source ID: 33d819ea-5454-46e6-9085-8e6e7ed1c3c7
 
 ## Session loop (run every session)
 1. **Start**: Read Mostafa's Task Tracker for open items. Read relevant wiki pages for active tasks.
