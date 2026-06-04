@@ -123,6 +123,12 @@
 - [Boris Cherny](boris-cherny.md) — creator of Claude Code; workflow reference
 - [Nate Herk](nate-herk.md) — AI automation creator; AI Operating System framework
 
+## Sources — Daily connector snapshots (2026-06-04)
+- [GHL Snapshot 2026-06-04](source-ghl-snapshot-2026-06-04.md) — 500 opps, 12 pipelines, 16,375 contacts; Ashley Paz hot in Send Deposit Agreement
+- [Mercury Snapshot 2026-06-04](source-mercury-snapshot-2026-06-04.md) — $263.55 checking, Lafayette Life $837.48 flagged, Tre'sye Rodriguez $1,172.98 incoming
+- [Supabase Snapshot 2026-06-04](source-supabase-snapshot-2026-06-04.md) — 14,206 directory contacts (87% migrated), 1 live SMS conversation
+- [Twilio SMS Log 2026-06-04](source-twilio-sms-log-2026-06-04.md) — **Vince AI confirmed live** on +18XXXXX2532; acquisition outreach active Jun 3–4
+
 ## Sources — Reference data
 - [Davis — Available Properties](davis-available-properties.md) — ~28 tracked acquisition leads with MAO/ARV/cashflow
 

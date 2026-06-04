@@ -849,3 +849,107 @@
 [2026-06-03 16:04:18] Everything up-to-date
 [2026-06-03 16:04:18] Pushed to GitHub
 [2026-06-03 16:04:18] === Notion meeting pull complete ===
+[2026-06-04 06:57:02] === Daily maintenance started ===
+[2026-06-04 06:57:02] git pull
+[2026-06-04 06:57:03] From https://github.com/joshua741/business-brain
+[2026-06-04 06:57:03]  * branch            master     -> FETCH_HEAD
+[2026-06-04 06:57:03] Already up to date.
+[2026-06-04 06:57:03] Google Drive briefings connector
+[2026-06-04 06:57:16] gdrive connector: ADC not available -- skipping (run gcloud auth application-default login).
+[2026-06-04 06:57:16] Local-files connector (drop folder)
+[2026-06-04 06:57:16] local-files connector: ingested 0, skipped 0, failed 0
+[2026-06-04 06:57:16] GHL connector
+[2026-06-04 06:57:19] ghl connector: wrote raw/ghl-snapshot-2026-06-04.md (500 opps, 12 pipelines).
+[2026-06-04 06:57:19] Twilio connector
+[2026-06-04 06:57:20] twilio connector: wrote raw/twilio-sms-log-2026-06-04.md (200 messages).
+[2026-06-04 06:57:20] Supabase connector
+[2026-06-04 06:57:24] supabase connector: wrote raw/supabase-snapshot-2026-06-04.md (14 tables).
+[2026-06-04 06:57:24] Google Sheets connector
+[2026-06-04 06:57:36] sheets connector: ADC not available -- skipping (run gcloud auth application-default login).
+[2026-06-04 06:57:36] Mercury connector
+[2026-06-04 06:57:37] mercury connector: wrote raw/mercury-snapshot-2026-06-04.md (2 accounts).
+[2026-06-04 06:57:37] Connector gap detector
+[2026-06-04 06:57:37] wrote STATUS.md: 15 connectors, 4 need credentials
+[2026-06-04 06:57:37] Running wiki ingest and lint agent
+[2026-06-04 07:02:59] The git commit will be handled by the calling maintenance script (as in previous runs). All wiki writes are complete. Here's the daily maintenance summary:
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ---
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ## Daily Maintenance Report ΓÇö 2026-06-04
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ### Ingested: 4 connector snapshots
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] **Raw files added to wiki:**
+[2026-06-04 07:02:59] - `source-ghl-snapshot-2026-06-04.md` ΓÇö 500 opps, 12 pipelines, 16,375 contacts
+[2026-06-04 07:02:59] - `source-mercury-snapshot-2026-06-04.md` ΓÇö $263.55 checking, $0 savings
+[2026-06-04 07:02:59] - `source-supabase-snapshot-2026-06-04.md` ΓÇö 14,206 directory contacts, 1 live conversation
+[2026-06-04 07:02:59] - `source-twilio-sms-log-2026-06-04.md` ΓÇö 200 SMS, Vince live on +18XXXXX2532
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] **Entity pages updated:** `vince-ai`, `twilio`, `mercury`, `wih-app`, `supabase`, `ghl`
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ---
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ### Biggest signal: Vince AI is live
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] The previous blocker on `vince-ai.md` ("needs dedicated number + publishing before go-live") is resolved. Vince has been running live conversations on **+18XXXXX2532** since June 3. The Twilio log shows Vince engaging contacts about off-market deals and stalled listings ΓÇö acquisition outreach, not just PML/TL qualification. The wih-app Supabase DB has 1 active conversation and 9 messages written, confirming the SMS layer is functional end-to-end.
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ---
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ### Other signals worth noting
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] 1. **GHLΓåÆSupabase migration: 87% done** ΓÇö 14,206 of 16,375 contacts synced to `directory_contacts`.
+[2026-06-04 07:02:59] 2. **Mercury is thin** ΓÇö $263.55 in checking. The full Profit First account buildout hasn't moved primary cash flows over yet. Lafayette Life ($837.48 on May 8) is a new payee not in migration docs ΓÇö flag for Joshua to confirm if this is an infinite banking premium.
+[2026-06-04 07:02:59] 3. **Ashley Paz** moved to "Send Deposit Agreement" in RTO Prospects on Jun 3 ΓÇö hottest active lead in GHL right now.
+[2026-06-04 07:02:59] 4. **Tre'sye Rodriguez** ΓÇö $1,172.98 incoming (pending Jun 3 in Mercury). Context unknown; could be rent or RTO payment.
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ---
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] ### No new session-capture memos
+[2026-06-04 07:02:59] 
+[2026-06-04 07:02:59] All June 2ΓÇô3 memos were already committed in yesterday's run. No June 4 memos yet.
+[2026-06-04 07:03:00] Secret audit (non-fatal warning)
+[2026-06-04 07:03:02] POTENTIAL UNMASKED SECRETS:
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234586890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5656434354'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '7468562544'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1619674829'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '3454557676'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1234567890'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '6434565664'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '9999999999'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '1122334455'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '2035551234'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '15672299756'
+[2026-06-04 07:03:02]  - raw\BookingKoala_Help_Center_Full_Reference.md: long-digit-run '5672299756'
+[2026-06-04 07:03:02] Repo visibility check
+[2026-06-04 07:03:03] isPrivate=true
+[2026-06-04 07:03:03] Changes detected -- committing

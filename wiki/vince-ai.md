@@ -4,7 +4,7 @@ type: project
 tags: [ai, ghl, twilio, capital-raising, pml, tl]
 status: active
 sources: [CLAUDE.md seed, vince-master-booklet.md, gumloop-instruction-manual.md]
-updated: 2026-06-03
+updated: 2026-06-04
 ---
 
 # Vince AI
@@ -32,7 +32,7 @@ No exclamation marks, no hype, short human texts; business hours only (9AM–6PM
 - GHL pipeline "PML Lenders," phone as dedup key; v2 API for opportunities, v1 for contacts/tags/notes (source: vince-master-booklet.md).
 - 10 follow-up/handler flows to build (inbound handler, PML/TL no-response sequences, no-show, rescheduling, re-engagement, etc.) (source: vince-master-booklet.md).
 
-Blockers: still needs a **dedicated PML phone number + publishing** before go-live. A full **"Vince master booklet"** spec exists ([[source-vince-master-booklet]]).
+**Vince is LIVE as of 2026-06-03.** Production number confirmed: **+18XXXXX2532** (source: [[source-twilio-sms-log-2026-06-04]]). The dedicated-number blocker is resolved. The agent is actively engaging contacts on acquisition outreach — asking about off-market/stalled listings — not just PML/TL qualification. A full **"Vince master booklet"** spec exists ([[source-vince-master-booklet]]).
 
 ## Build spec: Vince as an acquisitions agent
 The 2026 [[wholesale]] frameworks now give Vince a concrete next-build target — extending him from PML/TL qualification into an **AI acquisitions agent**:

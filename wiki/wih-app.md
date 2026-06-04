@@ -33,9 +33,9 @@ Because it is the central system, **relevant knowledge accumulating in this Busi
 Joshua now also calls the consolidated in-house app **"Us"** — the one-stop replacement for [[doorloop]], [[ghl]], and the contacts directory, i.e. "everything in the house." Internal [[railway]] project codename is **"Terrific Blessing."** Architecture: [[supabase]] = storage/backup, [[railway]] = hosting.
 
 Major build threads underway:
-- **Contacts migration** — moving all ~16,000 [[ghl]] contacts into [[supabase]] as a deduplicated Contacts directory. Data quality is poor: ~89% untagged and only 39 contacts have emails, so cleanup/dedup is part of the work.
+- **Contacts migration** — moving all ~16,375 [[ghl]] contacts into [[supabase]] as a deduplicated Contacts directory. As of 2026-06-04: **14,206 contacts synced** (~87% complete) in the `directory_contacts` table. Data quality is poor: ~89% untagged and only 39 contacts have emails, so cleanup/dedup is part of the work. (Source: [[source-supabase-snapshot-2026-06-04]])
 - **Wholesale KPI command-center dashboard** — a three-phase build that mirrors the No Fluff Operator GHL→Supabase→Railway/Vercel pattern (see [[source-bi-dashboard-claude]], [[no-fluff-model]], and [[claude-code-workflow]]). Surfaces [[kpi-tracking]] and [[disposition]] metrics.
-- **AI lead-reply** via [[twilio]].
+- **AI lead-reply** via [[twilio]] — **LIVE as of Jun 3, 2026**: 1 active conversation, 9 messages in Supabase (Vince on +18XXXXX2532, backed by [[vince-ai]]).
 - **Google Maps street view** in-app.
 - **Notes tab.**
 
