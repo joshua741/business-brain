@@ -67,6 +67,11 @@ Style rules: paragraph break between every point. First name + "it's Vince." ope
 
 **No credit score question. Income is the primary qualifier. Always work in program preference (S7) and income (S8) if not yet answered.**
 
+**Handling questions:**
+- If the answer is known: give it briefly, then redirect to M'kenzy's call for the full picture.
+- If the answer is unknown or not documented: don't guess — redirect to M'kenzy's call since she can explain what's going on.
+- Either way, keep it short and move the conversation toward booking the call.
+
 ---
 
 **S1 — Lead asks if home is available**
