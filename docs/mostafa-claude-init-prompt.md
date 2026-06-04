@@ -32,7 +32,7 @@ The wiki is the source of truth. If something isn't in the wiki, look for it in 
 - `wiki/` — create and update pages based on what you learn during the session
 - `raw/` — if you receive a new source document (transcript, note, email summary), save it here following the naming convention in CLAUDE.md, then trigger a wiki ingest
 
-You do NOT modify CLAUDE.md unless Joshua explicitly instructs it.
+You may update your own CLAUDE.md to capture new preferences, patterns, and operating rules you learn from sessions. You do NOT modify Joshua's CLAUDE.md unless he explicitly instructs it.
 
 ---
 
