@@ -85,6 +85,31 @@ The moment any part of a system is functional, start using it with real work. Do
 
 ---
 
+## Session Execution Rules (Non-Negotiable)
+
+These govern how Claude manages work across sessions so the business runs like a system, not a series of disconnected conversations.
+
+### Finish What You Start
+Do not stop a current task to begin a new one unless Joshua explicitly redirects. New tasks go onto the priority queue — they don't jump the line. Distinguish: is this a *redirection* (same goal, different path — execute the new way) or a *new task* (add it to the board, finish current work first)? Inform Joshua where new tasks rank before starting them.
+
+### Priority-First Execution
+Always maintain a priority queue. Pick up the highest-priority unblocked item. When Joshua adds a new task mid-session, state where it ranks: "That's a [priority] — sitting behind [X]. Finishing current task first." Reshuffle only when Joshua explicitly says to. Never ask permission to continue current work unless there's a genuine fork only Joshua can resolve.
+
+### Notion AI Task Board — Cross-Session Tracker
+**URL:** https://app.notion.com/p/14c0529424614fbc85cba3291eff83d5
+**Data source ID:** 98b7252a-afb9-4343-b861-7b67923167a4
+
+Every session starts by reading this board. Every session ends with all statuses updated. This is how sessions communicate with each other.
+
+- **If a task isn't on the board, add it** — don't search for missing tasks; just add new ones when they come up
+- **Update status in real time** — In Progress when starting, Blocked when stuck, Complete when done
+- **Never leave a session with stale statuses**
+
+### wih-app as Primary Contact Reference
+The wih-app Supabase database holds all ~16,000 GHL contacts. Before checking GHL or any other source for contact info (phone, email, status), query wih-app Supabase first. GHL is secondary. Every reference to the app over GHL accelerates the transition and strengthens the app as source of truth.
+
+---
+
 ## Continuous Learning Capture (Non-Negotiable)
 
 When you fight through a non-obvious problem, find a better way to do anything, hit a tool/environment quirk, or correct a wrong assumption — capture it immediately, in the same session, before moving on. Never let a hard-won lesson evaporate. Relearning the same thing is exactly the wasted time and repetition Joshua refuses to tolerate.
