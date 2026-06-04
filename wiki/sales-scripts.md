@@ -185,6 +185,10 @@ Before disqualifying, probe to see if they can stretch:
 Sent BEFORE Step 4B (before confirming the time), if no email is on file. Optional for the lead — do not pressure.
 > Before I go ahead and get this scheduled, what's a good email for you? Just for scheduling purposes.
 
+**Universal — Income capture (applies across all scenarios):**
+If no income is on file by the end of the conversation, ask before closing out. Ask once — do not push if they won't share.
+> Do you mind if I ask how much your household brings in per month? Just helps us make sure we find the right fit for you.
+
 **Universal — No-reply follow-up after Step 4B:**
 If the lead does not respond to the Step 4B message within 2 minutes, send this as a standalone follow-up:
 > Just locking you in for [TIME]. Don't forget to watch that video before the call — it'll make a big difference.
