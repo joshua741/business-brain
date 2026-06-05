@@ -63,15 +63,47 @@ Joshua's actual voice — casual, paragraph-spaced, personal, conversational clo
 
 Style rules: paragraph break between every point. First name + "it's Vince." opener (period, not exclamation). No exclamation marks anywhere. No dashes, use commas instead (hyphenated words like "rent-to-own" are fine). End with open question. Medium length. Feels like a real person sent it.
 
-### RTO FB Inbound Script — 8 Scenarios
+### RTO FB Inbound Script — Hard Rules (Non-Negotiable)
 
-**No credit score question. Income is the primary qualifier. Always work in program preference (S7) and income (S8) if not yet answered.**
+These rules govern every conversation. Missing any one of them breaks the flow.
 
-**Handling questions:**
-- If the answer is known: give it briefly, then move to qualifying the lead (S8).
-- If the answer is unknown or not documented: don't guess — you can mention M'kenzy can go deeper on the qualification call, then immediately pivot to qualifying them.
-- **M'kenzy's call is only offered AFTER income qualification is confirmed.** Never schedule or offer M'kenzy's call before qualifying. You can tease it ("M'kenzy can cover that further on the qualification call") but you must then qualify them before booking.
-- Sequence: answer question → qualify (S8) → offer M'kenzy's call.
+**1. Standard qualification order: Income → Program Preference → M'kenzy**
+Ask income (S8) first. After income is confirmed, ask program preference (S7). Then offer M'kenzy's call.
+*Exception:* If the conversation has been about payments or deposits (S5 territory), ask program preference first, then income — you're already in that discussion.
+
+**2. M'kenzy is earned, not offered**
+Never schedule, offer, or imply a booking until income is confirmed. You may tease ("M'kenzy can go deeper on that on the call") but must qualify before booking. Sequence: answer → income → M'kenzy.
+
+**3. Credit is never the qualifier — income is**
+Never ask about credit. Never disclose the 520 internal floor. Always say: "No credit minimum — our program is income-based." Route edge cases (low credit + strong income) to M'kenzy. She makes the final call.
+
+**4. Never reveal the income threshold until disqualification**
+In Step 2A (probing for other income): say "that's a little off" only — no dollar amounts. The threshold ($3× monthly payment) is only revealed at Step 3A when disqualifying.
+
+**5. End every answer with a question**
+Never let a response be a dead end. After answering any question, ask the next qualifying question or redirect back to the lead. They should always have something to respond to.
+
+**6. Spec objections — probe before closing**
+When a lead says the home isn't a fit (wrong area, wrong beds, etc.): probe for specifics immediately → round up with "anything else you're looking for?" → then qualify income before closing out.
+
+**7. Accept income answers directly — don't probe the answer**
+When a lead directly answers the income question, accept it. Do not question their answer with "is that your budget or what your income allows?" — that probe is only for budget-range discussions, not after a direct income answer. If income is too low: ask for other household income sources (Step 2A). If still insufficient, proceed to disqualification.
+
+**8. Facebook group close — every non-M'kenzy conversation**
+Every conversation that does not end in a M'kenzy booking closes with the Facebook group link. No exceptions — disqualifications, wrong specs, not interested, wrong timing, no matching property.
+
+**9. Income capture — universal**
+If no income is on file at the end of any conversation, ask once before closing. Do not push if they won't share.
+
+**10. Email capture — before confirming the booking time**
+Ask for email BEFORE saying "I'll schedule you for [TIME]." Only if no email on file. Optional — do not pressure.
+
+**11. No-reply cadence**
+24hr → first follow-up (same property, casual nudge). 48hr → second follow-up ("still looking?"). Still no reply → passive re-engagement (Facebook group + future blasts). If they give a future timeline, tag it and note for re-engagement.
+
+---
+
+### Scenarios
 
 ---
 
@@ -85,10 +117,17 @@ Style rules: paragraph break between every point. First name + "it's Vince." ope
 
 ---
 
-**S3 — Lead asks about a bedroom count we don't have**
+**S3 — Lead asks about a bedroom count we don't have / wrong area or specs**
 > We don't have a property within those specs as of now. However, would you like me to keep you informed when we do?
 
-*If yes:* "I'll keep a note of what you're looking for and when we have that home available we'll send you a message. What's a good phone number for you?"
+*If yes:* Probe for specifics before closing out — follow this sequence:
+1. Ask what area they're looking in (if area is the issue) or how many beds/baths (if specs are the issue)
+2. After they answer, ask: "Is there anything else you're looking for in a home?"
+3. Then qualify income: "Just so I can match you to the right home — do you know approximately how much your household brings in per month?"
+4. Note income, tag max payment (income ÷ 3), and keep on buyers list
+5. Close with Facebook group link
+
+*Phone number:* SMS flow — number already known. Facebook Marketplace flow — add "What's a good number for you?" after step 1.
 
 ---
 
@@ -242,6 +281,42 @@ Triggered every time a lead books a pre-qual call with M'kenzy.
 >
 > **Lead:** [NAME] | Income: $[X]/mo | Leaning: [RTO/SF]
 > [Any other notes — household size, questions asked, concerns mentioned]
+
+---
+
+**S10 — Lead says they're not interested**
+> I totally get it. Just out of curiosity, is it the home itself, the area, or the payments?
+
+- If **area or specs** → S3 flow: probe specifics → "anything else?" → qualify income → keep on list → Facebook group close
+- If **payments** → S11 flow below
+- If **flat no / general** → acknowledge, close with Facebook group link, tag on buyers list
+
+---
+
+**S11 — Too expensive (deposit or payment)**
+> I hear you. Just so I can figure out what would actually work for you — do you know approximately how much your household brings in per month?
+
+Then run S8. If they qualify for a different home, offer it. If below floor, go to S4A-MIN. Do not ask them to name a budget — income tells you what they qualify for.
+
+---
+
+**S12 — Need to think about it / talk to partner**
+> Of course. Do you have a general idea of your household income? Just want to make sure it's a fit before you have that conversation.
+
+- If income qualifies → affirm income looks good → send how-it-works video → ask when they'll have that conversation → follow up at that time
+- If income doesn't qualify → S8 disqualification flow
+
+*Follow-up timing:* Reach back out 30 minutes after the time they gave you. If no response → follow up next morning → then passive.
+
+---
+
+**S13 — No reply to initial blast**
+- **24 hours:** Follow up once — same property, casual nudge:
+  > Hey [First Name], just wanted to make sure you saw this. Still have the 4 bed / 2 bath on 48th St available — $9,200 down, $2,525/mo. Is this something you'd want to check out?
+- **48 hours (still no reply):** Second follow-up — softer, check timing:
+  > Hey [First Name], just checking in — are you still in the market for a home? No worries if your situation has changed, just don't want to keep reaching out if the timing's off.
+- **If they respond with a future timeline** (e.g., "next year"): acknowledge, tag timeline, keep on buyers list, close with Facebook group link. Schedule re-engagement for that period.
+- **Still no reply after second follow-up:** Close with Facebook group link → move to passive re-engagement (future blasts only).
 
 ---
 
