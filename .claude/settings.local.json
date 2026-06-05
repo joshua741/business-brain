@@ -22,7 +22,8 @@
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_get_attachment_by_filename",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_create_data_source_item",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_archive_data_source_item",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_make_api_mutating_request"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_make_api_mutating_request",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_find_data_source_items"
     ]
   }
 }
