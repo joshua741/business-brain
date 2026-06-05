@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Refundable Deposit Agreement — Sign</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/4.1.7/signature_pad.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: #f4f4f4; color: #1a1a1a; }
+  .container { max-width: 780px; margin: 40px auto; background: #fff; padding: 48px; border-radius: 8px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+  h1 { font-size: 18px; text-align: center; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .subtitle { text-align: center; font-size: 13px; color: #555; margin-bottom: 28px; }
+  .program-select { display: flex; gap: 32px; margin-bottom: 28px; }
+  .program-select label { font-size: 14px; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; margin-bottom: 28px; }
+  .field-grid.full { grid-template-columns: 1fr; }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+  .field input { border: none; border-bottom: 1px solid #999; padding: 6px 0; font-size: 14px; font-family: Georgia, serif; background: transparent; outline: none; }
+  .field input:focus { border-bottom-color: #2563eb; }
+  .field .value { border-bottom: 1px solid #ccc; padding: 6px 0; font-size: 14px; color: #1a1a1a; min-height: 28px; }
+  h2 { font-size: 13px; margin-bottom: 10px; margin-top: 28px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .terms p { font-size: 12px; line-height: 1.7; margin-bottom: 10px; color: #333; }
+  .terms ul { font-size: 12px; line-height: 1.7; padding-left: 20px; color: #333; margin-bottom: 10px; }
+  .terms ul li { margin-bottom: 4px; }
+  .disclosure { background: #f8f8f8; border-left: 3px solid #2563eb; padding: 14px 16px; font-size: 11.5px; line-height: 1.7; color: #444; margin: 24px 0; }
+  .sig-section { margin-top: 32px; }
+  .sig-block { margin-bottom: 28px; }
+  .sig-block h3 { font-size: 13px; margin-bottom: 12px; color: #555; }
+  .sig-canvas-wrap { border: 1px solid #ccc; border-radius: 4px; background: #fafafa; position: relative; }
+  .sig-canvas-wrap canvas { display: block; width: 100%; height: 120px; cursor: crosshair; touch-action: none; }
+  .sig-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+  .sig-hint { font-size: 11px; color: #999; }
+  .clear-btn { font-size: 11px; color: #2563eb; cursor: pointer; background: none; border: none; padding: 0; }
+  .initials-row { display: flex; gap: 24px; margin-top: 8px; }
+  .initials-box { flex: 1; }
+  .initials-box label { font-size: 11px; color: #666; display: block; margin-bottom: 4px; }
+  .initials-box input { border: none; border-bottom: 1px solid #999; width: 100%; padding: 4px 0; font-size: 14px; font-family: Georgia, serif; background: transparent; outline: none; text-align: center; }
+  .submit-btn { display: block; width: 100%; padding: 16px; background: #1d4ed8; color: #fff; border: none; border-radius: 6px; font-size: 15px; font-family: Georgia, serif; cursor: pointer; margin-top: 32px; letter-spacing: 0.5px; transition: background 0.2s; }
+  .submit-btn:hover { background: #1e40af; }
+  .submit-btn:disabled { background: #93c5fd; cursor: not-allowed; }
+  .success { display: none; text-align: center; padding: 32px; }
+  .success h2 { color: #059669; font-size: 20px; margin-bottom: 8px; border: none; }
+  .success p { font-size: 14px; color: #555; }
+  .download-btn { display: inline-block; margin-top: 16px; padding: 12px 28px; background: #059669; color: #fff; border-radius: 6px; font-size: 14px; cursor: pointer; border: none; font-family: Georgia, serif; }
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px; margin: 0; border-radius: 0; }
+    .field-grid { grid-template-columns: 1fr; }
+    .program-select { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container" id="form-container">
+  <h1>Non-Refundable Move-In Fee Receipt &amp; Acknowledgement</h1>
+  <p class="subtitle">Webber Investment Homes · Please read carefully before signing</p>
+
+  <h2>Program Selection</h2>
+  <div class="program-select">
+    <label><input type="radio" name="program" value="rto" checked> Rent-to-Own Agreement</label>
+    <label><input type="radio" name="program" value="sf"> Seller Financing Agreement</label>
+  </div>
+
+  <h2>Property &amp; Deposit Details</h2>
+  <div class="field-grid full">
+    <div class="field"><label>Property Address</label><div class="value">4513 48th St, Lubbock, TX 79414</div></div>
+  </div>
+  <div class="field-grid">
+    <div class="field"><label>Amount of Holding Fee</label><div class="value">$2,000.00</div></div>
+    <div class="field"><label>Date Received</label><div class="value" id="date-received"></div></div>
+    <div class="field"><label>Received From (Applicant 1 — Full Name)</label><input type="text" id="buyer1" placeholder="Your full name" required></div>
+    <div class="field"><label>Received From (Applicant 2 — Full Name, if applicable)</label><input type="text" id="buyer2" placeholder="Leave blank if single applicant"></div>
+    <div class="field"><label>Driver License # (Applicant 1)</label><input type="text" id="dl1" placeholder="DL number"></div>
+    <div class="field"><label>Driver License # (Applicant 2)</label><input type="text" id="dl2" placeholder="Leave blank if not applicable"></div>
+    <div class="field"><label>Received By</label><div class="value">M'kenzy · Webber Investment Homes</div></div>
+  </div>
+
+  <h2>Payment Deadlines (Rent-to-Own)</h2>
+  <div class="field-grid">
+    <div class="field"><label>First Rent Payment Due</label><div class="value">07/01/2026</div></div>
+    <div class="field"><label>Remaining Deposit Due</label><div class="value">07/01/2026 · $7,200.00</div></div>
+    <div class="field"><label>Standard Monthly Rent</label><div class="value">$2,525.00/mo</div></div>
+    <div class="field"><label>Monthly Payment Due On</label><div class="value">1st of each month · $2,525.00</div></div>
+  </div>
+
+  <h2>1. Purpose of Move-In Deposit</h2>
+  <div class="terms">
+    <p>This deposit is paid solely to reserve the property for Rent-to-Own or Seller Financing consideration. It is not a security deposit, rent payment, mortgage payment, down payment, or guarantee of possession.</p>
+  </div>
+
+  <h2>2. Non-Refundable Nature</h2>
+  <div class="terms">
+    <p>The deposit is non-refundable unless the property becomes unavailable for reasons not caused by the applicant/buyer. The deposit may be forfeited if any of the following occur:</p>
+    <ul>
+      <li>Failure to make required rent/mortgage, remaining deposit, or any related cost within <strong>2 days</strong> of the scheduled due date (or 7-day advance written/verbal notice)</li>
+      <li>Failure to demonstrate sufficient income to meet the required payment</li>
+      <li>Decision or inability to proceed for any reason</li>
+      <li>Refusal to sign required documents</li>
+      <li>Submission of fraudulent information on the application</li>
+      <li>Refusal to provide ACH information for automatic drafts</li>
+      <li><em>(Seller Finance only)</em> Inability to provide proof of home insurance within 7 days of closing</li>
+    </ul>
+  </div>
+
+  <h2>3. Payment Deadline</h2>
+  <div class="terms">
+    <p>If move-in occurs on the 25th, the full rent/mortgage amount is due on that date. If move-in occurs before or after the 25th, a prorated payment is required.</p>
+  </div>
+
+  <h2>4. Changes to Due Dates</h2>
+  <div class="terms">
+    <p>Extensions (pushing dates backward) require a written amendment signed by both parties. Acceleration (moving dates forward) may be issued at seller/lender discretion without requiring the applicant's signature.</p>
+  </div>
+
+  <h2>5. Property Availability</h2>
+  <div class="terms">
+    <p>If the applicant/buyer fails to submit the first payment or remaining deposit within <strong>2 days</strong> of the due date, the property may be re-listed and the holding fee may be forfeited.</p>
+  </div>
+
+  <div class="disclosure">
+    <strong>Disclosure:</strong> The applicant/buyer acknowledges that they have fully read and understood this agreement and have had sufficient time and opportunity to review its terms, ask questions, and seek independent legal counsel prior to signing. The applicant/buyer confirms they are entering into this agreement voluntarily, of their own free will, and without coercion, pressure, distress, or influence of any kind. The applicant/buyer agrees that the seller/lender shall not be held liable for any damages, losses, disputes, or consequences arising from this agreement, including but not limited to loss of any deposit or the applicant's/buyer's decision not to proceed.
+  </div>
+
+  <div class="sig-section">
+    <div class="sig-block">
+      <h3>Applicant / Buyer 1 — Signature</h3>
+      <div class="sig-canvas-wrap">
+        <canvas id="sig1-canvas"></canvas>
+      </div>
+      <div class="sig-actions">
+        <span class="sig-hint">Sign with your finger or mouse</span>
+        <button class="clear-btn" onclick="clearSig(1)">Clear</button>
+      </div>
+    </div>
+
+    <div class="sig-block">
+      <h3>Applicant / Buyer 2 — Signature <span style="font-weight:normal;color:#999">(if applicable)</span></h3>
+      <div class="sig-canvas-wrap">
+        <canvas id="sig2-canvas"></canvas>
+      </div>
+      <div class="sig-actions">
+        <span class="sig-hint">Sign with your finger or mouse</span>
+        <button class="clear-btn" onclick="clearSig(2)">Clear</button>
+      </div>
+    </div>
+
+    <h3 style="font-size:13px;color:#555;margin-bottom:12px;">Disclosure Initials</h3>
+    <div class="initials-row">
+      <div class="initials-box">
+        <label>Applicant 1 Initials</label>
+        <input type="text" id="initials1" maxlength="5" placeholder="e.g. JW">
+      </div>
+      <div class="initials-box">
+        <label>Applicant 2 Initials (if applicable)</label>
+        <input type="text" id="initials2" maxlength="5" placeholder="e.g. MW">
+      </div>
+    </div>
+  </div>
+
+  <button class="submit-btn" id="submit-btn" onclick="submitAgreement()">Sign &amp; Complete Agreement</button>
+</div>
+
+<div class="container success" id="success-container">
+  <h2>Agreement Signed</h2>
+  <p>Your signed deposit agreement has been generated. Download your copy below.<br>A copy will also be sent to Webber Investment Homes.</p>
+  <button class="download-btn" id="download-btn">Download Signed Agreement (PDF)</button>
+</div>
+
+<script>
+  // Set today's date
+  document.getElementById('date-received').textContent = new Date().toLocaleDateString('en-US', {month:'2-digit',day:'2-digit',year:'numeric'});
+
+  // Init signature pads
+  const canvas1 = document.getElementById('sig1-canvas');
+  const canvas2 = document.getElementById('sig2-canvas');
+  function resizeCanvas(c) {
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    const rect = c.getBoundingClientRect();
+    c.width = rect.width * ratio;
+    c.height = 120 * ratio;
+    c.getContext('2d').scale(ratio, ratio);
+  }
+  resizeCanvas(canvas1);
+  resizeCanvas(canvas2);
+  const pad1 = new SignaturePad(canvas1, { backgroundColor: 'rgba(250,250,250,0)', penColor: '#1a1a1a' });
+  const pad2 = new SignaturePad(canvas2, { backgroundColor: 'rgba(250,250,250,0)', penColor: '#1a1a1a' });
+
+  function clearSig(n) { n === 1 ? pad1.clear() : pad2.clear(); }
+
+  let signedPdfData = null;
+
+  function submitAgreement() {
+    const buyer1 = document.getElementById('buyer1').value.trim();
+    const dl1 = document.getElementById('dl1').value.trim();
+    const initials1 = document.getElementById('initials1').value.trim();
+    if (!buyer1) { alert('Please enter Applicant 1 full name.'); return; }
+    if (pad1.isEmpty()) { alert('Please provide Applicant 1 signature.'); return; }
+    if (!initials1) { alert('Please provide Applicant 1 initials for the disclosure.'); return; }
+
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Generating PDF...';
+
+    try {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'pt', format: 'letter' });
+      const margin = 60;
+      const pageW = doc.internal.pageSize.getWidth();
+      const contentW = pageW - margin * 2;
+      let y = 60;
+
+      const addText = (text, size, bold, color, indent) => {
+        doc.setFontSize(size || 11);
+        doc.setFont('helvetica', bold ? 'bold' : 'normal');
+        doc.setTextColor(color || '#1a1a1a');
+        const lines = doc.splitTextToSize(text, contentW - (indent || 0));
+        lines.forEach(line => {
+          if (y > 720) { doc.addPage(); y = 60; }
+          doc.text(line, margin + (indent || 0), y);
+          y += (size || 11) * 1.5;
+        });
+        return y;
+      };
+
+      const addField = (label, value) => {
+        if (y > 700) { doc.addPage(); y = 60; }
+        doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor('#666666');
+        doc.text(label.toUpperCase(), margin, y); y += 13;
+        doc.setFontSize(11); doc.setFont('helvetica', 'normal'); doc.setTextColor('#1a1a1a');
+        doc.text(value || '—', margin, y);
+        doc.setDrawColor('#cccccc');
+        doc.line(margin, y + 3, margin + contentW, y + 3);
+        y += 22;
+      };
+
+      const addSection = (title) => {
+        y += 10;
+        if (y > 700) { doc.addPage(); y = 60; }
+        doc.setFontSize(10); doc.setFont('helvetica', 'bold'); doc.setTextColor('#1a1a1a');
+        doc.text(title.toUpperCase(), margin, y);
+        doc.setDrawColor('#eeeeee');
+        doc.line(margin, y + 4, margin + contentW, y + 4);
+        y += 18;
+      };
+
+      // Title
+      doc.setFontSize(14); doc.setFont('helvetica', 'bold'); doc.setTextColor('#1a1a1a');
+      doc.text('Non-Refundable Move-In Fee Receipt & Acknowledgement', pageW / 2, y, { align: 'center' });
+      y += 20;
+      doc.setFontSize(10); doc.setFont('helvetica', 'normal'); doc.setTextColor('#555555');
+      doc.text('Webber Investment Homes', pageW / 2, y, { align: 'center' });
+      y += 30;
+
+      // Program
+      const program = document.querySelector('input[name="program"]:checked').value;
+      addField('Program', program === 'rto' ? '☑ Rent-to-Own Agreement' : '☑ Seller Financing Agreement');
+
+      addSection('Property & Deposit Details');
+      addField('Property Address', '4513 48th St, Lubbock, TX 79414');
+      addField('Amount of Holding Fee', '$2,000.00');
+      addField('Date Received', document.getElementById('date-received').textContent);
+      addField('Received From (Applicant 1)', buyer1);
+      addField('Received From (Applicant 2)', document.getElementById('buyer2').value.trim() || 'N/A');
+      addField('Received By', "M'kenzy · Webber Investment Homes");
+
+      addSection('Payment Deadlines (Rent-to-Own)');
+      addField('First Rent Payment Due', '07/01/2026');
+      addField('Remaining Deposit Due', '07/01/2026 · $7,200.00');
+      addField('Standard Monthly Rent', '$2,525.00/mo');
+      addField('Monthly Payment Due On', '1st of each month · $2,525.00');
+
+      addSection('1. Purpose of Move-In Deposit');
+      addText('This deposit is paid solely to reserve the property for Rent-to-Own or Seller Financing consideration. It is not a security deposit, rent payment, mortgage payment, down payment, or guarantee of possession.', 10);
+      y += 6;
+
+      addSection('2. Non-Refundable Nature');
+      addText('The deposit is non-refundable unless the property becomes unavailable for reasons not caused by the applicant/buyer. Deposit may be forfeited if:', 10);
+      const bullets = [
+        'Failure to make required payment within 2 days of due date (or 7-day advance notice)',
+        'Failure to demonstrate sufficient income',
+        'Decision or inability to proceed for any reason',
+        'Refusal to sign required documents',
+        'Submission of fraudulent information',
+        'Refusal to provide ACH information',
+        '(SF only) Failure to provide proof of insurance within 7 days of closing'
+      ];
+      bullets.forEach(b => { addText('• ' + b, 10, false, '#333333', 12); y += 2; });
+      y += 4;
+
+      addSection('3. Payment Deadline');
+      addText('Move-in on the 25th: full amount due that date. Move-in before or after the 25th: prorated payment required.', 10);
+      y += 4;
+
+      addSection('4. Changes to Due Dates');
+      addText('Extensions require written amendment signed by both parties. Acceleration may be issued at seller/lender discretion without applicant signature.', 10);
+      y += 4;
+
+      addSection('5. Property Availability');
+      addText('Failure to submit first payment or remaining deposit within 2 days of due date may result in property re-listing and forfeiture of holding fee.', 10);
+      y += 10;
+
+      // Disclosure box
+      if (y > 650) { doc.addPage(); y = 60; }
+      doc.setDrawColor('#2563eb'); doc.setLineWidth(2);
+      doc.line(margin, y, margin, y + 70);
+      doc.setLineWidth(0.5);
+      const discText = 'Disclosure: The applicant/buyer acknowledges that they have fully read and understood this agreement and have had sufficient time to review its terms. The applicant/buyer confirms voluntary entry without coercion of any kind. The seller/lender shall not be held liable for any damages arising from this agreement.';
+      doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor('#444444');
+      const discLines = doc.splitTextToSize(discText, contentW - 16);
+      discLines.forEach(line => { doc.text(line, margin + 12, y + 12); y += 12; });
+      y += 20;
+
+      // Signatures
+      if (y > 600) { doc.addPage(); y = 60; }
+      addSection('Signatures');
+
+      // Sig 1
+      addField('Applicant 1 Full Name', buyer1);
+      addField('Driver License #', dl1 || '—');
+      addField('Date', new Date().toLocaleDateString('en-US'));
+      doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor('#666666');
+      doc.text('APPLICANT 1 SIGNATURE', margin, y); y += 13;
+      if (!pad1.isEmpty()) {
+        const sig1Data = pad1.toDataURL('image/png');
+        doc.addImage(sig1Data, 'PNG', margin, y, 200, 60);
+      }
+      doc.setDrawColor('#cccccc');
+      doc.line(margin, y + 65, margin + 240, y + 65);
+      y += 80;
+
+      addField('Applicant 1 Initials (Disclosure)', initials1);
+
+      // Sig 2 (if provided)
+      const buyer2 = document.getElementById('buyer2').value.trim();
+      if (buyer2 && !pad2.isEmpty()) {
+        y += 10;
+        addField('Applicant 2 Full Name', buyer2);
+        addField('Driver License #', document.getElementById('dl2').value.trim() || '—');
+        addField('Date', new Date().toLocaleDateString('en-US'));
+        doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor('#666666');
+        doc.text('APPLICANT 2 SIGNATURE', margin, y); y += 13;
+        const sig2Data = pad2.toDataURL('image/png');
+        doc.addImage(sig2Data, 'PNG', margin, y, 200, 60);
+        doc.setDrawColor('#cccccc');
+        doc.line(margin, y + 65, margin + 240, y + 65);
+        y += 80;
+        const initials2 = document.getElementById('initials2').value.trim();
+        if (initials2) addField('Applicant 2 Initials (Disclosure)', initials2);
+      }
+
+      // Footer
+      doc.setFontSize(8); doc.setFont('helvetica', 'normal'); doc.setTextColor('#aaaaaa');
+      doc.text('Webber Investment Homes · Generated ' + new Date().toLocaleString(), pageW / 2, 760, { align: 'center' });
+
+      signedPdfData = doc.output('blob');
+
+      // Show success
+      document.getElementById('form-container').style.display = 'none';
+      document.getElementById('success-container').style.display = 'block';
+
+      document.getElementById('download-btn').onclick = () => {
+        const url = URL.createObjectURL(signedPdfData);
+        const a = document.createElement('a'); a.href = url;
+        a.download = 'Deposit-Agreement-Signed-' + buyer1.replace(/\s+/g, '-') + '.pdf';
+        a.click(); URL.revokeObjectURL(url);
+      };
+
+    } catch(e) {
+      btn.disabled = false;
+      btn.textContent = 'Sign & Complete Agreement';
+      alert('Error generating PDF: ' + e.message);
+    }
+  }
+</script>
+</body>
+</html>
