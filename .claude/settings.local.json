@@ -10,7 +10,11 @@
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "PowerShell(Start-ScheduledTask *)",
-      "mcp__1afafd5b-76c3-4bee-aa0f-3b60e1ce0272__read_file_content"
+      "mcp__1afafd5b-76c3-4bee-aa0f-3b60e1ce0272__read_file_content",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__google_sheets_get_many_spreadsheet_rows_advanced",
+      "mcp__2a946e7c-eba9-4b6f-bfd0-c43ecaeb1620__generate_image",
+      "mcp__2a946e7c-eba9-4b6f-bfd0-c43ecaeb1620__job_display",
+      "mcp__b96d0f74-7168-4eb8-a60b-3cb573b89588__upload-asset-from-url"
     ]
   }
 }
