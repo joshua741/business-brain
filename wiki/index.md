@@ -35,7 +35,8 @@
 
 ## Entities — Tools & Platforms
 - [GoHighLevel](ghl.md) — comms/pipeline hub; 16k contacts migrating to Supabase, GHL becomes data source
-- [BookingKoala](bookingkoala.md) — CRM for LBK Cleaners
+- [BookingKoala](bookingkoala.md) — CRM for LBK Cleaners; client profiles, Square payments, on-site bid confirmation
+- [LBK Cleaners Website](lbk-cleaners-website.md) — Lovable booking funnel; Square Web Payments SDK; GHL pipeline integration
 - [DoorLoop](doorloop.md) — property management platform ($265/mo per-lease); slated for in-house replacement
 - [Baselane](baselane.md) — financial tracking; statement-pull automation; Section 8 payments land here
 - [Mercury](mercury.md) — business bank accounts, Profit First; becoming the primary money layer (API + MCP)

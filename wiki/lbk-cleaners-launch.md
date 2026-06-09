@@ -20,8 +20,10 @@ updated: 2026-05-29
 Launch sequence for [[lbk-cleaners]]. Operated under [[mostafa]]'s oversight. [[bookingkoala]] is the full operational platform.
 
 ## Current State
-- Website: live
-- BookingKoala CRM: configured
+- Website (Lovable): live at lbkcleaners.com
+- BookingKoala CRM: configured — see [[bookingkoala]] for full setup detail
+- Square: connected to GHL; needs Production keys added to both [[lbk-cleaners-website]] (Lovable env vars) and BookingKoala (admin panel) to go live
+- Booking page: not yet published — blocked on Square payment connection
 
 ## Financial plan ([[profit-first]])
 - Targets: **$11,000+/mo gross, $2,750+/mo net, 25%+ margin**, avg job $175, ~20 jobs/week, 15+ recurring clients (source: lbk-cleaners-finance-strategy.md, lbk-cleaners-goal-tracker.md).
@@ -36,13 +38,14 @@ Launch sequence for [[lbk-cleaners]]. Operated under [[mostafa]]'s oversight. [[
 
 ## Launch Sequence
 
-### Phase 1: Booking Page (Current)
-1. Choose booking form type — Form 1 (flat rate by bedrooms/bathrooms) or Form 2 (itemized packages)
-2. Configure smart scheduling
-3. Set up notification templates (customer and cleaner SMS/email)
-4. Connect payment processor (Stripe Connect for cleaner payouts)
-5. Test booking flow end-to-end
+### Phase 1: Booking Page (Current — Square is the blocker)
+1. **Connect Square to BookingKoala** — get Production Application ID + Access Token from Square Developer Dashboard; paste into `Settings > General > Store Options > Admin > Connect Payment Gateways`; click Get Locations; map to Lubbock/Wolfforth location (see [[bookingkoala]])
+2. **Connect Square to Lovable site** — add `SQUARE_APP_ID` and `SQUARE_ACCESS_TOKEN` to Lovable project env vars; enable Payment Links API in Square (for Lena payment link sends)
+3. Configure smart scheduling — arrival windows, 30-min buffer, 16-hr cut-off
+4. Set up notification templates (customer and cleaner SMS/email)
+5. Test booking flow end-to-end (Square sandbox → then production)
 6. Publish booking page
+7. Soft launch — 3–5 trusted contacts first; 1 week feedback; then public
 
 ### Phase 2: Cleaner Hiring
 1. Activate the **Hiring Module** in BookingKoala (Growing/Premium plan required)
@@ -61,6 +64,7 @@ Launch sequence for [[lbk-cleaners]]. Operated under [[mostafa]]'s oversight. [[
 
 ## Related pages
 - [[lbk-cleaners]]
+- [[lbk-cleaners-website]]
 - [[bookingkoala]]
 - [[mostafa]]
 - [[zapier]]

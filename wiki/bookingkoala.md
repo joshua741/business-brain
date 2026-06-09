@@ -1,10 +1,10 @@
 ---
 name: bookingkoala
 type: entity
-tags: [crm, cleaning, scheduling, booking, platform]
+tags: [crm, cleaning, scheduling, booking, platform, payments, client-profiles]
 status: active
-sources: [CLAUDE.md seed, BookingKoala_Help_Center_Full_Reference.md.txt]
-updated: 2026-05-29
+sources: [CLAUDE.md seed, BookingKoala_Help_Center_Full_Reference.md.txt, lbk-cleaners-bookingkoala-setup-guide.md, lbk-cleaners-builder-q3-answers.md]
+updated: 2026-06-09
 ---
 
 # BookingKoala
@@ -13,11 +13,89 @@ updated: 2026-05-29
 
 **Sources**: CLAUDE.md seed, BookingKoala_Help_Center_Full_Reference.md.txt
 
-**Last updated**: 2026-05-29
+**Last updated**: 2026-06-09
 
 ---
 
 Used exclusively for [[lbk-cleaners]] operations. 370-article help center available as reference (source: BookingKoala_Help_Center_Full_Reference.md.txt).
+
+Admin panel: `lbkcleaners.bookingkoala.com/admin`
+Booking URL: `lbkcleaners.bookingkoala.com/booknow`
+
+## LBK Cleaners Account Settings
+
+| Field | Value |
+|---|---|
+| Business Name | LBK Cleaners |
+| Support Email | info@lbkcleaners.com |
+| Phone | (806) 429-4569 |
+| Time Zone | CST6CDT |
+| Date Format | MM/DD/YYYY |
+| Time Format | 12-hour (e.g., 5:30 PM) |
+| Tax Rate | 0% residential (TX exempt) / 8.25% if commercial |
+| Service Area | Lubbock + Wolfforth, TX |
+| Payment Processor | Square (Production keys required — see below) |
+
+## Payment Processor — Square Setup
+
+Square is the configured processor. **Current status: "Invalid key or no location exists" error — needs Production keys.**
+
+### Fix Steps
+1. Log into Square Developer Dashboard → copy **Production** Application ID (`sq0idp-...`) and Access Token (`EAAA...`)
+2. Go to `Settings > General > Store Options > Admin > Connect Payment Gateways`
+3. Toggle Square to **Enabled**
+4. Paste Application ID and Access Token → click **Save**
+5. Click **Get Locations** — pulls physical merchant locations from Square account
+6. Select the Lubbock/Wolfforth location from dropdown → click **Save**
+7. Verify in `Settings > Industries > [Industry] > Form 1 > Locations` — each location should be set to "No, Use Default" (or mapped to the specific Square location)
+
+> Warning: Paste keys only in the BookingKoala admin panel — not in chat, Slack, or any unsecured log.
+
+## Client Profile — What Gets Created
+
+When a customer books for the first time, BookingKoala automatically creates a **customer profile** containing:
+
+| Field | Source |
+|---|---|
+| Full name | Booking form Step 1 |
+| Email address | Booking form Step 1 |
+| Phone number | Booking form Step 1 |
+| Service address | Booking form Step 2 |
+| Beds / baths / sqft | Booking form Step 2 |
+| Service type | Booking form Step 3 |
+| Booking frequency | Booking form Step 3 |
+| Payment method on file | Square (tokenized card) |
+| Booking history | Auto-updated each job |
+| Job notes / checklist results | Added by cleaner via provider app |
+| Booking total + receipts | Auto-logged per charge |
+
+Profiles are accessible at `Customers` in the BookingKoala admin panel. Each profile shows full booking history, payment records, and any notes left by the team.
+
+## On-Site Bid Confirmation Workflow
+
+For jobs where the final price needs to be confirmed after a property walkthrough (common for initial commercial bids or large residential add-ons):
+
+1. **Customer gets online estimate** on [[lbk-cleaners-website]] (Steps 1–2) or via Lena SMS quote
+2. **Team visits the property** to assess actual scope
+3. **If the quote is accurate** → send the customer their booking link (Lena sends via GHL) to complete Step 3 payment
+4. **If the scope changed** → admin updates the booking in BookingKoala (`Bookings > Edit`) with the confirmed price → customer receives updated quote and payment link
+5. **Customer pays via Square** → booking is confirmed → confirmation SMS fires from GHL
+6. **BookingKoala profile is created/updated** with all job details
+
+### On-Site — Provider App Actions
+The cleaner uses the **BookingKoala provider mobile app** at the property to:
+- View job details and confirmed scope
+- Update job notes (access codes, special instructions, parking)
+- Complete job checklists (quality verification)
+- Capture customer signature on completion
+- Clock in/out (GPS-verified location)
+- Trigger job completion → fires review request sequence
+
+### Price Adjustment After Arrival
+If additional scope is discovered after the job starts:
+1. Cleaner notes it in the provider app
+2. Admin creates an additional charge in `Bookings > [Booking] > Charges` → Square processes it
+3. Customer receives updated receipt automatically
 
 ## Core Capabilities
 
@@ -68,7 +146,9 @@ Used exclusively for [[lbk-cleaners]] operations. 370-article help center availa
 
 ## Related pages
 - [[lbk-cleaners]]
+- [[lbk-cleaners-website]]
 - [[lbk-cleaners-launch]]
 - [[zapier]]
 - [[stripe]]
+- [[ghl]]
 - [[source-bookingkoala-help-center]]
