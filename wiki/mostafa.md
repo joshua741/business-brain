@@ -33,6 +33,17 @@ Mostafa was **added as a collaborator on the Business Brain GitHub repository** 
 
 Works remotely from Egypt, often overnight relative to Central time. Task management is migrating from [[ghl]] into [[notion]] (a dedicated Team Space).
 
+## Contact Details
+
+| Channel | Value |
+|---|---|
+| Email | mostafa.webberinvestmenthomes@gmail.com |
+| Telegram | Available anytime — preferred for operational notifications |
+| Claude account | docs@webberinvestmenthomes.com |
+| GitHub | m_khamisy |
+
+**Notification protocol**: Reach Mostafa via Telegram first. Email to mostafa.webberinvestmenthomes@gmail.com as fallback. He does not review — he just gets notified and his task is created in the WIH Daily Schedule delegate section.
+
 ## Related pages
 - [[wih]]
 - [[lbk-cleaners]]

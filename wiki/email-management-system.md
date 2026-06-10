@@ -27,10 +27,10 @@ Runs every hour Monday–Friday 6 AM – 7 PM CT via [[n8n]]. Invoked manually v
 
 | Account | Purpose |
 |---|---|
-| `joshua@webberinvestmenthomes.com` | Deals, partners, lenders, legal, property decisions |
-| `docs@webberinvestmenthomes.com` | Subscriptions, vendors, team ops, servicers, receipts |
+| `joshua@webberinvestmenthomes.com` | Joshua's personal business email — deals, partners, lenders, legal, key contacts |
+| `docs@webberinvestmenthomes.com` | Business operational email — subscriptions, vendors, servicers, team tools, invoices, all business-infrastructure correspondence |
 
-**Important**: docs@ is also where [[mostafa]] operates (his Claude account). Anything flagged for him is sent to docs@ with an `[ACTION NEEDED]` prefix subject.
+**docs@ intent**: This is the business-wide operational inbox. Subscriptions (GHL, Railway, Supabase, etc.), mortgage servicer statements, vendor invoices, team tool accounts, LBK Cleaners supplier comms — all of it lives here. docs@ is also Mostafa's working account for Claude Code.
 
 ## Contact Lookup Hierarchy
 
@@ -83,13 +83,29 @@ If no match is found anywhere: 0 context points, automatic escalation to Joshua.
 - Signature for joshua@: `Joshua Webber`
 - Signature for docs@: `Webber Investment Homes Team`
 
+## Notification Channels
+
+| Person | Primary | Fallback |
+|---|---|---|
+| **Joshua** | Push notification (in-session) + SMS to 806-781-8495 via Twilio MCP | Email to joshua@webberinvestmenthomes.com |
+| **Mostafa** | Telegram (anytime — no review needed) | Email to mostafa.webberinvestmenthomes@gmail.com |
+
 ## Mostafa Escalation
 
 When an email is operational and falls in Mostafa's scope:
-1. Email to `docs@webberinvestmenthomes.com` with `[ACTION NEEDED]` subject
-2. Brief: what the email is, what action is needed
-3. CC Mostafa on the thread if he's taking it over
+1. **Telegram message** via Telegram MCP (or email to `mostafa.webberinvestmenthomes@gmail.com` as fallback), subject: `[ACTION NEEDED] [original subject]`
+2. Brief at top: what the email is, what action is needed in 2 sentences
+3. CC `mostafa.webberinvestmenthomes@gmail.com` on thread if he's taking it over
 4. Apply `Routed-to-Mostafa` label
+5. Add task to NEW TASKS section of WIH Daily Schedule with "Mostafa —" prefix
+
+## Notion Task Integration
+
+**WIH Daily Schedule** (ID: `35a92db1-8570-81e3-a2c4-e6ddf3adff07`) is the single task source of truth.
+- **Joshua tasks**: Add to NEW TASKS section (routes to his schedule on next rebuild)
+- **Mostafa tasks**: Add to NEW TASKS section with "Mostafa —" prefix (auto-routes to Section 2 delegate list)
+- **Existing task updates**: Find the task by keyword and append: `UPDATE: [sender] replied — [one-line summary] [date]`
+- Tag all AI-generated tasks with `[AI]`
 
 ## Log
 
@@ -99,9 +115,13 @@ All run activity is appended to `wiki/email-management-log.md` after each pass.
 
 - [x] Gmail MCP connected to joshua@webberinvestmenthomes.com
 - [ ] Gmail MCP connected to docs@webberinvestmenthomes.com (or set up as alias)
-- [ ] Mostafa's direct email confirmed and added to [[mostafa]] wiki page
+- [x] Mostafa's email confirmed: `mostafa.webberinvestmenthomes@gmail.com`
+- [x] Joshua's SMS number confirmed: `806-781-8495`
 - [x] wih-app Supabase project ID: `catvxwoyguovitcyxwap`
-- [ ] n8n hourly workflow created (`Email Management — Hourly Triage`)
+- [x] Notion WIH Daily Schedule page ID: `35a92db1-8570-81e3-a2c4-e6ddf3adff07`
+- [ ] **Telegram MCP** — add to session config with Mostafa's bot token + chat ID (recommended over n8n for notifications)
+- [ ] **Twilio MCP** — add to session config for direct SMS to Joshua at 806-781-8495
+- [ ] n8n cron workflow — `0 6-19 * * 1-5` — triggers hourly email run (scheduling only, not notification routing)
 - [ ] Gmail labels created: AI-Handled, Needs-Review, Escalate, Urgent, Routed-to-Mostafa
 
 ## Related pages

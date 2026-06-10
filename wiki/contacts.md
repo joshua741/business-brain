@@ -31,13 +31,12 @@ This page is updated by the email management system when:
 
 ## Known Contacts — Internal Team
 
-| Name | Email | Role | Context Source |
-|---|---|---|---|
-| Mostafa Elkhamisy | docs@webberinvestmenthomes.com | Operations Lead | [[mostafa]] |
-| M'kenzy | — | Team member | [[mkenzy]] |
-| Kenneth | — | Team member | [[kenneth]] |
-
-> Add Mostafa's personal email when confirmed. Currently docs@ is his working account.
+| Name | Email | Notification | Role | Context Source |
+|---|---|---|---|---|
+| Mostafa Elkhamisy | mostafa.webberinvestmenthomes@gmail.com | Telegram (primary) | Operations Lead | [[mostafa]] |
+| M'kenzy | — | — | Team member | [[mkenzy]] |
+| Kenneth | — | — | Team member | [[kenneth]] |
+| Joshua Webber | joshua@webberinvestmenthomes.com | Push + SMS 806-781-8495 | Owner / decision-maker | [[joshua]] |
 
 ---
 
@@ -89,11 +88,11 @@ This page is updated by the email management system when:
 
 ## Email-to-Wiki Index
 
-As email addresses are confirmed, they are linked here for fast lookup:
-
 | Email Address | Contact Name | Wiki Page |
 |---|---|---|
-| docs@webberinvestmenthomes.com | Mostafa Elkhamisy | [[mostafa]] |
+| mostafa.webberinvestmenthomes@gmail.com | Mostafa Elkhamisy | [[mostafa]] |
+| docs@webberinvestmenthomes.com | Mostafa Elkhamisy (working account) | [[mostafa]] |
+| joshua@webberinvestmenthomes.com | Joshua Webber | [[joshua]] |
 
 > This index grows automatically as the email management system processes emails and identifies senders.
 
