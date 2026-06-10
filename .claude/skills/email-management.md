@@ -26,7 +26,13 @@ Both accounts run through the same Gmail MCP. When docs@ is not yet connected as
 
 **SMS to Joshua (806-781-8495)**: Use Twilio MCP when available. For urgent escalations during automated (non-session) runs, send via email to joshua@webberinvestmenthomes.com as fallback.
 
-**Telegram to Mostafa**: Use Telegram MCP when available. Fallback: email to mostafa.webberinvestmenthomes@gmail.com. Mostafa does not need to review/approve — he just gets notified and his task gets created.
+**Telegram to Mostafa**: Use Telegram MCP when available.
+- Bot: `@wih_ops_bot`
+- Mostafa chat ID: `8107031523`
+- Token: env var `TELEGRAM_BOT_TOKEN`
+- Send via: `POST https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage` with `chat_id=8107031523`
+- Fallback: email to mostafa.webberinvestmenthomes@gmail.com
+- Mostafa does not need to review/approve — he just gets notified and his task gets created.
 
 ---
 

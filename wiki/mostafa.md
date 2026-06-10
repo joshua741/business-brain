@@ -38,7 +38,8 @@ Works remotely from Egypt, often overnight relative to Central time. Task manage
 | Channel | Value |
 |---|---|
 | Email | mostafa.webberinvestmenthomes@gmail.com |
-| Telegram | Available anytime — preferred for operational notifications |
+| Telegram chat ID | 8107031523 |
+| Telegram bot | @wih_ops_bot |
 | Claude account | docs@webberinvestmenthomes.com |
 | GitHub | m_khamisy |
 
