@@ -9,7 +9,8 @@
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\wiki\\*)",
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
-      "PowerShell(Start-ScheduledTask *)"
+      "PowerShell(Start-ScheduledTask *)",
+      "mcp__1afafd5b-76c3-4bee-aa0f-3b60e1ce0272__get_file_metadata"
     ]
   }
 }
