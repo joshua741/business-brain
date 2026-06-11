@@ -49,20 +49,33 @@ Run these phases in order on every invocation.
 
 ### Phase 2 — Inbox Scan
 
-Search both inboxes for unread email:
+Search both inboxes for ALL unread email using pagination. **Do not stop at 50 — exhaust every page.**
 
 ```
 Query: in:inbox is:unread
+pageSize: 50 (max per call)
 ```
 
 Run against: `joshua@webberinvestmenthomes.com` and `docs@webberinvestmenthomes.com`
+
+**Pagination is mandatory.** After each `search_threads` call, check for a `nextPageToken` in the response. If one exists, immediately call `search_threads` again with that token. Repeat until no `nextPageToken` is returned. Collect all threads across all pages before processing any of them.
+
+```
+LOOP:
+  results = search_threads(query="in:inbox is:unread", pageSize=50, pageToken=cursor)
+  add results.threads to full_list
+  if results.nextPageToken exists → cursor = results.nextPageToken → repeat
+  else → stop
+```
+
+The inbox may have 200+ unread emails on a catch-up run. Every single one must be collected before scoring begins. There is no limit. Do not stop early.
 
 For each unread email, capture:
 - Sender name and email address
 - Subject line
 - Thread ID (for reply continuity)
 - Date/time received
-- Full body text
+- Snippet (full body fetched via `get_thread` only when needed for scoring)
 - Whether it's part of an existing thread
 
 Process oldest first. Do not skip any unread email.
@@ -115,13 +128,18 @@ Score each email 0–100. Start at 0, add points:
 
 ### Phase 5 — Routing Decision
 
+**Every processed email gets marked read — no exceptions. Inbox zero is the goal.**
+
 | Score | Action |
 |---|---|
 | **≥95** | Auto-reply via Gmail, mark read, label `AI-Handled` |
-| **75–94** | Draft reply via Gmail, push notification + SMS to Joshua: "Draft ready — [Sender]: [Subject]. Check Gmail to approve." |
-| **50–74** | No draft. Push notification + SMS to Joshua with 3-sentence summary: who, what they want, why it needs his judgment. Label `Needs-Review`. |
-| **<50** | Immediate push + SMS to Joshua. Label `Escalate`. If Mostafa-relevant, also notify Mostafa via Telegram and create his task. |
-| **Legal / money** | Immediate push + SMS to Joshua regardless of score. Label `Urgent`. Never draft. |
+| **75–94** | Draft reply via Gmail, **mark read**, label `Needs-Review`, push notification + SMS to Joshua: "Draft ready — [Sender]: [Subject]. Check Gmail to approve." |
+| **50–74** | No draft, **mark read**, label `Needs-Review`, push notification + SMS to Joshua with 3-sentence summary: who, what they want, why it needs his judgment. |
+| **<50** | **Mark read**, label `Escalate`, immediate push + SMS to Joshua. If Mostafa-relevant, also notify Mostafa via Telegram and create his task. |
+| **Legal / money** | **Mark read**, label `Urgent`, immediate push + SMS to Joshua regardless of score. Never draft. |
+| **Marketing / noise** | **Mark read**, remove from inbox (archive). No label, no notification. |
+
+Marking read = remove `UNREAD` label via `unlabel_thread`. This must happen for every email after it is processed, regardless of routing outcome. The inbox unread count must reach zero at the end of every run.
 
 ### Phase 6 — Inbox Routing Rules
 
