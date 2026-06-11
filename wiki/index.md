@@ -87,6 +87,7 @@
 - [AI Automation Strategy](ai-automation-strategy.md) — GHL hub, Matt Beard framework, three verticals
 - [Email Management System](email-management-system.md) — AI-managed triage, auto-reply, and escalation for joshua@ and docs@ inboxes; hourly M–F
 - [Date Verification](date-verification.md) — permanent rule: always confirm date and day of week via Google Calendar before any date-sensitive action
+- [Skill Permissions Rule](skill-permissions-rule.md) — every skill's tools must be pre-authorized in allowedTools before autonomous deployment; undiscovered prompts kill automated runs silently
 - [Contacts Registry](contacts.md) — supplemental email-to-contact index for the email management system; bridges wiki ↔ wih-app ↔ GHL
 - [Email Management Log](email-management-log.md) — append-only run log for every email triage pass
 - [AI Operating System](ai-operating-system.md) — Four Cs / Three Ms / Bike Method (Nate Herk)
