@@ -122,7 +122,7 @@ All run activity is appended to `wiki/email-management-log.md` after each pass.
 - [ ] **Telegram MCP** — add to session config. Bot: @wih_ops_bot. Mostafa chat ID: 8107031523. Token stored as env var `TELEGRAM_BOT_TOKEN` (not in repo).
 - [ ] **Twilio MCP** — add to session config for direct SMS to Joshua at 806-781-8495
 - [ ] n8n cron workflow — `0 6-19 * * 1-5` — triggers hourly email run (scheduling only, not notification routing)
-- [ ] Gmail labels created: AI-Handled, Needs-Review, Escalate, Urgent, Routed-to-Mostafa
+- [x] Gmail labels created: AI-Handled, Needs-Review, Escalate, Urgent, Routed-to-Mostafa
 
 ## Related pages
 - [[mostafa]]
