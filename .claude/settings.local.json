@@ -11,7 +11,14 @@
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "PowerShell(Start-ScheduledTask *)",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_find_page_by_title",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_label"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_label",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__label_message",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_add_label_to_email",
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-update-page",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__create_draft",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__telegram_send_message",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft_reply",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft"
     ]
   }
 }
