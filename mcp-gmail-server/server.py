@@ -236,29 +236,16 @@ def gmail_create_draft(
     return {"success": True, "draft_id": result["id"]}
 
 
-# --- API key middleware ---
-
-class APIKeyMiddleware(BaseHTTPMiddleware):
+class BlockOAuthMiddleware(BaseHTTPMiddleware):
+    """Block OAuth discovery endpoints — prevents claude.ai from trying OAuth auth flow."""
     async def dispatch(self, request, call_next):
-        api_key = os.environ.get("MCP_API_KEY", "")
-        if api_key:
-            provided = request.headers.get("x-api-key", "")
-            if not provided:
-                auth = request.headers.get("authorization", "")
-                if auth.startswith("Bearer "):
-                    provided = auth[7:]
-            if provided != api_key:
-                return JSONResponse({"error": "Unauthorized"}, status_code=401)
+        if request.url.path.startswith("/.well-known/"):
+            return JSONResponse({"error": "not_found"}, status_code=404)
         return await call_next(request)
 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    try:
-        # mcp >= 1.9: get the Starlette app directly and add middleware
-        app = mcp.streamable_http_app()
-        app.add_middleware(APIKeyMiddleware)
-        uvicorn.run(app, host="0.0.0.0", port=port)
-    except AttributeError:
-        # Older mcp: run without middleware (Railway URL is the security layer)
-        mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
+    app = mcp.streamable_http_app()
+    app.add_middleware(BlockOAuthMiddleware)
+    uvicorn.run(app, host="0.0.0.0", port=port)
