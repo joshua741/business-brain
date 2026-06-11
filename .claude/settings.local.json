@@ -19,7 +19,9 @@
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__telegram_send_message",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft_reply",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_add_block_to_page"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_add_block_to_page",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_archive_email",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__unlabel_thread"
     ]
   }
 }
