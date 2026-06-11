@@ -10,18 +10,50 @@
       "Write(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "Edit(C:\\Users\\joshu\\.claude\\Business_Brain\\daily-maintenance.log)",
       "PowerShell(Start-ScheduledTask *)",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_find_page_by_title",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_label",
+
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__search_threads",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__get_thread",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__list_labels",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__create_label",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__label_thread",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__unlabel_thread",
       "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__label_message",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_add_label_to_email",
-      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-update-page",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__unlabel_message",
       "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__create_draft",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__telegram_send_message",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft_reply",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft",
-      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_add_block_to_page",
+      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__list_drafts",
+
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_find_email",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_label",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_add_label_to_email",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_remove_label_from_email",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_remove_label_from_conversation",
       "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_archive_email",
-      "mcp__713a6e81-47a5-417c-8a82-c5d76f21e73d__unlabel_thread"
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_create_draft_reply",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_reply_to_email",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__gmail_send_email",
+
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__telegram_send_message",
+
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_find_page_by_title",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_add_block_to_page",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_add_content_to_page",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_get_page_and_children",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__notion_retrieve_a_page",
+
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-update-page",
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-fetch",
+      "mcp__e1e8751a-39ea-4b16-bcf8-ba97ee7ce1bd__notion-search",
+
+      "mcp__48687191-3053-4b53-a842-1bf3e3c18a12__execute_sql",
+      "mcp__48687191-3053-4b53-a842-1bf3e3c18a12__list_tables",
+
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_contact",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_update_opportunity",
+      "mcp__1ca995af-7ffb-46e3-b271-a0b9e9536fdb__leadconnector_add_task",
+
+      "mcp__faf9164f-6277-4bc8-9f9a-23fdbfbe35ef__list_events",
+      "mcp__faf9164f-6277-4bc8-9f9a-23fdbfbe35ef__list_calendars"
     ]
   }
 }
