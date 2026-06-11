@@ -1,6 +1,7 @@
 import os
 import json
 import base64
+import hashlib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import Optional
@@ -8,6 +9,7 @@ from typing import Optional
 import uvicorn
 from mcp.server.fastmcp import FastMCP
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
 from starlette.responses import JSONResponse
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -18,6 +20,13 @@ ACCOUNTS = {
     "joshua": "joshua@webberinvestmenthomes.com",
     "docs": "docs@webberinvestmenthomes.com",
 }
+
+# OAuth credentials — set OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET in Railway env vars,
+# then enter the same values in the claude.ai connector settings.
+_CLIENT_ID = os.environ.get("OAUTH_CLIENT_ID", "wih-gmail-mcp-client")
+_CLIENT_SECRET = os.environ.get("OAUTH_CLIENT_SECRET", "wih-gmail-mcp-secret-2026")
+# Deterministic token derived from credentials — no extra env var needed
+_TOKEN = hashlib.sha256(f"{_CLIENT_ID}:{_CLIENT_SECRET}:wih-static".encode()).hexdigest()
 
 
 def get_service(account: str = "joshua"):
@@ -236,16 +245,68 @@ def gmail_create_draft(
     return {"success": True, "draft_id": result["id"]}
 
 
-class BlockOAuthMiddleware(BaseHTTPMiddleware):
-    """Block OAuth discovery endpoints — prevents claude.ai from trying OAuth auth flow."""
-    async def dispatch(self, request, call_next):
-        if request.url.path.startswith("/.well-known/"):
-            return JSONResponse({"error": "not_found"}, status_code=404)
+class OAuthMiddleware(BaseHTTPMiddleware):
+    """
+    Implements a minimal OAuth 2.0 client_credentials flow so claude.ai
+    custom connectors can authenticate. The client ID and secret come from
+    Railway env vars; the same values go in the connector's OAuth fields.
+    """
+
+    async def dispatch(self, request: Request, call_next):
+        path = request.url.path
+
+        # OAuth discovery — tells claude.ai where to get tokens
+        if path == "/.well-known/oauth-authorization-server":
+            base = str(request.base_url).rstrip("/")
+            return JSONResponse({
+                "issuer": base,
+                "token_endpoint": f"{base}/oauth/token",
+                "response_types_supported": ["token"],
+                "grant_types_supported": ["client_credentials"],
+                "token_endpoint_auth_methods_supported": [
+                    "client_secret_post",
+                    "client_secret_basic",
+                ],
+            })
+
+        # Token exchange — claude.ai posts client_id + client_secret, gets a Bearer token
+        if path == "/oauth/token":
+            form = await request.form()
+            client_id = form.get("client_id", "")
+            client_secret = form.get("client_secret", "")
+
+            # Also accept Basic auth header
+            auth_hdr = request.headers.get("authorization", "")
+            if auth_hdr.startswith("Basic "):
+                try:
+                    decoded = base64.b64decode(auth_hdr[6:]).decode()
+                    if ":" in decoded:
+                        client_id, client_secret = decoded.split(":", 1)
+                except Exception:
+                    pass
+
+            if client_id == _CLIENT_ID and client_secret == _CLIENT_SECRET:
+                return JSONResponse({
+                    "access_token": _TOKEN,
+                    "token_type": "bearer",
+                    "expires_in": 31_536_000,  # 1 year
+                })
+            return JSONResponse({"error": "invalid_client"}, status_code=401)
+
+        # All other requests (i.e., MCP calls) must carry the Bearer token
+        auth = request.headers.get("authorization", "")
+        if not (auth.startswith("Bearer ") and auth[7:] == _TOKEN):
+            return JSONResponse(
+                {"error": "unauthorized"},
+                status_code=401,
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
         return await call_next(request)
 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     app = mcp.streamable_http_app()
-    app.add_middleware(BlockOAuthMiddleware)
+    app.add_middleware(OAuthMiddleware)
     uvicorn.run(app, host="0.0.0.0", port=port)
