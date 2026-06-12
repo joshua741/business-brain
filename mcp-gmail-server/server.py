@@ -2,6 +2,7 @@ import os
 import json
 import base64
 import hashlib
+from urllib.parse import urlencode
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import Optional
@@ -10,7 +11,7 @@ import uvicorn
 from mcp.server.fastmcp import FastMCP
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
-from starlette.responses import JSONResponse
+from starlette.responses import JSONResponse, RedirectResponse
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -27,6 +28,7 @@ _CLIENT_ID = os.environ.get("OAUTH_CLIENT_ID", "wih-gmail-mcp-client")
 _CLIENT_SECRET = os.environ.get("OAUTH_CLIENT_SECRET", "wih-gmail-mcp-secret-2026")
 # Deterministic token derived from credentials — no extra env var needed
 _TOKEN = hashlib.sha256(f"{_CLIENT_ID}:{_CLIENT_SECRET}:wih-static".encode()).hexdigest()
+_AUTH_CODE = hashlib.sha256(f"{_CLIENT_ID}:{_CLIENT_SECRET}:code".encode()).hexdigest()[:32]
 
 
 def get_service(account: str = "joshua"):
@@ -255,27 +257,51 @@ class OAuthMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
 
-        # OAuth discovery — tells claude.ai where to get tokens
+        # OAuth discovery
         if path == "/.well-known/oauth-authorization-server":
             base = str(request.base_url).rstrip("/")
             return JSONResponse({
                 "issuer": base,
+                "authorization_endpoint": f"{base}/authorize",
                 "token_endpoint": f"{base}/oauth/token",
-                "response_types_supported": ["token"],
-                "grant_types_supported": ["client_credentials"],
+                "response_types_supported": ["code"],
+                "grant_types_supported": ["authorization_code", "client_credentials"],
                 "token_endpoint_auth_methods_supported": [
                     "client_secret_post",
                     "client_secret_basic",
+                    "none",
                 ],
+                "code_challenge_methods_supported": ["S256"],
             })
 
-        # Token exchange — claude.ai posts client_id + client_secret, gets a Bearer token
+        # Authorization endpoint — auto-approves and redirects back to claude.ai with a code
+        if path == "/authorize":
+            redirect_uri = request.query_params.get("redirect_uri", "")
+            state = request.query_params.get("state", "")
+            if not redirect_uri:
+                return JSONResponse({"error": "missing_redirect_uri"}, status_code=400)
+            sep = "&" if "?" in redirect_uri else "?"
+            params = urlencode({"code": _AUTH_CODE, "state": state})
+            return RedirectResponse(url=f"{redirect_uri}{sep}{params}", status_code=302)
+
+        # Token endpoint — exchanges auth code or client credentials for a Bearer token
         if path == "/oauth/token":
             form = await request.form()
+            grant_type = form.get("grant_type", "")
+
+            if grant_type == "authorization_code":
+                code = form.get("code", "")
+                if code == _AUTH_CODE:
+                    return JSONResponse({
+                        "access_token": _TOKEN,
+                        "token_type": "bearer",
+                        "expires_in": 31_536_000,
+                    })
+                return JSONResponse({"error": "invalid_grant"}, status_code=401)
+
+            # client_credentials fallback
             client_id = form.get("client_id", "")
             client_secret = form.get("client_secret", "")
-
-            # Also accept Basic auth header
             auth_hdr = request.headers.get("authorization", "")
             if auth_hdr.startswith("Basic "):
                 try:
@@ -289,7 +315,7 @@ class OAuthMiddleware(BaseHTTPMiddleware):
                 return JSONResponse({
                     "access_token": _TOKEN,
                     "token_type": "bearer",
-                    "expires_in": 31_536_000,  # 1 year
+                    "expires_in": 31_536_000,
                 })
             return JSONResponse({"error": "invalid_client"}, status_code=401)
 
