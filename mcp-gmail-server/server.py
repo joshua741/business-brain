@@ -9,9 +9,11 @@ from typing import Optional
 
 import uvicorn
 from mcp.server.fastmcp import FastMCP
+from starlette.applications import Starlette
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse, RedirectResponse
+from starlette.routing import Route, Mount
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -22,13 +24,11 @@ ACCOUNTS = {
     "docs": "docs@webberinvestmenthomes.com",
 }
 
-# OAuth credentials — set OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET in Railway env vars,
-# then enter the same values in the claude.ai connector settings.
 _CLIENT_ID = os.environ.get("OAUTH_CLIENT_ID", "wih-gmail-mcp-client")
 _CLIENT_SECRET = os.environ.get("OAUTH_CLIENT_SECRET", "wih-gmail-mcp-secret-2026")
-# Deterministic token derived from credentials — no extra env var needed
 _TOKEN = hashlib.sha256(f"{_CLIENT_ID}:{_CLIENT_SECRET}:wih-static".encode()).hexdigest()
 _AUTH_CODE = hashlib.sha256(f"{_CLIENT_ID}:{_CLIENT_SECRET}:code".encode()).hexdigest()[:32]
+_REST_KEY = os.environ.get("REST_API_KEY", "wih-rest-n8n-2026")
 
 
 def get_service(account: str = "joshua"):
@@ -60,6 +60,10 @@ def _extract_body(payload: dict) -> str:
             return base64.urlsafe_b64decode(data + "==").decode("utf-8", errors="replace")
     return ""
 
+
+# ---------------------------------------------------------------------------
+# MCP tools
+# ---------------------------------------------------------------------------
 
 @mcp.tool()
 def gmail_search(
@@ -247,15 +251,155 @@ def gmail_create_draft(
     return {"success": True, "draft_id": result["id"]}
 
 
-class OAuthMiddleware(BaseHTTPMiddleware):
-    """
-    Implements a minimal OAuth 2.0 client_credentials flow so claude.ai
-    custom connectors can authenticate. The client ID and secret come from
-    Railway env vars; the same values go in the connector's OAuth fields.
-    """
+# ---------------------------------------------------------------------------
+# REST endpoints (for n8n — authenticated via X-Api-Key header)
+# ---------------------------------------------------------------------------
 
+def _check_rest_key(request: Request) -> bool:
+    return request.headers.get("x-api-key", "") == _REST_KEY
+
+
+async def rest_search(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        q = request.query_params.get("q", "in:inbox is:unread")
+        account = request.query_params.get("account", "joshua")
+        max_results = int(request.query_params.get("max", "50"))
+        page_token = request.query_params.get("page_token")
+        return JSONResponse(gmail_search(q, account, max_results, page_token))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_get_email(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        message_id = request.path_params["message_id"]
+        account = request.query_params.get("account", "joshua")
+        return JSONResponse(gmail_get_email(message_id, account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_mark_read(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        body = await request.json()
+        message_id = body["message_id"]
+        account = body.get("account", "joshua")
+        return JSONResponse(gmail_mark_as_read(message_id, account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_batch_mark_read(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        body = await request.json()
+        message_ids = body["message_ids"]
+        account = body.get("account", "joshua")
+        return JSONResponse(gmail_batch_mark_as_read(message_ids, account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_archive(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        body = await request.json()
+        message_id = body["message_id"]
+        account = body.get("account", "joshua")
+        return JSONResponse(gmail_archive(message_id, account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+def _resolve_label_id(service, label_name: str) -> str:
+    """Find a label ID by name, creating the label if it doesn't exist."""
+    result = service.users().labels().list(userId="me").execute()
+    for lbl in result.get("labels", []):
+        if lbl["name"].lower() == label_name.lower():
+            return lbl["id"]
+    new_lbl = service.users().labels().create(
+        userId="me",
+        body={"name": label_name, "labelListVisibility": "labelShow", "messageListVisibility": "show"},
+    ).execute()
+    return new_lbl["id"]
+
+
+async def rest_label(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        body = await request.json()
+        message_id = body["message_id"]
+        action = body.get("action", "add")
+        account = body.get("account", "joshua")
+        label_id = body.get("label_id")
+        label_name = body.get("label_name")
+        if not label_id and label_name:
+            service = get_service(account)
+            label_id = _resolve_label_id(service, label_name)
+        if not label_id:
+            return JSONResponse({"error": "label_id or label_name required"}, status_code=400)
+        if action == "remove":
+            return JSONResponse(gmail_remove_label(message_id, label_id, account))
+        return JSONResponse(gmail_add_label(message_id, label_id, account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_list_labels(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        account = request.query_params.get("account", "joshua")
+        return JSONResponse(gmail_list_labels(account))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_send(request: Request) -> JSONResponse:
+    if not _check_rest_key(request):
+        return JSONResponse({"error": "unauthorized"}, status_code=401)
+    try:
+        body = await request.json()
+        return JSONResponse(gmail_send(
+            to=body["to"],
+            subject=body["subject"],
+            body=body["body"],
+            account=body.get("account", "joshua"),
+            thread_id=body.get("thread_id"),
+            html=body.get("html", False),
+        ))
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+
+async def rest_health(request: Request) -> JSONResponse:
+    return JSONResponse({"status": "ok"})
+
+
+# ---------------------------------------------------------------------------
+# OAuth middleware (MCP paths only — /api/* use X-Api-Key instead)
+# ---------------------------------------------------------------------------
+
+class OAuthMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
+
+        # REST API paths — handled by their own key check inside each handler
+        if path.startswith("/api/"):
+            return await call_next(request)
+
+        # Health check — always open
+        if path == "/health":
+            return await call_next(request)
 
         # OAuth discovery
         if path == "/.well-known/oauth-authorization-server":
@@ -274,7 +418,7 @@ class OAuthMiddleware(BaseHTTPMiddleware):
                 "code_challenge_methods_supported": ["S256"],
             })
 
-        # Authorization endpoint — auto-approves and redirects back to claude.ai with a code
+        # Authorization endpoint — auto-approves and redirects back with a code
         if path == "/authorize":
             redirect_uri = request.query_params.get("redirect_uri", "")
             state = request.query_params.get("state", "")
@@ -299,7 +443,6 @@ class OAuthMiddleware(BaseHTTPMiddleware):
                     })
                 return JSONResponse({"error": "invalid_grant"}, status_code=401)
 
-            # client_credentials fallback
             client_id = form.get("client_id", "")
             client_secret = form.get("client_secret", "")
             auth_hdr = request.headers.get("authorization", "")
@@ -319,7 +462,7 @@ class OAuthMiddleware(BaseHTTPMiddleware):
                 })
             return JSONResponse({"error": "invalid_client"}, status_code=401)
 
-        # All other requests (i.e., MCP calls) must carry the Bearer token
+        # All MCP calls must carry the Bearer token
         auth = request.headers.get("authorization", "")
         if not (auth.startswith("Bearer ") and auth[7:] == _TOKEN):
             return JSONResponse(
@@ -333,6 +476,22 @@ class OAuthMiddleware(BaseHTTPMiddleware):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    app = mcp.streamable_http_app()
+
+    rest_routes = [
+        Route("/api/search", rest_search, methods=["GET"]),
+        Route("/api/email/{message_id}", rest_get_email, methods=["GET"]),
+        Route("/api/mark-read", rest_mark_read, methods=["POST"]),
+        Route("/api/batch-mark-read", rest_batch_mark_read, methods=["POST"]),
+        Route("/api/archive", rest_archive, methods=["POST"]),
+        Route("/api/label", rest_label, methods=["POST"]),
+        Route("/api/labels", rest_list_labels, methods=["GET"]),
+        Route("/api/send", rest_send, methods=["POST"]),
+        Route("/health", rest_health, methods=["GET"]),
+    ]
+
+    mcp_app = mcp.streamable_http_app()
+
+    app = Starlette(routes=rest_routes + list(mcp_app.routes))
     app.add_middleware(OAuthMiddleware)
+
     uvicorn.run(app, host="0.0.0.0", port=port)

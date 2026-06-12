@@ -1,0 +1,561 @@
+{
+  "name": "WIH Email Management",
+  "nodes": [
+    {
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0,30 6-19 * * 1-5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fetch-joshua",
+      "name": "Fetch Joshua Unread",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 180],
+      "parameters": {
+        "method": "GET",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" }
+          ]
+        },
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "q", "value": "in:inbox is:unread" },
+            { "name": "account", "value": "joshua" },
+            { "name": "max", "value": "25" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fetch-docs",
+      "name": "Fetch Docs Unread",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 420],
+      "parameters": {
+        "method": "GET",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" }
+          ]
+        },
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "q", "value": "in:inbox is:unread" },
+            { "name": "account", "value": "docs" },
+            { "name": "max", "value": "25" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "merge-results",
+      "name": "Merge Results",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [440, 300],
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition"
+      }
+    },
+    {
+      "id": "flatten-emails",
+      "name": "Flatten Emails",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [660, 300],
+      "parameters": {
+        "jsCode": "// Collect all emails from both inputs with their account tag\nconst emails = [];\nfor (const item of $input.all()) {\n  const messages = item.json.messages || [];\n  const account = messages.length > 0 && item.json.account_email\n    ? (item.json.account_email.includes('docs') ? 'docs' : 'joshua')\n    : 'joshua';\n  for (const msg of messages) {\n    emails.push({ json: { ...msg, account } });\n  }\n}\nif (emails.length === 0) {\n  // Return a sentinel so downstream nodes know there's nothing to do\n  return [{ json: { _empty: true, count: 0 } }];\n}\nreturn emails;"
+      }
+    },
+    {
+      "id": "check-empty",
+      "name": "Has Emails?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [880, 300],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond1",
+              "leftValue": "={{ $json._empty }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "loop-emails",
+      "name": "Loop Emails",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [1100, 300],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "get-full-email",
+      "name": "Get Full Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1320, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://business-brain-production-1d2d.up.railway.app/api/email/{{ $json.message_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" }
+          ]
+        },
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "account", "value": "={{ $('Loop Emails').item.json.account }}" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "claude-classify",
+      "name": "Claude Classify",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1540, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-haiku-4-5-20251001\",\n  \"max_tokens\": 256,\n  \"system\": \"You are an email classifier for a real estate investment business. Classify incoming emails with one of these actions and respond ONLY with a JSON object.\\n\\nActions:\\n- archive: newsletters, automated notifications, marketing, receipts, shipping updates, social media digests, no reply required\\n- needs_review: tenant communications, vendor quotes, non-urgent business emails, general inquiries\\n- urgent: lease issues, maintenance emergencies, legal notices, eviction-related, payment disputes, time-sensitive deadlines within 48 hours\\n- escalate: anything requiring immediate human decision, threats, legal action, lender/investor issues, anything that could cost >$1000 if ignored\\n\\nRespond ONLY with this JSON (no other text):\\n{\\\"action\\\": \\\"<action>\\\", \\\"reason\\\": \\\"<10 word max reason>\\\"}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"From: {{ $json.from }}\\nSubject: {{ $json.subject }}\\nDate: {{ $json.date }}\\n\\n{{ $json.body.substring(0, 1500) }}\"\n    }\n  ]\n}"
+      }
+    },
+    {
+      "id": "parse-classification",
+      "name": "Parse Classification",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1760, 300],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst content = item.json.content?.[0]?.text || '{\"action\":\"needs_review\",\"reason\":\"parse error\"}';\nlet classification;\ntry {\n  classification = JSON.parse(content);\n} catch (e) {\n  // Try to extract JSON from the response\n  const match = content.match(/\\{[^}]+\\}/);\n  classification = match ? JSON.parse(match[0]) : { action: 'needs_review', reason: 'parse error' };\n}\n// Pass through email metadata from the get-full-email step\nconst emailData = $('Get Full Email').first().json;\nreturn [{\n  json: {\n    ...emailData,\n    account: $('Loop Emails').first().json.account,\n    action: classification.action || 'needs_review',\n    reason: classification.reason || '',\n  }\n}];"
+      }
+    },
+    {
+      "id": "action-router",
+      "name": "Action Router",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [1980, 300],
+      "parameters": {
+        "mode": "rules",
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "archive",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "outputIndex": 0
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "needs_review",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "outputIndex": 1
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "urgent",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "outputIndex": 2
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "escalate",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "outputIndex": 3
+            }
+          ]
+        },
+        "fallbackOutput": "none"
+      }
+    },
+    {
+      "id": "do-archive",
+      "name": "Mark Read + Archive",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2200, 80],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/archive",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\" }"
+      }
+    },
+    {
+      "id": "label-needs-review",
+      "name": "Label Needs-Review",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2200, 240],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Needs-Review\", \"action\": \"add\" }"
+      }
+    },
+    {
+      "id": "label-urgent",
+      "name": "Label Urgent",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2200, 400],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Urgent\", \"action\": \"add\" }"
+      }
+    },
+    {
+      "id": "label-escalate",
+      "name": "Label Escalate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2200, 560],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Escalate\", \"action\": \"add\" }"
+      }
+    },
+    {
+      "id": "mark-read-archive",
+      "name": "Mark Read (Archive)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2420, 80],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $('Action Router').item.json.message_id }}\", \"account\": \"{{ $('Action Router').item.json.account }}\" }"
+      }
+    },
+    {
+      "id": "mark-read-needs-review",
+      "name": "Mark Read (Needs Review)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2420, 240],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $('Action Router').item.json.message_id }}\", \"account\": \"{{ $('Action Router').item.json.account }}\" }"
+      }
+    },
+    {
+      "id": "mark-read-urgent",
+      "name": "Mark Read (Urgent)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2420, 400],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $('Action Router').item.json.message_id }}\", \"account\": \"{{ $('Action Router').item.json.account }}\" }"
+      }
+    },
+    {
+      "id": "telegram-notify",
+      "name": "Telegram Notify Mostafa",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2420, 560],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN }}/sendMessage",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chat_id\": \"{{ $env.MOSTAFA_TELEGRAM_CHAT_ID }}\",\n  \"text\": \"🚨 ESCALATE EMAIL\\n\\nFrom: {{ $('Action Router').item.json.from }}\\nSubject: {{ $('Action Router').item.json.subject }}\\nAccount: {{ $('Action Router').item.json.account }}@webberinvestmenthomes.com\\nReason: {{ $('Action Router').item.json.reason }}\\n\\nSnippet: {{ $('Action Router').item.json.snippet.substring(0, 200) }}\",\n  \"parse_mode\": \"HTML\"\n}"
+      }
+    },
+    {
+      "id": "mark-read-escalate",
+      "name": "Mark Read (Escalate)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2640, 560],
+      "parameters": {
+        "method": "POST",
+        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "wih-rest-n8n-2026" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"message_id\": \"{{ $('Action Router').item.json.message_id }}\", \"account\": \"{{ $('Action Router').item.json.account }}\" }"
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          { "node": "Fetch Joshua Unread", "type": "main", "index": 0 },
+          { "node": "Fetch Docs Unread", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Fetch Joshua Unread": {
+      "main": [
+        [{ "node": "Merge Results", "type": "main", "index": 0 }]
+      ]
+    },
+    "Fetch Docs Unread": {
+      "main": [
+        [{ "node": "Merge Results", "type": "main", "index": 1 }]
+      ]
+    },
+    "Merge Results": {
+      "main": [
+        [{ "node": "Flatten Emails", "type": "main", "index": 0 }]
+      ]
+    },
+    "Flatten Emails": {
+      "main": [
+        [{ "node": "Has Emails?", "type": "main", "index": 0 }]
+      ]
+    },
+    "Has Emails?": {
+      "main": [
+        [{ "node": "Loop Emails", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Loop Emails": {
+      "main": [
+        [{ "node": "Get Full Email", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Get Full Email": {
+      "main": [
+        [{ "node": "Claude Classify", "type": "main", "index": 0 }]
+      ]
+    },
+    "Claude Classify": {
+      "main": [
+        [{ "node": "Parse Classification", "type": "main", "index": 0 }]
+      ]
+    },
+    "Parse Classification": {
+      "main": [
+        [{ "node": "Action Router", "type": "main", "index": 0 }]
+      ]
+    },
+    "Action Router": {
+      "main": [
+        [{ "node": "Mark Read + Archive", "type": "main", "index": 0 }],
+        [{ "node": "Label Needs-Review", "type": "main", "index": 0 }],
+        [{ "node": "Label Urgent", "type": "main", "index": 0 }],
+        [{ "node": "Label Escalate", "type": "main", "index": 0 }]
+      ]
+    },
+    "Mark Read + Archive": {
+      "main": [
+        [{ "node": "Mark Read (Archive)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Mark Read (Archive)": {
+      "main": [
+        [{ "node": "Loop Emails", "type": "main", "index": 0 }]
+      ]
+    },
+    "Label Needs-Review": {
+      "main": [
+        [{ "node": "Mark Read (Needs Review)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Mark Read (Needs Review)": {
+      "main": [
+        [{ "node": "Loop Emails", "type": "main", "index": 0 }]
+      ]
+    },
+    "Label Urgent": {
+      "main": [
+        [{ "node": "Mark Read (Urgent)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Mark Read (Urgent)": {
+      "main": [
+        [{ "node": "Loop Emails", "type": "main", "index": 0 }]
+      ]
+    },
+    "Label Escalate": {
+      "main": [
+        [{ "node": "Telegram Notify Mostafa", "type": "main", "index": 0 }]
+      ]
+    },
+    "Telegram Notify Mostafa": {
+      "main": [
+        [{ "node": "Mark Read (Escalate)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Mark Read (Escalate)": {
+      "main": [
+        [{ "node": "Loop Emails", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "tags": []
+}
