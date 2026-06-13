@@ -278,7 +278,9 @@ async def rest_get_email(request: Request) -> JSONResponse:
     try:
         message_id = request.path_params["message_id"]
         account = request.query_params.get("account", "joshua")
-        return JSONResponse(gmail_get_email(message_id, account))
+        result = gmail_get_email(message_id, account)
+        result["account"] = account
+        return JSONResponse(result)
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
 
