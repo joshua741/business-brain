@@ -155,7 +155,7 @@
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
-            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "x-api-key", "value": "=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" },
             { "name": "anthropic-version", "value": "2023-06-01" },
             { "name": "content-type", "value": "application/json" }
           ]
@@ -401,7 +401,7 @@
       "position": [2420, 560],
       "parameters": {
         "method": "POST",
-        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN }}/sendMessage",
+        "url": "=https://api.telegram.org/bot8974292507:AAF0XUjcvkUjGvQabFrCWrTGw9GR9zM3n0Y/sendMessage",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -410,7 +410,7 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"chat_id\": \"{{ $env.MOSTAFA_TELEGRAM_CHAT_ID }}\",\n  \"text\": \"🚨 ESCALATE EMAIL\\n\\nFrom: {{ $('Action Router').item.json.from }}\\nSubject: {{ $('Action Router').item.json.subject }}\\nAccount: {{ $('Action Router').item.json.account }}@webberinvestmenthomes.com\\nReason: {{ $('Action Router').item.json.reason }}\\n\\nSnippet: {{ $('Action Router').item.json.snippet.substring(0, 200) }}\",\n  \"parse_mode\": \"HTML\"\n}"
+        "jsonBody": "={\n  \"chat_id\": \"8107031523\",\n  \"text\": \"🚨 ESCALATE EMAIL\\n\\nFrom: {{ $('Action Router').item.json.from }}\\nSubject: {{ $('Action Router').item.json.subject }}\\nAccount: {{ $('Action Router').item.json.account }}@webberinvestmenthomes.com\\nReason: {{ $('Action Router').item.json.reason }}\\n\\nSnippet: {{ $('Action Router').item.json.snippet.substring(0, 200) }}\",\n  \"parse_mode\": \"HTML\"\n}"
       }
     },
     {
