@@ -112,11 +112,21 @@
       }
     },
     {
+      "id": "build-claude-body",
+      "name": "Build Claude Body",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1100, 300],
+      "parameters": {
+        "jsCode": "const SYSTEM = 'You are an email classifier for a real estate investment business. Classify incoming emails with one of these actions and respond ONLY with a JSON object.\\n\\nActions:\\n- archive: newsletters, automated notifications, marketing, receipts, shipping updates, social media digests, no reply required\\n- needs_review: tenant communications, vendor quotes, non-urgent business emails, general inquiries\\n- urgent: lease issues, maintenance emergencies, legal notices, eviction-related, payment disputes, time-sensitive deadlines within 48 hours\\n- escalate: anything requiring immediate human decision, threats, legal action, lender/investor issues, anything that could cost >$1000 if ignored\\n\\nRespond ONLY with this JSON (no other text):\\n{\"action\": \"<action>\", \"reason\": \"<10 word max reason>\"}';\n\nconst results = [];\nfor (const item of $input.all()) {\n  const email = item.json;\n  const content = [\n    'From: ' + (email.from || ''),\n    'Subject: ' + (email.subject || ''),\n    'Date: ' + (email.date || ''),\n    '',\n    email.body ? email.body.substring(0, 1500) : (email.snippet || '')\n  ].join('\\n');\n\n  const requestBody = {\n    model: 'claude-haiku-4-5-20251001',\n    max_tokens: 256,\n    system: SYSTEM,\n    messages: [{ role: 'user', content: content }]\n  };\n\n  results.push({\n    json: {\n      ...email,\n      claudeBody: JSON.stringify(requestBody)\n    }\n  });\n}\nreturn results;"
+      }
+    },
+    {
       "id": "claude-classify",
       "name": "Claude Classify",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1100, 300],
+      "position": [1320, 300],
       "parameters": {
         "method": "POST",
         "url": "https://api.anthropic.com/v1/messages",
@@ -130,7 +140,7 @@
         },
         "sendBody": true,
         "specifyBody": "string",
-        "body": "={{ JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 256, system: 'You are an email classifier for a real estate investment business. Classify incoming emails with one of these actions and respond ONLY with a JSON object.\\n\\nActions:\\n- archive: newsletters, automated notifications, marketing, receipts, shipping updates, social media digests, no reply required\\n- needs_review: tenant communications, vendor quotes, non-urgent business emails, general inquiries\\n- urgent: lease issues, maintenance emergencies, legal notices, eviction-related, payment disputes, time-sensitive deadlines within 48 hours\\n- escalate: anything requiring immediate human decision, threats, legal action, lender/investor issues, anything that could cost >$1000 if ignored\\n\\nRespond ONLY with this JSON (no other text):\\n{\"action\": \"<action>\", \"reason\": \"<10 word max reason>\"}', messages: [{ role: 'user', content: 'From: ' + $json.from + '\\nSubject: ' + $json.subject + '\\nDate: ' + $json.date + '\\n\\n' + ($json.body ? $json.body.substring(0, 1500) : ($json.snippet || '')) }] }) }}"
+        "body": "={{ $json.claudeBody }}"
       }
     },
     {
@@ -138,9 +148,9 @@
       "name": "Parse Classification",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [1320, 300],
+      "position": [1540, 300],
       "parameters": {
-        "jsCode": "const results = [];\nconst claudeItems = $input.all();\nconst emailItems = $('Get Full Email').all();\n\nfor (let i = 0; i < claudeItems.length; i++) {\n  const claudeItem = claudeItems[i];\n  const emailItem = emailItems[i] || emailItems[0];\n  const content = claudeItem.json.content?.[0]?.text || '{\"action\":\"needs_review\",\"reason\":\"parse error\"}';\n  let classification;\n  try {\n    classification = JSON.parse(content);\n  } catch (e) {\n    const match = content.match(/\\{[^}]+\\}/);\n    classification = match ? JSON.parse(match[0]) : { action: 'needs_review', reason: 'parse error' };\n  }\n  results.push({\n    json: {\n      ...emailItem.json,\n      action: classification.action || 'needs_review',\n      reason: classification.reason || '',\n    }\n  });\n}\nreturn results;"
+        "jsCode": "const results = [];\nconst claudeItems = $input.all();\nconst emailItems = $('Build Claude Body').all();\n\nfor (let i = 0; i < claudeItems.length; i++) {\n  const claudeItem = claudeItems[i];\n  const emailItem = emailItems[i] || emailItems[0];\n  const content = claudeItem.json.content?.[0]?.text || '{\"action\":\"needs_review\",\"reason\":\"parse error\"}';\n  let classification;\n  try {\n    classification = JSON.parse(content);\n  } catch (e) {\n    const match = content.match(/\\{[^}]+\\}/);\n    classification = match ? JSON.parse(match[0]) : { action: 'needs_review', reason: 'parse error' };\n  }\n  results.push({\n    json: {\n      ...emailItem.json,\n      action: classification.action || 'needs_review',\n      reason: classification.reason || '',\n    }\n  });\n}\nreturn results;"
       }
     },
     {
@@ -148,7 +158,7 @@
       "name": "Action Router",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3,
-      "position": [1540, 300],
+      "position": [1760, 300],
       "parameters": {
         "mode": "rules",
         "rules": {
@@ -219,7 +229,7 @@
       "name": "Mark Read + Archive",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1760, 80],
+      "position": [1980, 80],
       "parameters": {
         "method": "POST",
         "url": "https://business-brain-production-0820.up.railway.app/api/archive",
@@ -240,7 +250,7 @@
       "name": "Label Needs-Review",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1760, 240],
+      "position": [1980, 240],
       "parameters": {
         "method": "POST",
         "url": "https://business-brain-production-0820.up.railway.app/api/label",
@@ -261,7 +271,7 @@
       "name": "Label Urgent",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1760, 400],
+      "position": [1980, 400],
       "parameters": {
         "method": "POST",
         "url": "https://business-brain-production-0820.up.railway.app/api/label",
@@ -282,7 +292,7 @@
       "name": "Label Escalate",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1760, 560],
+      "position": [1980, 560],
       "parameters": {
         "method": "POST",
         "url": "https://business-brain-production-0820.up.railway.app/api/label",
@@ -303,7 +313,7 @@
       "name": "Telegram Notify Mostafa",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [1980, 560],
+      "position": [2200, 560],
       "parameters": {
         "method": "POST",
         "url": "https://api.telegram.org/bot8974292507:AAF0XUjcvkUjGvQabFrCWrTGw9GR9zM3n0Y/sendMessage",
@@ -349,6 +359,11 @@
       ]
     },
     "Get Full Email": {
+      "main": [
+        [{ "node": "Build Claude Body", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Claude Body": {
       "main": [
         [{ "node": "Claude Classify", "type": "main", "index": 0 }]
       ]
