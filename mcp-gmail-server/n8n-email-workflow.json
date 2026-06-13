@@ -129,8 +129,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={\n  \"model\": \"claude-haiku-4-5-20251001\",\n  \"max_tokens\": 256,\n  \"system\": \"You are an email classifier for a real estate investment business. Classify incoming emails with one of these actions and respond ONLY with a JSON object.\\n\\nActions:\\n- archive: newsletters, automated notifications, marketing, receipts, shipping updates, social media digests, no reply required\\n- needs_review: tenant communications, vendor quotes, non-urgent business emails, general inquiries\\n- urgent: lease issues, maintenance emergencies, legal notices, eviction-related, payment disputes, time-sensitive deadlines within 48 hours\\n- escalate: anything requiring immediate human decision, threats, legal action, lender/investor issues, anything that could cost >$1000 if ignored\\n\\nRespond ONLY with this JSON (no other text):\\n{\\\"action\\\": \\\"<action>\\\", \\\"reason\\\": \\\"<10 word max reason>\\\"}\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"From: {{ $json.from }}\\nSubject: {{ $json.subject }}\\nDate: {{ $json.date }}\\n\\n{{ $json.body ? $json.body.substring(0, 1500) : $json.snippet }}\"\n    }\n  ]\n}"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 256, system: 'You are an email classifier for a real estate investment business. Classify incoming emails with one of these actions and respond ONLY with a JSON object.\\n\\nActions:\\n- archive: newsletters, automated notifications, marketing, receipts, shipping updates, social media digests, no reply required\\n- needs_review: tenant communications, vendor quotes, non-urgent business emails, general inquiries\\n- urgent: lease issues, maintenance emergencies, legal notices, eviction-related, payment disputes, time-sensitive deadlines within 48 hours\\n- escalate: anything requiring immediate human decision, threats, legal action, lender/investor issues, anything that could cost >$1000 if ignored\\n\\nRespond ONLY with this JSON (no other text):\\n{\"action\": \"<action>\", \"reason\": \"<10 word max reason>\"}', messages: [{ role: 'user', content: 'From: ' + $json.from + '\\nSubject: ' + $json.subject + '\\nDate: ' + $json.date + '\\n\\n' + ($json.body ? $json.body.substring(0, 1500) : ($json.snippet || '')) }] }) }}"
       }
     },
     {
@@ -231,8 +231,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\" }"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ message_id: $json.message_id, account: $json.account }) }}"
       }
     },
     {
@@ -252,8 +252,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Needs-Review\", \"action\": \"add\" }"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ message_id: $json.message_id, account: $json.account, label_name: 'AI/Needs-Review', action: 'add' }) }}"
       }
     },
     {
@@ -273,8 +273,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Urgent\", \"action\": \"add\" }"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ message_id: $json.message_id, account: $json.account, label_name: 'AI/Urgent', action: 'add' }) }}"
       }
     },
     {
@@ -294,8 +294,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={ \"message_id\": \"{{ $json.message_id }}\", \"account\": \"{{ $json.account }}\", \"label_name\": \"AI/Escalate\", \"action\": \"add\" }"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ message_id: $json.message_id, account: $json.account, label_name: 'AI/Escalate', action: 'add' }) }}"
       }
     },
     {
@@ -314,8 +314,8 @@
           ]
         },
         "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={\n  \"chat_id\": \"8107031523\",\n  \"text\": \"🚨 ESCALATE EMAIL\\n\\nFrom: {{ $json.from }}\\nSubject: {{ $json.subject }}\\nAccount: {{ $json.account }}@webberinvestmenthomes.com\\nReason: {{ $json.reason }}\\n\\nSnippet: {{ $json.snippet ? $json.snippet.substring(0, 200) : '' }}\"\n}"
+        "specifyBody": "string",
+        "body": "={{ JSON.stringify({ chat_id: '8107031523', text: '🚨 ESCALATE EMAIL\\n\\nFrom: ' + $json.from + '\\nSubject: ' + $json.subject + '\\nAccount: ' + $json.account + '@webberinvestmenthomes.com\\nReason: ' + $json.reason + '\\n\\nSnippet: ' + ($json.snippet ? $json.snippet.substring(0, 200) : '') }) }}"
       }
     }
   ],
