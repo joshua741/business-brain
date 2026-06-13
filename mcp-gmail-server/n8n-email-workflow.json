@@ -26,7 +26,7 @@
       "position": [220, 180],
       "parameters": {
         "method": "GET",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/search",
+        "url": "https://business-brain-production-0820.up.railway.app/api/search",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -51,7 +51,7 @@
       "position": [220, 420],
       "parameters": {
         "method": "GET",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/search",
+        "url": "https://business-brain-production-0820.up.railway.app/api/search",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -129,7 +129,7 @@
       "position": [1320, 300],
       "parameters": {
         "method": "GET",
-        "url": "=https://business-brain-production-1d2d.up.railway.app/api/email/{{ $json.message_id }}",
+        "url": "=https://business-brain-production-0820.up.railway.app/api/email/{{ $json.message_id }}",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -255,7 +255,7 @@
       "position": [2200, 80],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/archive",
+        "url": "https://business-brain-production-0820.up.railway.app/api/archive",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -276,7 +276,7 @@
       "position": [2200, 240],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "url": "https://business-brain-production-0820.up.railway.app/api/label",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -297,7 +297,7 @@
       "position": [2200, 400],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "url": "https://business-brain-production-0820.up.railway.app/api/label",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -318,7 +318,7 @@
       "position": [2200, 560],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/label",
+        "url": "https://business-brain-production-0820.up.railway.app/api/label",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -339,7 +339,7 @@
       "position": [2420, 80],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "url": "https://business-brain-production-0820.up.railway.app/api/mark-read",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -360,7 +360,7 @@
       "position": [2420, 240],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "url": "https://business-brain-production-0820.up.railway.app/api/mark-read",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -381,7 +381,7 @@
       "position": [2420, 400],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "url": "https://business-brain-production-0820.up.railway.app/api/mark-read",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -422,7 +422,7 @@
       "position": [2640, 560],
       "parameters": {
         "method": "POST",
-        "url": "https://business-brain-production-1d2d.up.railway.app/api/mark-read",
+        "url": "https://business-brain-production-0820.up.railway.app/api/mark-read",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
