@@ -3,8 +3,9 @@ name: mostafa-business-brain
 type: dashboard
 owner: mostafa
 scope: operations / execution layer (WIH + LBK Cleaners)
-updated: 2026-06-17
+updated: 2026-06-18
 sync: pushed daily ~8:47 AM to joshua741/business-brain (master)
+freshness: latest morning-meeting transcript is 2026-06-04 — items below carry forward from then; time-passed items flagged for live verification
 ---
 
 # Mostafa's Business Brain — Operations Heartbeat
@@ -52,8 +53,8 @@ sync: pushed daily ~8:47 AM to joshua741/business-brain (master)
 
 | Tenant / Property | Health | Detail |
 |---|---|---|
-| Veronica — 3423 E Baylor | 🟡 Watch | Payment "processing"; verify source in DoorLoop; 10-day grace, follow up post-June 10 |
-| Tracy — 2802 S Channing | 🟡 Watch | 10-day grace confirmed; $210.38 late fee from June 10 if unpaid |
+| Veronica — 3423 E Baylor | 🟡 Verify | Was "processing" as of June 4 w/ 10-day grace — grace window now passed; confirm paid/cleared _⟶ pull live (DoorLoop)_ |
+| Tracy — 2802 S Channing | 🟡 Verify | 10-day grace; $210.38 late fee applied from June 10 if unpaid — confirm current standing _⟶ pull live (DoorLoop)_ |
 | Aaron — 1312 65th Dr Unit E | 🟢 Renewing | New lease drafted $850/mo; signature deadline July 20 via Crystal Sherwood |
 | 4019 37th St (Evergreen note) | 🔴 Issue | NSF returned; Evergreen now wire-only ($15/wire) for 6+ payments; moving to auto-draft to Josh Fox |
 | 4626 S Lipscomb | 🔴 Issue | (a) mortgage AutoPay may have stopped; (b) Xcel Energy past-due weekly since Feb — collection threat |
