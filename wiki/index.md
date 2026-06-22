@@ -125,6 +125,10 @@
 - [Boris Cherny](boris-cherny.md) — creator of Claude Code; workflow reference
 - [Nate Herk](nate-herk.md) — AI automation creator; AI Operating System framework
 
+## Sources — Daily meeting transcripts (Jun 12–17, 2026)
+- [2026-06-12 Morning Meeting (Josh & Mostafa)](source-transcript-2026-06-12.md) — NotebookLM content AI, Facebook cross-posting SOP, 4513 closing tasks, 2102 68th power disconnect, utility cadence, Sequence EIN, wih-app Live Share onboarding, Notion series system
+- [2026-06-17 Morning Meeting (Josh & Angel)](source-transcript-2026-06-17.md) — blended closing check, Notion transcription setup, Antonio missed meeting SOP, Shane water heater, McKenzie sheet wrap, AI skills GitHub repo
+
 ## Sources — Daily meeting transcripts (Jun 4, 2026)
 - [2026-06-04 Morning Meeting](source-transcript-2026-06-04-morning-meeting-josh-mostafa.md) — Alyssa termination $3,007; 4513 closing Jun 5; 4626 Excel Energy urgent; 4019 Evergreen NSF; GitHub collab Mostafa
 

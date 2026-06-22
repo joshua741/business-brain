@@ -3,8 +3,8 @@ name: wih-app
 type: project
 tags: [web-app, railway, supabase, crm, central]
 status: active
-sources: [CLAUDE.md seed, memo-2026-05-29T14-03-38-session.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md, transcript-2026-06-02-meeting.md, clip-2026-06-03-how-to-build-a-business-intelligence-dashboard-with-claude-a.md]
-updated: 2026-06-03
+sources: [CLAUDE.md seed, memo-2026-05-29T14-03-38-session.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md, transcript-2026-06-02-meeting.md, clip-2026-06-03-how-to-build-a-business-intelligence-dashboard-with-claude-a.md, transcript-2026-06-12-morning-meeting-josh-mostafa.md]
+updated: 2026-06-22
 ---
 
 # WIH App
@@ -41,6 +41,16 @@ Major build threads underway:
 
 **Long-term goal:** replace [[doorloop]] (~$265/mo, billed per-lease) with a custom property-management dashboard + tenant portal inside this app.
 
+## Mostafa onboarding — VS Code Live Share (Jun 12, 2026)
+On June 12, 2026, Joshua onboarded [[mostafa]] to the wih-app codebase using **VS Code Live Share**. Mostafa joined the live session, gained read/write access to the Railway-hosted project, and was walked through the app's current state. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
+Current app state at the time of onboarding:
+- **Pipeline/Stages view** visible with a Disposition tab and a Contacts section (contacts not loading at the time — a minor bug to fix).
+- AI handover document generated mid-session to bring Mostafa up to speed on what's been built and what's next.
+- **Follow-up engine** spec identified as the next major build — implementation plan being written.
+
+Going forward: Joshua will keep his desktop running / Wi-Fi on so Mostafa can access the Live Share session independently, even after Joshua closes his window. Collaboration model: major sessions → handover document → Mostafa continues independently.
+
 ## Feature context to fold in
 Running backlog of app-relevant ideas pulled from ingested sources. The daily ingest appends here whenever a new source touches CRM features, AI agents, dashboards, or the three verticals. Review periodically and pull the best into the wih-app dev project.
 - **AI / voice agent layer** -- voice agents via ElevenLabs + Twilio for [[vince-ai]]-style flows; could power in-app call/SMS ([[source-voice-agents-elevenlabs]], [[elevenlabs]]).
@@ -59,3 +69,5 @@ Running backlog of app-relevant ideas pulled from ingested sources. The daily in
 - [[no-fluff-model]]
 - [[disposition]]
 - [[kpi-tracking]]
+- [[mostafa]]
+- [[source-transcript-2026-06-12]]

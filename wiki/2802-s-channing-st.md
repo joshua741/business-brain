@@ -3,8 +3,8 @@ name: 2802-s-channing-st
 type: entity
 tags: [property, amarillo, subject-to, trust]
 status: active
-sources: [CLAUDE.md seed, 2802-assignment-of-insurance-proceeds.md, 2802-s-channing-trust-addendum-updated.md, baselane-webber-wealth-holdings-llc-bank-2802-s-channing-st-jan-2026-statement.md, baselane-webber-wealth-holdings-llc-bank-2802-s-channing-st-feb-2026-statement.md, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-28-morning-meeting-josh-mostafa.md, transcript-2026-06-02-meeting.md]
-updated: 2026-06-03
+sources: [CLAUDE.md seed, 2802-assignment-of-insurance-proceeds.md, 2802-s-channing-trust-addendum-updated.md, baselane-webber-wealth-holdings-llc-bank-2802-s-channing-st-jan-2026-statement.md, baselane-webber-wealth-holdings-llc-bank-2802-s-channing-st-feb-2026-statement.md, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-28-morning-meeting-josh-mostafa.md, transcript-2026-06-02-meeting.md, transcript-2026-06-12-morning-meeting-josh-mostafa.md]
+updated: 2026-06-22
 ---
 
 # 2802 S Channing St
@@ -40,6 +40,11 @@ Part of the [[wih]] portfolio. Managed through [[doorloop]]; operations by [[mos
 ## Financials (Baselane)
 Tracked under [[webber-wealth-holdings]] Baselane property account (Jan & Feb 2026 statements). See [[source-baselane-statements]].
 
+## Escrow shortage payment (Jun 2026)
+Payment of the escrow shortage for 2802 S Channing was originally scheduled for Tuesday but moved to Monday (June 15) to catch potential early funding from the [[4513-48th-st]] close. This payment is blocked by (dependent on) the 4513 48th St closing and funding. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
+Tracy's payment also bounced (NSF) around this period, incurring a $45 returned-payment fee. Separate task: follow up with Tracy, confirm late fees apply, recalculate her monthly payment after deducting the escrow shortage she already paid (divide shortage by 12, subtract from monthly). (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
 ## Related pages
 - [[wih]]
 - [[doorloop]]
@@ -48,3 +53,5 @@ Tracked under [[webber-wealth-holdings]] Baselane property account (Jan & Feb 20
 - [[rocket-mortgage]]
 - [[secured-sequence]]
 - [[source-baselane-statements]]
+- [[4513-48th-st]]
+- [[source-transcript-2026-06-12]]

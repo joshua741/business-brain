@@ -3,8 +3,8 @@ name: 7005-winston-ave
 type: entity
 tags: [property, trust, finance]
 status: active
-sources: [ein-7005-winston-ave-irrevocable-living-trust.md, k1-7005-winston-trust-wwh-joshua-webber-2025.md, doorloop-profit-and-loss-7005-winston-ave.md, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md]
-updated: 2026-06-03
+sources: [ein-7005-winston-ave-irrevocable-living-trust.md, k1-7005-winston-trust-wwh-joshua-webber-2025.md, doorloop-profit-and-loss-7005-winston-ave.md, transcript-2026-05-26-morning-meeting-josh-mostafa.md, transcript-2026-05-29-morning-meeting-josh-mostafa.md, transcript-2026-06-12-morning-meeting-josh-mostafa.md]
+updated: 2026-06-22
 ---
 
 # 7005 Winston Ave
@@ -34,6 +34,11 @@ Multi-unit property; surfaced units include **E** and **F**.
 - **Flooring:** Removed and redone by contractor **[[john-garcia]]** — **$400 job**, **$200 paid / $200 due on walkthrough**; a **$75 upcharge was rejected** (source: transcript-2026-05-29-morning-meeting-josh-mostafa.md).
 - **Tenants:** include **Ronald** (late/grace-period payer). See also the **eviction thread** tied to [[4019-37th-st]] — referenced there as **"7500 Winston Ave," tenants Ronald & Samantha**, chronically non-paying and proceeding to eviction as of June 2026 (source: transcript-2026-06-01-morning-meeting-josh-mostafa.md). Confirm whether "7500 Winston Ave" and 7005 Winston Ave are the same property or distinct.
 
+## Ronald & Samantha eviction notice (Jun 2026)
+As of June 12, 2026, a Monday eviction notice was going out for tenants **Ronald & Samantha** (referenced in transcripts as 7500 Winston, tied to this property thread). Joshua is proceeding with the notice and, if payment is not received, will file for eviction. Mostafa was tasked with calling all three numbers (Joshua had: Ronald's work number + another number) before sending a formal notice — attempting to collect the overdue payment first. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
+**Note**: The address discrepancy "7500 Winston Ave" vs. "7005 Winston Ave" is a known lint flag — these may be the same property or closely linked. Confirm and resolve.
+
 ## Related pages
 - [[webber-wealth-holdings]]
 - [[doorloop]]
@@ -41,3 +46,4 @@ Multi-unit property; surfaced units include **E** and **F**.
 - [[shane-leary]]
 - [[john-garcia]]
 - [[4019-37th-st]]
+- [[source-transcript-2026-06-12]]
