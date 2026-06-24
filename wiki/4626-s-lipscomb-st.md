@@ -3,8 +3,8 @@ name: 4626-s-lipscomb-st
 type: entity
 tags: [property, lubbock, seller-lease-back]
 status: active
-sources: [CLAUDE.md seed, signed-4626-s-liscomb-seller-lease-back.md, transcript-2026-06-04-morning-meeting-josh-mostafa.md]
-updated: 2026-06-04
+sources: [CLAUDE.md seed, signed-4626-s-liscomb-seller-lease-back.md, transcript-2026-06-04-morning-meeting-josh-mostafa.md, mostafa-confirmation-2026-06-24]
+updated: 2026-06-24
 ---
 
 # 4626 S Lipscomb St
@@ -18,6 +18,11 @@ updated: 2026-06-04
 ---
 
 Part of the [[wih]] portfolio in Lubbock, TX. Managed through [[doorloop]]; operations by [[mostafa]].
+
+## Title / ownership
+- Title held by the **4626 S Lipscomb St Irrevocable Trust**; **beneficiary is [[webber-wealth-holdings]] LLC** (confirmed by Mostafa, 2026-06-24).
+- **The trust has no EIN of its own** — by design. It is therefore intentionally absent from the EIN registry ([[source-ein-registry]]); this is not a missing-data gap.
+- All Baselane bank/reserve/credit accounts for the property are held under Webber Wealth Holdings LLC. Acquired **subject-to** with the seller lease-back to John Arthur Castillo (see below).
 
 ## Seller lease-back
 - Signed **seller lease-back agreement** executed April 1, 2025 between **John Arthur Castillo** (seller) and Joshua Webber, letting the seller remain in the property after closing (source: signed-4626-s-liscomb-seller-lease-back.md).

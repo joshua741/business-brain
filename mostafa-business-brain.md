@@ -89,7 +89,7 @@ _Targets/automation in place; live values ⟶ pull from sources._
 
 - **Mortgage servicing fragility**: NSF + servicer changes (Evergreen wire-only, Freedom Mortgage status emails) — moving toward direct auto-draft to lenders to bypass servicing friction.
 - **Utility delinquency blind spot**: 4626 Lipscomb Xcel past-due ran Feb→present unnoticed — the utilities tracker exists to catch exactly this; tighten the alerting.
-- **Entity/EIN registry gap**: the **4626 S Lipscomb St Irrevocable Trust** (holds 4626 S Lipscomb, Amarillo TX; beneficiary Webber Wealth Holdings LLC; subject-to w/ seller lease-back to John Arthur Castillo) is **missing from the brain's EIN registry** — its EIN isn't recorded in the wiki or any readable Drive doc (likely only in the tax-prep tracker .xlsx). Add it to `wiki/source-ein-registry.md` once obtained.
+- **4626 Lipscomb title (confirmed)**: held by the **4626 S Lipscomb St Irrevocable Trust**, beneficiary **Webber Wealth Holdings LLC** (subject-to acquisition w/ seller lease-back to John Arthur Castillo). The trust has **no EIN of its own by design** — so it correctly does NOT appear in the EIN registry. Not a data gap.
 - **Skills-sync auth**: shared-skills push hit `403` on 2026-06-24 (the embedded PAT was rotated). Fixed by switching the `.skills-shared` clone to Git Credential Manager + adding a retry for pending-but-unpushed commits. `mercury-balance-sync` is now shared.
 - **Credentials hygiene**: skill files had hardcoded API tokens (caught by GitHub push protection) — now excluded + secret-scan guard on sync. Don't commit live tokens.
 - **Systems > goals**: "You don't rise to the level of your goals, you fall to the level of your systems." — the operating ethos here.
