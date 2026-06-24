@@ -3,7 +3,7 @@ name: mostafa-business-brain
 type: dashboard
 owner: mostafa
 scope: operations / execution layer (WIH + LBK Cleaners)
-updated: 2026-06-18
+updated: 2026-06-24
 sync: pushed daily ~8:47 AM to joshua741/business-brain (master)
 freshness: latest morning-meeting transcript is 2026-06-04 — items below carry forward from then; time-passed items flagged for live verification
 ---
