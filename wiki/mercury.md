@@ -3,8 +3,8 @@ name: mercury
 type: entity
 tags: [banking, profit-first, finance, invoicing]
 status: active
-sources: [CLAUDE.md seed]
-updated: 2026-06-03
+sources: [CLAUDE.md seed, transcript-2026-06-12-morning-meeting-josh-mostafa.md]
+updated: 2026-06-22
 ---
 
 # Mercury
@@ -30,6 +30,9 @@ Recent transactions: -$32.67 Mercury subscription fee (Jun 3), -$296.22 to SEQUE
 
 The low balance reflects that the Profit First account buildout under [[baselane-to-mercury-migration]] hasn't yet moved primary cash flows over.
 
+## AI balance automation (Jun 2026)
+Confirmed June 12, 2026: once the operation is fully on Mercury, **AI can automatically read balances and reflect them on Google Sheets** — eliminating the need for manual mortgage and utility balance checks. This is a core rationale for the [[baselane-to-mercury-migration]] and the reason the recurring Tuesday utility check / monthly mortgage check cadence is a bridge measure until Mercury is fully live. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
 ## Invoicing (capability identified 2026-06-03)
 Mercury can **create and send invoices natively** — a capability we hadn't logged before. WIH invoices frequently, so this is a real opportunity: consolidate invoicing into Mercury rather than a separate tool, and (via the Banking API) automate invoice creation/tracking from [[wih-app]] — fits the "own the software / one-stop app" direction. Action: evaluate Mercury invoicing vs. the current method and consider wiring it into the in-house app's billing.
 
@@ -42,3 +45,4 @@ Mercury can **create and send invoices natively** — a capability we hadn't log
 - [[baselane-to-mercury-migration]]
 - [[doorloop]]
 - [[company-roadmap]]
+- [[source-transcript-2026-06-12]]

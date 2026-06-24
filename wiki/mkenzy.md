@@ -2,8 +2,8 @@
 name: mkenzy
 type: person
 tags: [team]
-sources: [CLAUDE.md seed, transcript-2026-05-27-morning-meeting-josh-mostafa.md, transcript-2026-06-04-morning-meeting-josh-mostafa.md]
-updated: 2026-06-04
+sources: [CLAUDE.md seed, transcript-2026-05-27-morning-meeting-josh-mostafa.md, transcript-2026-06-04-morning-meeting-josh-mostafa.md, transcript-2026-06-12-morning-meeting-josh-mostafa.md, transcript-2026-06-17-morning-meeting-josh-angel.md]
+updated: 2026-06-22
 ---
 
 # M'kenzy
@@ -30,8 +30,13 @@ McKenzie negotiated the lease termination agreement for tenant Alyssa at [[4302-
 ## AI process briefing meeting
 McKenzie wants a 30–45 minute sit-down with Joshua to go over the AI automation setup for the rent-to-own sector — AI agent responses, property details flow, pre-call briefing, etc. Available **any day next week except Tuesday, at 3pm**. (source: transcript-2026-06-04-morning-meeting-josh-mostafa.md)
 
+## Repeated non-responsiveness (Jun 2026)
+During the week of June 12, McKenzie was unreachable multiple times — specifically when Joshua and Mostafa were trying to reach Austin Hughes (flooring contractor) at [[2102-68th-st]] and needed his contact info. As of June 17, a "sheet wrap" task was still pending and McKenzie was again unreachable. Joshua has flagged that her level of responsiveness feels automatable and her long-term role is being quietly re-evaluated. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md, transcript-2026-06-17-morning-meeting-josh-angel.md)
+
 ## Related pages
 - [[wih]]
 - [[mostafa]]
 - [[joshua]]
 - [[lbk-cleaners]]
+- [[source-transcript-2026-06-12]]
+- [[source-transcript-2026-06-17]]

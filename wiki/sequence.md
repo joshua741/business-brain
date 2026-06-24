@@ -3,8 +3,8 @@ name: sequence
 type: entity
 tags: [finance, automation, money-routing]
 status: active
-sources: [source-baselane-statements.md, memo-2026-06-03-mercury-migration-and-vision.md, transcript-2026-06-02-meeting.md]
-updated: 2026-06-03
+sources: [source-baselane-statements.md, memo-2026-06-03-mercury-migration-and-vision.md, transcript-2026-06-02-meeting.md, transcript-2026-06-12-morning-meeting-josh-mostafa.md]
+updated: 2026-06-22
 ---
 
 # Sequence (getsequence.io)
@@ -25,6 +25,9 @@ Sequence is not banking — it's the rules engine layered over [[baselane]]. The
 
 **Status:** slated for retirement under [[baselane-to-mercury-migration]] — [[mercury]]'s native percentage auto-transfer rules replace it, saving ~$1,091/yr.
 
+## EIN application (Jun 2026)
+Jacoby sent an EIN number sheet that needs to be edited — replace the name with **Joshua Weber** — and submitted to Sequence for application approval. A past-due invoice on [[2102-68th-st]] was also flagged in Sequence around June 12, 2026. (source: transcript-2026-06-12-morning-meeting-josh-mostafa.md)
+
 ## Related pages
 - [[baselane]]
 - [[mercury]]
@@ -32,3 +35,5 @@ Sequence is not banking — it's the rules engine layered over [[baselane]]. The
 - [[source-baselane-statements]]
 - [[profit-first]]
 - [[secured-sequence]]
+- [[2102-68th-st]]
+- [[source-transcript-2026-06-12]]
