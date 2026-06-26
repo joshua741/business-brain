@@ -105,7 +105,7 @@
 - [Austin Hughes](austin-hughes.md) — Thunder Sun Homes; 9-unit deal (paused)
 - [Don Pittman](don-pittman.md) — CPA; entity consolidation (verify approach)
 - [Crystal Sherwood](crystal-sherwood.md) — property manager intermediary at 1312 65th Dr (Unit E lease comms)
-- [Blake Hoffman](blake-hoffman.md) — external payee; bank/payment details on file (provided 2026-06-26; holder name + bank to confirm)
+- [Blake Hoffman](blake-hoffman.md) — external payee; bank/payment details on file (1978 Holding Company Of Texas LLC @ Mountain America CU)
 - [Josh Fox](josh-fox.md) — individual note holder on 4019 37th St loan via Evergreen; plan to pay directly
 - [Curtis William](curtis-william.md) — private/transactional lender ($15k → 4513 48th St)
 - [Michael Bullis](michael-bullis.md) — seller-side counterparty on 4513 48th St (TMGLC)

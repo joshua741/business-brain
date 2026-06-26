@@ -17,16 +17,15 @@ updated: 2026-06-26
 ---
 
 ## Payment / bank details
-Account is held under **Blake's company** (exact legal account-holder name to confirm — see note).
 
-| Field | Value (as provided) |
+| Field | Value |
 |---|---|
-| Account holder | Blake's company — possibly **"Texas Holding Company"** (confirm exact legal name) |
+| Account holder | **1978 Holding Company Of Texas LLC** (Blake's company) |
+| Bank | **Mountain America Credit Union** (Mountain America FCU), West Jordan, UT — resolved from routing number |
 | Routing number | **324079555** (given as `3240-7955-5`) |
 | Account number | **501012148539** (given as `5010-1214-8539`) |
-| Bank name | ⟶ not provided (needed for a wire) |
 
-> **Confirm before sending money:** (1) the exact **account-holder legal name** — it's unclear whether "Texas Holding Company" is the company's name or a label; (2) the **bank name**; (3) whether this is an **ACH** or **wire** account. Verbatim record per Mostafa, 2026-06-26.
+> Details provided by Blake directly via Mostafa, 2026-06-26. Account holder + bank confirmed; bank name resolved from the ABA routing number (324079555 → Mountain America CU).
 
 ## Related pages
 - [[wih]]
