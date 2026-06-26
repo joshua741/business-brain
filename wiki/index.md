@@ -23,7 +23,8 @@
 - [5427 35th St](5427-35th-st.md) — Lubbock, TX rental property
 - [3904 Ave R](3904-ave-r.md) — Lubbock, TX rental property
 - [3602 31st St](3602-31st-st.md) — Lubbock, TX rental property
-- [4302 E 61st St](4302-e-61st-st.md) — creative-finance close ~Mar 2026; seller-finance transfer to tenants in progress
+- [4302 E 61st St](4302-e-61st-st.md) — creative-finance close ~Mar 2026; remarketing RTO ($1,450/mo); lender Blake Hoffman
+- [4205 E 61st St](4205-e-61st-st.md) — paired with 4302; 2nd-position note serviced by Southern Loan Servicing
 - [526 53rd St](526-53rd-st.md) — Lubbock, TX seller-finance property
 - [7005 Winston Ave](7005-winston-ave.md) — Units E & F; water heater + flooring work; tenant Ronald
 - [4513 48th St](4513-48th-st.md) — active RTO; tenant Joseph $1,813 escrowed; TMGLC/Michael Bullis; Curtis William funding
@@ -45,6 +46,10 @@
 - [Giggle Finance](giggle-finance.md) — working-capital / bridge funding for fast-repay closings
 - [Lakeview](lakeview.md) — FL mortgage servicer on the Yvonne/Scott subject-to deal
 - [Rocket Mortgage](rocket-mortgage.md) — servicer on 2802 S Channing (FHA)
+- [Fay Servicing](fay-servicing.md) — loan servicer on 4019 37th St; escrows Joseph DeLaO's homeowner insurance
+- [Southern Loan Servicing](southern-loan-servicing.md) — services 2nd-position notes on 4205/4302 E 61st (Blake Hoffman)
+- [Allstate](allstate.md) — insurance carrier for 4019 37th St (homeowner + auto); agent Zach
+- [Mortgage Status Sheet](mortgage-status-sheet.md) — Property Payment Checklist tab; Mercury balance-sync + 2nd-position/servicing math
 - [Stripe](stripe.md) — payment processing, merchant account at 3423 E Baylor
 - [Twilio](twilio.md) — SMS/voice for AI agents
 - [Claude API](claude-api.md) — AI backbone for Vince and other automations
@@ -94,6 +99,8 @@
 - [Legal Document Templates](legal-document-templates.md) — reusable legal/contract templates
 - [KPI Tracking](kpi-tracking.md) — daily KPI dashboard; $500 needle-mover bet
 - [Company Roadmap](company-roadmap.md) — the billion-dollar ladder; AI-run, in-house software
+- [Selling Notes / Partials](selling-notes.md) — next tier: sell payment streams (partials) rather than the asset
+- [Morby Method](morby-method.md) — net-zero seller carryback; seller equity covers down payment + closing costs
 
 ## People
 - [Joshua](joshua.md) — systems architect and decision-maker
@@ -105,7 +112,14 @@
 - [Austin Hughes](austin-hughes.md) — Thunder Sun Homes; 9-unit deal (paused)
 - [Don Pittman](don-pittman.md) — CPA; entity consolidation (verify approach)
 - [Crystal Sherwood](crystal-sherwood.md) — property manager intermediary at 1312 65th Dr (Unit E lease comms)
-- [Blake Hoffman](blake-hoffman.md) — external payee; bank/payment details on file (1978 Holding Company Of Texas LLC @ Mountain America CU)
+- [Blake Hoffman](blake-hoffman.md) — note holder/lender on 4302 E 61st (1978 Holding Company of Texas LLC); paid via Southern Loan Servicing
+- [Jacoby Maydwell](jacoby-maydwell.md) — seller on 4513 48th St; owner of 8-unit townhome portfolio WIH is wholesaling
+- [Joseph DeLaO](joseph-delao.md) — seller-finance buyer on 4019 37th St (wife Kimberly); insurance double-escrow resolved
+- [Didi Haase](didi-haase.md) — out-of-state investor retiring; wants to cash out a 5+ property portfolio
+- [Rex Andrews](rex-andrews.md) — commercial broker / cash-buyer access; disposition channel for Jacoby's townhomes
+- [Elsa Galindo](elsa-galindo.md) — 1926 27th St tenant converting to seller finance (Kiavi refi)
+- [Glenda](glenda.md) — rent-to-own prospect sent the 4302 E 61st application
+- [Jalissa Ramos Mendoza](jalissa-ramos-mendoza.md) — former 4302 E 61st tenant ("Alyssa"); lease terminated/inactive
 - [Josh Fox](josh-fox.md) — individual note holder on 4019 37th St loan via Evergreen; plan to pay directly
 - [Curtis William](curtis-william.md) — private/transactional lender ($15k → 4513 48th St)
 - [Michael Bullis](michael-bullis.md) — seller-side counterparty on 4513 48th St (TMGLC)
@@ -125,6 +139,13 @@
 - [Jerry Norton](jerry-norton.md) — wholesale educator (Flipping Mastery)
 - [Boris Cherny](boris-cherny.md) — creator of Claude Code; workflow reference
 - [Nate Herk](nate-herk.md) — AI automation creator; AI Operating System framework
+
+## Sources — Daily meeting transcripts (Jun 18–26, 2026)
+- [2026-06-18 Morning Meeting](source-transcript-2026-06-18-morning-meeting-josh-mostafa.md) — Jacoby 4513 closing-cost shortfall $5,964; Veronica paid (no termination); Elsa seller-finance; FB group 900
+- [2026-06-23 Morning Meeting](source-transcript-2026-06-23-morning-meeting-josh-mostafa.md) — 4513 funded; Baselane→Mercury migration; balance-sync automation; Sequence→AI transfer plan
+- [2026-06-24 Morning Meeting](source-transcript-2026-06-24-morning-meeting-josh-mostafa.md) — auto-pay set; GHL spam-call fix; 2nd-position+servicing sheet gap; 4302 to Glenda; 3423 refi
+- [2026-06-25 Morning Meeting](source-transcript-2026-06-25-morning-meeting-josh-mostafa.md) — 4019 double-escrow insurance (cancel Portega, keep Allstate); Joseph pmt $1,826.87; Veronica evicted
+- [2026-06-26 Morning Meeting](source-transcript-2026-06-26-morning-meeting-josh-mostafa.md) — Jacoby 8-unit wholesale via Rex Andrews; Blake/4302 servicing gap; McKenzie Airbnb; 1312 electric spike
 
 ## Sources — Daily meeting transcripts (Jun 4, 2026)
 - [2026-06-04 Morning Meeting](source-transcript-2026-06-04-morning-meeting-josh-mostafa.md) — Alyssa termination $3,007; 4513 closing Jun 5; 4626 Excel Energy urgent; 4019 Evergreen NSF; GitHub collab Mostafa

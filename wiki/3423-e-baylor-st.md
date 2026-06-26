@@ -24,10 +24,16 @@ Part of the [[wih]] portfolio in Lubbock, TX, held in the **W&M Series LLC – 3
 ## 2025 P&L
 Rental income $4,457.80; net **loss ($3,595.79)** for 2025 (mortgage principal $7,110.81, insurance $801) (source: webber-2025-pl.md). See [[source-webber-2025-pl]].
 
+## Refinance + eviction (Jun 2026)
+- **Refinanced** ~June 2026 — mortgage payment dropped ~**$500**; need the new PITI + portal credentials from [[kenneth]] to update [[mortgage-status-sheet]] and [[sequence]]. (source: [[source-transcript-2026-06-24-morning-meeting-josh-mostafa]])
+- **Tenant Veronica**: after ignoring resolution, **evicted/foreclosed June 25, 2026**; WIH regained access (needs a new master key). Earlier (Jun 18) she had actually paid — situation deteriorated after. (source: [[source-transcript-2026-06-25-morning-meeting-josh-mostafa]])
+
 ## Related pages
 - [[wih]]
 - [[wm-series-llc]]
 - [[doorloop]]
 - [[mostafa]]
 - [[stripe]]
+- [[kenneth]]
+- [[mortgage-status-sheet]]
 - [[source-webber-2025-pl]]

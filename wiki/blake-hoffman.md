@@ -8,7 +8,10 @@ updated: 2026-06-26
 
 # Blake Hoffman
 
-**Summary**: External party paid by [[wih]]. Payment routed through [[mostafa]] (all outbound). Banking details below were provided by Blake directly and relayed by Mostafa on 2026-06-26. Role/relationship not yet documented.
+**Summary**: **Note holder / lender on [[4302-e-61st-st]]** (his company is **1978 Holding Company of Texas LLC**). WIH pays him via **[[southern-loan-servicing]]**. Payment routed/coordinated through [[mostafa]].
+
+## Role
+- Lender on the **[[4302-e-61st-st]]** note. On Jun 26 he followed up that he hadn't received his expected (15th) payment — root cause: **[[southern-loan-servicing]]** never created the 4302 account (only [[4205-e-61st-st]]), so the pull didn't happen. Being opened (contact Jessica). (source: [[source-transcript-2026-06-26-morning-meeting-josh-mostafa]])
 
 **Sources**: provided by Blake directly to Mostafa, 2026-06-26
 

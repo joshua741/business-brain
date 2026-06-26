@@ -25,6 +25,8 @@ Sequence is not banking — it's the rules engine layered over [[baselane]]. The
 
 **Status:** slated for retirement under [[baselane-to-mercury-migration]] — [[mercury]]'s native percentage auto-transfer rules replace it, saving ~$1,091/yr.
 
+**Retirement plan in motion (Jun 23–24, 2026):** Sequence currently auto-moves reserve→bank only when funds exist, on the 14th, capped at ~100 actions/mo (overages billed). The plan: have **AI make the reserve→bank top-up 2 days before each payment's due date** (reading [[mortgage-status-sheet]]), transferring only the shortfall, then **delete the Sequence rules**. AI is authorized for transfers (not payments) on its own. (source: [[source-transcript-2026-06-23-morning-meeting-josh-mostafa]])
+
 ## Related pages
 - [[baselane]]
 - [[mercury]]

@@ -33,6 +33,11 @@ The low balance reflects that the Profit First account buildout under [[baselane
 ## Invoicing (capability identified 2026-06-03)
 Mercury can **create and send invoices natively** — a capability we hadn't logged before. WIH invoices frequently, so this is a real opportunity: consolidate invoicing into Mercury rather than a separate tool, and (via the Banking API) automate invoice creation/tracking from [[wih-app]] — fits the "own the software / one-stop app" direction. Action: evaluate Mercury invoicing vs. the current method and consider wiring it into the in-house app's billing.
 
+## Migration executed (Jun 23–24, 2026)
+- After the [[4513-48th-st]] close, **all property banking was migrated from [[baselane]] to Mercury** and audited. Per-property **virtual cards** created (instant, no physical-card wait); Mercury **auto-categorization** replaces manual transaction tagging. Account email switched to **docs@**; receipts route there via the traveling mailbox.
+- **Mercury Banking API connected to Claude** (stored in Claude Code local settings / MCP) — the AI money layer the roadmap called for. Security: the API token must **not** be committed to git; rotate if exposed.
+- **Balance-sync automation live**: Mercury balances → [[mortgage-status-sheet]] (Mon/Wed/Fri) with Telegram low-balance alerts. (source: [[source-transcript-2026-06-23-morning-meeting-josh-mostafa]], [[source-transcript-2026-06-24-morning-meeting-josh-mostafa]])
+
 ## Related pages
 - [[profit-first]]
 - [[wih]]
@@ -40,5 +45,6 @@ Mercury can **create and send invoices natively** — a capability we hadn't log
 - [[baselane]]
 - [[sequence]]
 - [[baselane-to-mercury-migration]]
+- [[mortgage-status-sheet]]
 - [[doorloop]]
 - [[company-roadmap]]

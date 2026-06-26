@@ -3,9 +3,9 @@ name: mostafa-business-brain
 type: dashboard
 owner: mostafa
 scope: operations / execution layer (WIH + LBK Cleaners)
-updated: 2026-06-24
+updated: 2026-06-26
 sync: pushed daily ~8:47 AM to joshua741/business-brain (master)
-freshness: latest morning-meeting transcript is 2026-06-04 — items below carry forward from then; time-passed items flagged for live verification
+freshness: ingested morning-meeting transcripts through 2026-06-26 (Jun 18/23/24/25/26)
 ---
 
 # Mostafa's Business Brain — Operations Heartbeat
@@ -26,9 +26,13 @@ freshness: latest morning-meeting transcript is 2026-06-04 — items below carry
 
 | Project | Status | Notes |
 |---|---|---|
-| **Property management ops** | 🟢 Active | ~12-property Lubbock portfolio; rent collection, leases, maintenance, vendor coordination |
-| **4513 48th St rent-to-own push** | 🟠 Top priority | Closed ~June 5 ($250K seller-finance @8.5%). Marketing via Facebook Marketplace + manual group posts; text-blast for inbound, M'kenzy runs showings |
+| **Property management ops** | 🟢 Active | ~14-property Lubbock portfolio; rent collection, leases, maintenance, vendor coordination |
+| **Baselane → Mercury migration** | 🟢 Done (Jun 23–24) | All property banking moved to Mercury; per-property virtual cards; Mercury API connected to Claude; auto-pay set on all mortgages |
+| **Disposition push: 4513 48th St + 4302 E 61st** | 🟠 Top priority | 4513 **closed/funded ~Jun 22**; 4302 vacant + remarketed RTO ($1,450/mo, $145k, $35,922.50 down) — app sent to Glenda. Utilities turned on both. Text-blast + Facebook; M'kenzy runs showings |
+| **Jacoby Maydwell 8-unit wholesale** | 🟡 In progress | Wholesale his townhomes to a cash/1031 buyer ($1.5–1.55M) via broker Rex Andrews; WIH spread $40k–$128k. On pause pending portfolio data |
+| **Mortgage-status-sheet automations** | 🟢 / 🟡 | Mercury balance-sync (MWF + Telegram alert) live; adding 2nd-position + servicing total columns; AI reserve→bank transfers to replace Sequence rules |
 | **DoorLoop → Sheet payment sync** | 🟢 Live | MWF automated sync of payment statuses to the Property Payment Checklist sheet |
+| **Docs-mailbox AI automation** | 🟡 Building (this weekend) | AI to read docs@ mailbox for mortgage/utility statements + receipts (feeds utilities + reimbursement automations) |
 | **Subscriptions & Utilities tracking** | 🟢 Live | 36-subscription roster + utilities tracker with status automation and repayment tracking |
 | **GHL ↔ Notion task sync** | 🟢 Live | Two-way sync of my GHL tasks into the Mostafa Task Tracker (Notion) |
 | **Task prioritization / time-blocking** | 🟢 Live | "Organize my tasks" workflow ranks + time-blocks the Notion tracker |
@@ -38,10 +42,13 @@ freshness: latest morning-meeting transcript is 2026-06-04 — items below carry
 
 ## 3. Revenue & Financial Metrics
 
-**Known concrete data points (early–mid June 2026):**
-- **Alyssa lease termination (4302 E 61st)**: $3,007.37 collected via Square → **$2,948.73 net** to acct ending 5847. M'kenzy commission 14.2% = **$418.72** (paid via Sequence).
-- **4513 48th St** acquisition: $250K @ 8.5%, taxes $215.83/mo, insurance ~$350/mo.
-- **1312 65th Dr Unit E (Aaron)**: $832/mo → renewing **$850/mo** (12 mo from Aug 1, 2026).
+**Known concrete data points (June 2026):**
+- **4513 48th St** closed/funded ~Jun 22 ($250K @ 8.5%). Closing reconciliation: HUD cash-to-seller $71,334.27; Jacoby's cut $25,309.97; $17,250 back to lender Curtis (First Act, $15k + 15%); ~$28,774.30 net back to WIH.
+- **4019 37th St (buyer Joseph DeLaO)**: payment rising **$1,674.08 → $1,826.87/mo (+$152.79)** once homeowner insurance escrows (P&I $1,203.35 + taxes $281.15 + ins $342.37); effective Aug 1. 1st position $1,367.07 + 2nd position $176.67 = $1,543.74.
+- **4302 E 61st remarketing**: RTO $1,450/mo, purchase $145,000, seller-finance down $35,922.50.
+- **Jacoby 8-unit portfolio**: owes ~$1.308M, appraised ~$1.736M, cash-flow negative ~$35k/yr; wholesale target $1.5–1.55M.
+- **1312 65th Dr**: electric bill spiked ~$1,107 (≈2× May); Unit E (Aaron) renewing $850/mo Aug 1.
+- **Alyssa/Jalissa termination (4302)**: $3,007.37 → $2,948.73 net; M'kenzy commission $418.72.
 
 **Rollups _⟶ pull live_:**
 - Total monthly rent roll across portfolio — _⟶ DoorLoop rent roll_
@@ -53,20 +60,22 @@ freshness: latest morning-meeting transcript is 2026-06-04 — items below carry
 
 | Tenant / Property | Health | Detail |
 |---|---|---|
-| Veronica — 3423 E Baylor | 🟡 Verify | Was "processing" as of June 4 w/ 10-day grace — grace window now passed; confirm paid/cleared _⟶ pull live (DoorLoop)_ |
-| Tracy — 2802 S Channing | 🟡 Verify | 10-day grace; $210.38 late fee applied from June 10 if unpaid — confirm current standing _⟶ pull live (DoorLoop)_ |
-| Aaron — 1312 65th Dr Unit E | 🟢 Renewing | New lease drafted $850/mo; signature deadline July 20 via Crystal Sherwood |
-| 4019 37th St (Evergreen note) | 🔴 Issue | NSF returned; Evergreen now wire-only ($15/wire) for 6+ payments; moving to auto-draft to Josh Fox |
-| 4626 S Lipscomb | 🔴 Issue | (a) mortgage AutoPay may have stopped; (b) Xcel Energy past-due weekly since Feb — collection threat |
-| 7500 Winston Ave (Freedom Mortgage) | 🟡 Watch | Repeated "account status change" emails — requires login to check (note: Winston trust + Josh personal Baselane accts are CLOSED) |
+| Veronica — 3423 E Baylor | 🔴 Evicted | Evicted/foreclosed **June 25**; WIH regained access (need new master key). Property refinanced (~$500 lower payment) |
+| Ronald & Samantha — 7500 Winston | 🔴 Eviction | Did not pay (25th); proceeding to eviction; no further contact per Josh |
+| Joseph DeLaO — 4019 37th St | 🟢 Paying | Payment rising to $1,826.87 (+$152.79) Aug 1; insurance double-escrow resolved (see §8) |
+| Tracy — 2802 S Channing | 🟢 Amended | Payment amount amended; DoorLoop merchant account approved |
+| Aaron — 1312 65th Dr Unit E | 🟢 Renewing | New lease $850/mo; signature deadline July 20 via Crystal Sherwood |
+| Elsa Galindo — 1926 27th St | 🟢 Converting | Switching to seller finance; lease being refied with Kiavi ($5k deposit) |
+| 4205 E 61st St (mortgage) | 🟡 Watch | Mortgage was overdue (payment processing); Kenneth/Shellpoint pulling — recheck Mon |
+| 4626 S Lipscomb | 🟡 Watch | One-time mortgage payment made (~$3.9k); Xcel Energy past-due still needs resolving (login reset) |
 
 _Full tenant roster & current statuses ⟶ pull live from DoorLoop + Payment Checklist._
 
 ## 5. Team Status & Capacity
 
 - **Mostafa (me)** — operations + automations; capacity stretched across payments, property issues, marketing push, and AI buildout. Overnight-CT working hours.
-- **M'kenzy** — deals/showings; negotiated Alyssa termination; running 4513 showings; wants a 30–45 min AI + rent-to-own briefing (next week, 3pm, not Tuesday). Surfaced new lead.
-- **Kenneth** — team member; route tasks where applicable.
+- **M'kenzy** — deals/showings/Airbnb. Runs Airbnbs (e.g., owner "Don," ~$11k/mo) via Airbnb auto-split. Exploring an Airbnb **partnership** with WIH (partner % in lieu of mgmt fee; AI to handle guest messages). Running 4513/4302 showings.
+- **Kenneth** — partner; mortgages/lenders/refis (Kiavi, Shellpoint, Fay, Southern Loan Servicing); loan-broker access. Route lender tasks here.
 - **Joshua** — systems architect / decision-maker only; not in execution.
 
 ## 6. Key Performance Indicators
@@ -92,14 +101,17 @@ _Targets/automation in place; live values ⟶ pull from sources._
 - **4626 Lipscomb title (confirmed)**: held by the **4626 S Lipscomb St Irrevocable Trust**, beneficiary **Webber Wealth Holdings LLC** (subject-to acquisition w/ seller lease-back to John Arthur Castillo). The trust has **no EIN of its own by design** — so it correctly does NOT appear in the EIN registry. Not a data gap.
 - **Skills-sync auth**: shared-skills push hit `403` on 2026-06-24 (the embedded PAT was rotated). Fixed by switching the `.skills-shared` clone to Git Credential Manager + adding a retry for pending-but-unpushed commits. `mercury-balance-sync` is now shared.
 - **Credentials hygiene**: skill files had hardcoded API tokens (caught by GitHub push protection) — now excluded + secret-scan guard on sync. Don't commit live tokens.
+- **Double-escrow insurance (4019, Jun 25)**: two homeowner policies (Portega/Black Opal + Allstate) were both escrowed via Fay Servicing → paying twice. Caught it, cancelled Portega, kept Allstate, requested refund. Lesson: when a new policy is placed, verify the old one is cancelled before the servicer escrows both.
+- **Servicing setup gap (4302, Jun 26)**: lender Blake Hoffman went unpaid because Southern Loan Servicing never created the 4302 account (only 4205) despite a March submission. Lesson: confirm the servicer actually opened each account, don't assume a portal submission took.
+- **Electric blind spot (1312)**: a back unit's AC switched back on doubled the bill (~$1,107). Action: per-unit thermostats; consider efficiency audit.
 - **Systems > goals**: "You don't rise to the level of your goals, you fall to the level of your systems." — the operating ethos here.
 
 ## 9. Upcoming Milestones
 
-- **July 20, 2026** — Aaron lease-renewal signature deadline (1312 Unit E) via Crystal Sherwood.
-- **Aug 1, 2026** — Aaron new lease term begins at $850/mo.
-- **Next week** — M'kenzy AI/rent-to-own briefing (3pm, not Tue); Shelby McDonald confirmed start for 4302 E 61st rehab.
-- **Ongoing** — 4513 48th St rent-to-own buyer acquisition; new 5-property lead from the E 61st investors (M'kenzy pursuing).
+- **Mon (next biz day)** — call Jessica @ Southern Loan Servicing to open the 4302 account (Blake Hoffman payment); recheck 4205 mortgage pull; revisit Kenneth for 3423 E Baylor PITI + portal credentials.
+- **This weekend** — build the docs-mailbox AI automation (mortgage/utility statements + receipts).
+- **July 20, 2026** — Aaron lease-renewal signature deadline (1312 Unit E) via Crystal Sherwood; **Aug 1** new term at $850/mo + Joseph DeLaO payment rises to $1,826.87.
+- **Ongoing** — disposition of 4513 + 4302 (text-blast/Facebook); Jacoby 8-unit wholesale via Rex Andrews; Didi Haase portfolio proposal; selling-notes/partials as the next tier.
 
 ## 10. How This Doc Is Maintained
 
