@@ -218,10 +218,22 @@ The wiki is the source of truth. Notion master prompts and CLAUDE.md are compres
 raw/                          # immutable source documents — never modify these
 raw/assets/                   # images downloaded from web-clipped articles
 wiki/                         # LLM-maintained knowledge base
-wiki/index.md                 # master table of contents, grouped by type
+wiki/index.md                 # master table of contents — always read this first
 wiki/log.md                   # append-only ingest/query/lint history
 wiki/.last-ingest             # timestamp of last successful ingest (ISO 8601)
+wiki/people/                  # one file per person (team, vendors, partners, mentors, role models)
+wiki/projects/                # active initiatives with a goal and status
+wiki/companies/               # business entities, tools, platforms, lenders, servicers
+wiki/properties/              # one file per property address
+wiki/meetings/                # all source pages: transcripts, snapshots, documents, clips
+wiki/decisions/               # log of significant decisions with context and alternatives
+wiki/daily/                   # daily 3–5 line dumps
+wiki/knowledge/               # concepts, frameworks, strategies, systems
+wiki/moc/                     # Maps of Content — topic summaries built when a subject gets messy
 ```
+
+### Navigation Rule
+Always read `wiki/index.md` first to find the right file. Wikilinks inside pages use short-form only — `[[vince-ai]]`, `[[mostafa]]` — Obsidian resolves these by filename automatically regardless of subfolder. Never use path prefixes in wikilinks.
 
 ## File Conventions
 
@@ -240,15 +252,19 @@ updated: 2026-05-28
 ---
 ```
 
-## Page Types
+## Page Types → Folders
 
-| Type | What it covers | Examples |
+| Type | Folder | Examples |
 |---|---|---|
-| `entity` | Companies, properties, tools, accounts | `wih.md`, `1312-65th-dr.md`, `ghl.md` |
-| `project` | Active initiatives with a goal and status | `vince-ai.md`, `lbk-cleaners-launch.md` |
-| `concept` | Ideas and frameworks | `profit-first.md`, `rent-to-own.md` |
-| `person` | Team, vendors, partners, mentors | `mostafa.md`, `austin-hughes.md` |
-| `source` | One page per ingested raw file | `transcript-2026-05-10.md` |
+| `person` | `wiki/people/` | `mostafa.md`, `austin-hughes.md` |
+| `project` | `wiki/projects/` | `vince-ai.md`, `lbk-cleaners-launch.md` |
+| `entity` (company/tool) | `wiki/companies/` | `wih.md`, `ghl.md`, `mercury.md` |
+| `entity` (property) | `wiki/properties/` | `1312-65th-dr.md`, `4019-37th-st.md` |
+| `source` | `wiki/meetings/` | `source-transcript-2026-06-26-*.md` |
+| `concept` | `wiki/knowledge/` | `profit-first.md`, `rent-to-own.md` |
+| *(new)* | `wiki/decisions/` | significant business decisions |
+| *(new)* | `wiki/daily/` | daily 3–5 line dumps |
+| *(new)* | `wiki/moc/` | topic summary files (build when messy) |
 
 Wikilinks: always clean short-form — `[[vince-ai]]`, `[[mostafa]]`. Never use path prefixes.
 
@@ -278,8 +294,8 @@ When Joshua drops a file into `raw/` and says "ingest this":
 
 1. Read the full source document
 2. Discuss key takeaways with Joshua before writing anything
-3. Create a `source` page in `wiki/` summarizing the document
-4. Create or update entity, project, concept, and person pages touched by the source
+3. Create a `source` page in `wiki/meetings/` summarizing the document
+4. Create or update pages in the correct folders (people/, projects/, companies/, properties/, knowledge/) touched by the source
 5. Link everything with wikilinks
 6. Update `wiki/index.md` with any new pages
 7. Append an entry to `wiki/log.md`
